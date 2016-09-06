@@ -20,8 +20,8 @@
     "watch:js": "onchange 'js/*.js' -- npm run build:js",
     "watch": "parallelshell 'npm run watch:html' 'npm run watch:css' 'npm run watch:js'",
     "ac": "git add --all && git commit -m",
-    "push": "git push origin master",
-    "pull": "git pull origin master"
+    "push": "git push origin master && git status",
+    "pull": "git pull origin master && git status"
   },
   "repository": {
     "type": "git",
