@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="styles.css" type="text/css" />
 </head>
 <body>
-    <!--built as a single-page, operates as a multi-page- divs show/hide via js-->
     <header>
         <!--contains nav info, uses pic of me in "logo" slot (also for returning to #home)-->
         <div>
@@ -18,28 +17,30 @@
         </nav>
     </header>
     <main>
-        <!--contains all divs- landing page (#home), who i am (#about), projects (#projects)-->
-        <!--use backgrounds via different parallax displays between the divs-->
         <div id="#home">
-            <!--landing page with pic of me in woods - on right side-->
+            <img src="img/close-up3.jpg" alt="Me! In the woods!">
             <h4>Full-Stack Javascript</h4>
             <h4>&</h4>
             <h4>Front-End Web Developer</h4>
             <p>(Not much of a web designer though)</p>
         </div>
-        <div class="background" id="firstBG"></div>
-        <div id="#about">
-            <h4>Coder</h4> <!--search-->
-            <p>Info about me as a coder</p>
-            <img src="" alt="">
-            <h4>Creator</h4><!---->
-            <p>Info about me as a creator</p>
-            <img src="" alt="">
-            <h4>Explorer</h4><!---->
-            <p>Info about me as an explorer</p>
-            <img src="" alt="">
+        <div class="background" id="firstBG">
+            <!--using a parallax scroll on background image-->
         </div>
-        <div class="background" id="secondBG"></div>
+        <div id="#about">
+            <img src="img/coder.png" alt="Coder">
+            <h4>Coder</h4>
+            <p>Info about me as a coder</p>
+            <img src="img/creator.png" alt="Creator">
+            <h4>Creator</h4>
+            <p>Info about me as a creator</p>
+            <img src="img/explorer.png" alt="Explorer">
+            <h4>Explorer</h4>
+            <p>Info about me as an explorer</p>
+        </div>
+        <div class="background" id="secondBG">
+            <!--using a parallax scroll on background image-->
+        </div>
         <div id="#projects">
             <!--projects list-->
             <div>
@@ -58,4 +59,7 @@
         <a href="mailto:strotherwebdev@gmail.com">Email</a>
     </footer>
 </body>
+<!--coder.png created by Umesh Vgl from Noun Project-->
+<!--creator.png created as Brain by Marek Polakovic from Noun Project-->
+<!--explorer.png created as Compass by Jardson Almeida from Noun Project-->
 </html>
