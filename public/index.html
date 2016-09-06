@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Jim Strother</title>
-    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link rel="stylesheet" href="styles.css" type="text/css" />
 </head>
 <body>
     <!--built as a single-page, operates as a multi-page- divs show/hide via js-->
     <header>
         <!--contains nav info, uses pic of me in "logo" slot (also for returning to #home)-->
         <div>
-            <a href="#home"><img src="img/head-shot.jpg" alt="Jim Strother"></a>
+            <a href="#home"><img src="img/head-shot1.jpg" alt="Jim Strother"></a>
         </div>
         <nav>
             <a href="#about">Who I Am</a>
@@ -40,14 +40,22 @@
             <img src="" alt="">
         </div>
         <div class="background" id="secondBG"></div>
-        <div id="#projects"></div>
+        <div id="#projects">
+            <!--projects list-->
+            <div>
+                <h4>List of Projects</h4>
+                <div id="list">
+                    <div class="project">Flappy Bird</div>
+                    <div class="project">API "Hack"</div>
+                    <div class="project">Hot or Cold</div>
+                    <div class="project">Task List</div>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
         <!--contains contact info- email, facebook, twitter, linkdin-->
+        <a href="mailto:strotherwebdev@gmail.com">Email</a>
     </footer>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script src="//cdn.jsdelivr.net/velocity/1.2.2/velocity.min.js"></script>
-    <script src="//cdn.jsdelivr.net/velocity/1.2.2/velocity.ui.min.js"></script>
-	<script type="text/javascript" src="scripts.js"></script>
 </body>
 </html>
