@@ -4,14 +4,15 @@
   "description": "a rebuild of my site",
   "main": "scripts.js",
   "scripts": {
-    "scss": "node-sass --output-stlye compressed -o public/styles.css scss/styles.scss",
+    "scss": "node-sass --output-stlye compressed scss/styles.scss public/styles.css",
     "autoprefixer": "postcss -u autoprefixer -r public/styles.css",
     "browserify": "browserify js/*.js -d -o public/scripts.js",
     "uglify": "uglifyjs public/scripts.js -m -c -o public/scripts.js",
     "lint": "eslint js",
     "imagemin": "imagemin img public/img",
-    "htmlminifier": "html-minifier --case-sensitive *.html --output-dir public/",
-    "build:html": "npm run htmlminifier && npm run imagemin",
+    "font:copy": "cp font/*.* public/font/",
+    "htmlminifier": "html-minifier --case-sensitive index.html -o public/index.html",
+    "build:html": "npm run font:copy && npm run htmlminifier && npm run imagemin",
     "build:css": "npm run scss && npm run autoprefixer",
     "build:js": "npm run lint && npm run browserify && npm run uglify",
     "build": "npm run build:html & npm run build:css && npm run build:js",
@@ -44,9 +45,11 @@
     "html-minifier": "^3.0.2",
     "imagemin-cli": "^3.0.0",
     "node-sass": "^3.9.0",
+    "normalize-scss": "^5.0.3",
     "onchange": "^3.0.0",
     "parallelshell": "^2.0.0",
     "postcss-cli": "^2.6.0",
+    "support-for": "^1.0.6",
     "uglify-js": "^2.7.3"
   }
 }
