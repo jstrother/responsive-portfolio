@@ -55,3 +55,52 @@
    -o-transition: width 4.50s ease !important;
       transition: width 4.50s ease !important;
  }
+ 
+//  parallax
+$parallax-window-height: 30em;
+$parallax-background-height: $parallax-window-height * 2;
+
+.parallax-window {
+  max-height: $parallax-window-height;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.parallax-static-content {
+    height: 30em;
+    color: #9A9A8A;
+    padding: 8em 0;
+    position: relative;
+    z-index: 9;
+}
+
+.parallax-background {
+  background-position: bottom;
+  background-size: cover;
+  height: $parallax-background-height;
+  left: 0;
+  position: absolute;
+  top: - $parallax-window-height / 3;
+  width: 100%;
+}
+
+#firstBG {
+    .parallax-background {
+        background: url("../img/background4.jpg");
+    }
+}
+
+#secondBG {
+    .parallax-background {
+        background: url("../img/background11.jpg");
+    }
+}
+
+.background-div {
+    clear: both;
+    height: 30em;
+    width: 100%;
+}
+
+// Based on http://codepen.io/skeurentjes/

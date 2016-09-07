@@ -642,3 +642,36 @@ textarea {
 .adobe, .html, .css, .jquery, .javascript, .bootstrap, .wordpress, .ui, .ux, .rwd, .mobile, .rapidproto {
   -webkit-transition: width 4.50s ease !important;
   transition: width 4.50s ease !important; }
+
+.parallax-window {
+  max-height: 30em;
+  overflow: hidden;
+  position: relative;
+  width: 100%; }
+
+.parallax-static-content {
+  height: 30em;
+  color: #9A9A8A;
+  padding: 8em 0;
+  position: relative;
+  z-index: 9; }
+
+.parallax-background {
+  background-position: bottom;
+  background-size: cover;
+  height: 60em;
+  left: 0;
+  position: absolute;
+  top: -10em;
+  width: 100%; }
+
+#firstBG .parallax-background {
+  background: url("../img/background4.jpg"); }
+
+#secondBG .parallax-background {
+  background: url("../img/background11.jpg"); }
+
+.background-div {
+  clear: both;
+  height: 30em;
+  width: 100%; }

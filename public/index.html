@@ -17,16 +17,20 @@
         </nav>
     </header>
     <main>
-        <div id="#home">
+        <div id="home">
             <h4>Full-Stack Javascript</h4>
             <h4>&</h4>
             <h4>Front-End Web Developer</h4>
             <p>(Not much of a web designer though)</p>
         </div>
-        <div class="background" id="firstBG">
+        <div class="background-div" id="firstBG">
             <!--using a parallax scroll on background image-->
+            <div id="js-parallax-window1" class="parallax-window">
+                <div class="parallax-static-content"></div>
+                <div id="js-parallax-background1" class="parallax-background"></div>
+            </div>
         </div>
-        <div id="#about">
+        <div id="about">
             <section class="info" id="coder">
                 <img src="img/coder.png" alt="Coder">
                 <h4>Coder</h4>
@@ -48,49 +52,56 @@
                     <div id="resumeProficienciesTop" class="resumeProficienciesTop1">HTML5</div>
                     <div id="resumeProficienciesBottom">
                         <div class="progress">
-                            <div class="html progress-bar progress-bar-info" role="progressbar" style="width: 0%"></div>
+                            <div class="html progress-bar progress-bar-info" role="progressbar" style="width: 0%">
+                                <span class="sr-only"></span></div>
                         </div>
                     </div>
                     
                     <div id="resumeProficienciesTop">CSS3</div>
                     <div id="resumeProficienciesBottom">
                         <div class="progress">
-                            <div class="css progress-bar progress-bar-info" role="progressbar" style="width: 0%"></div>
+                            <div class="css progress-bar progress-bar-info" role="progressbar" style="width: 0%">
+                                <span class="sr-only"></span></div>
                         </div>
                     </div>
         
                     <div id="resumeProficienciesTop">SASS/SCSS</div>
                     <div id="resumeProficienciesBottom">
                         <div class="progress">
-                            <div class="scss progress-bar progress-bar-info" role="progressbar" style="width: 0%"></div>
+                            <div class="scss progress-bar progress-bar-info" role="progressbar" style="width: 0%">
+                                <span class="sr-only"></span></div>
                         </div>
                     </div>
             
                     <div id="resumeProficienciesTop">JavaScript</div>
                     <div id="resumeProficienciesBottom">
                         <div class="progress">
-                            <div class="javascript progress-bar progress-bar-info" role="progressbar" style="width: 0%"></div>
+                            <div class="javascript progress-bar progress-bar-info" role="progressbar" style="width: 0%">
+                                <span class="sr-only"></span></div>
                         </div>
                     </div>
                     
                     <div id="resumeProficienciesTop">jQuery</div>
                     <div id="resumeProficienciesBottom">
                         <div class="progress">
-                            <div class="javascript progress-bar progress-bar-info" role="progressbar" style="width: 0%"></div>
+                            <div class="javascript progress-bar progress-bar-info" role="progressbar" style="width: 0%">
+                                <span class="sr-only"></span></div>
                         </div>
                     </div>
                 
                     <div id="resumeProficienciesTop">Velocity</div>
                     <div id="resumeProficienciesBottom">
                         <div class="progress">
-                            <div class="velocity progress-bar progress-bar-info" role="progressbar" style="width: 0%"></div>
+                            <div class="velocity progress-bar progress-bar-info" role="progressbar" style="width: 0%">
+                                <span class="sr-only"></span></div>
                         </div>
                     </div>
                 
                     <div id="resumeProficienciesTop">Bourbon/Neat</div>
                     <div id="resumeProficienciesBottom">
                         <div class="progress">
-                            <div class="bourbon progress-bar progress-bar-info" role="progressbar" style="width: 0%"></div>
+                            <div class="bourbon progress-bar progress-bar-info" role="progressbar" style="width: 0%">
+                                <span class="sr-only"></span></div>
                         </div>
                     </div>
                 
@@ -115,14 +126,16 @@
                     <div id="resumeProficienciesTop">Node.js/Express</div>
                     <div id="resumeProficienciesBottom">
                         <div class="progress">
-                            <div class="node progress-bar progress-bar-info" role="progressbar" style="width: 0%"></div>
+                            <div class="node progress-bar progress-bar-info" role="progressbar" style="width: 0%">
+                                <span class="sr-only"></span></div>
                         </div>
                     </div>
                 
                     <div id="resumeProficienciesTop">Socket.io</div>
                     <div id="resumeProficienciesBottom">
                         <div class="progress">
-                            <div class="socket progress-bar progress-bar-info" role="progressbar" style="width: 0%"></div>
+                            <div class="socket progress-bar progress-bar-info" role="progressbar" style="width: 0%">
+                                <span class="sr-only"></span></div>
                         </div>
                     </div>
                 
@@ -146,10 +159,14 @@
                 </div>
             </section>
         </div>
-        <div class="background" id="secondBG">
+        <div class="background-div" id="secondBG">
             <!--using a parallax scroll on background image-->
+            <div id="js-parallax-window2" class="parallax-window">
+                <div class="parallax-static-content"></div>
+                <div id="js-parallax-background2" class="parallax-background"></div>
+            </div>
         </div>
-        <div id="#projects">
+        <div id="projects">
             <!--projects list-->
             <section>
                 <h4>List of Projects</h4>
@@ -188,6 +205,8 @@
     </footer>
     <script type="text/javascript" src="scripts.js"></script>
 </body>
+<!--This website was built, and is maintained, by Jim Strother-->
+
 <!--coder.png created by Umesh Vgl from Noun Project-->
 <!--creator.png created as Brain by Marek Polakovic from Noun Project-->
 <!--explorer.png created as Compass by Jardson Almeida from Noun Project-->
