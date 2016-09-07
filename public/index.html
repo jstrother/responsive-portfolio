@@ -18,7 +18,6 @@
     </header>
     <main>
         <div id="#home">
-            <img src="img/close-up3.jpg" alt="Me! In the woods!">
             <h4>Full-Stack Javascript</h4>
             <h4>&</h4>
             <h4>Front-End Web Developer</h4>
@@ -28,36 +27,166 @@
             <!--using a parallax scroll on background image-->
         </div>
         <div id="#about">
-            <img src="img/coder.png" alt="Coder">
-            <h4>Coder</h4>
-            <p>Info about me as a coder</p>
-            <img src="img/creator.png" alt="Creator">
-            <h4>Creator</h4>
-            <p>Info about me as a creator</p>
-            <img src="img/explorer.png" alt="Explorer">
-            <h4>Explorer</h4>
-            <p>Info about me as an explorer</p>
+            <section class="info" id="coder">
+                <img src="img/coder.png" alt="Coder">
+                <h4>Coder</h4>
+                <p>Info about me as a coder</p>
+            </section>
+            <section class="info" id="creator">
+                <img src="img/creator.png" alt="Creator">
+                <h4>Creator</h4>
+                <p>Info about me as a creator</p>
+            </section>
+            <section class="info" id="explorer">
+                <img src="img/explorer.png" alt="Explorer">
+                <h4>Explorer</h4>
+                <p>Info about me as an explorer</p>
+                <img src="img/close-up3.jpg" alt="Me! In the woods!">
+            </section>
+            <section id=skillset>
+                <div id="resumeProficiencies">
+                    <div id="resumeProficienciesTop" class="resumeProficienciesTop1">HTML5</div>
+                    <div id="resumeProficienciesBottom">
+                        <div class="progress">
+                            <div class="html progress-bar progress-bar-info" role="progressbar" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    
+                    <div id="resumeProficienciesTop">CSS3</div>
+                    <div id="resumeProficienciesBottom">
+                        <div class="progress">
+                            <div class="css progress-bar progress-bar-info" role="progressbar" style="width: 0%"></div>
+                        </div>
+                    </div>
+        
+                    <div id="resumeProficienciesTop">SASS/SCSS</div>
+                    <div id="resumeProficienciesBottom">
+                        <div class="progress">
+                            <div class="scss progress-bar progress-bar-info" role="progressbar" style="width: 0%"></div>
+                        </div>
+                    </div>
+            
+                    <div id="resumeProficienciesTop">JavaScript</div>
+                    <div id="resumeProficienciesBottom">
+                        <div class="progress">
+                            <div class="javascript progress-bar progress-bar-info" role="progressbar" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    
+                    <div id="resumeProficienciesTop">jQuery</div>
+                    <div id="resumeProficienciesBottom">
+                        <div class="progress">
+                            <div class="javascript progress-bar progress-bar-info" role="progressbar" style="width: 0%"></div>
+                        </div>
+                    </div>
+                
+                    <div id="resumeProficienciesTop">Velocity</div>
+                    <div id="resumeProficienciesBottom">
+                        <div class="progress">
+                            <div class="velocity progress-bar progress-bar-info" role="progressbar" style="width: 0%"></div>
+                        </div>
+                    </div>
+                
+                    <div id="resumeProficienciesTop">Bourbon/Neat</div>
+                    <div id="resumeProficienciesBottom">
+                        <div class="progress">
+                            <div class="bourbon progress-bar progress-bar-info" role="progressbar" style="width: 0%"></div>
+                        </div>
+                    </div>
+                
+                    <div id="resumeProficienciesTop">Responsive Web Design</div>
+                    <div id="resumeProficienciesBottom">
+                        <div class="progress">
+                            <div class="rwd progress-bar progress-bar-info" role="progressbar" style="width: 0%">
+                                <span class="sr-only"></span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div id="resumeProficienciesTop">React/Redux</div>
+                    <div id="resumeProficienciesBottom">
+                        <div class="progress">
+                            <div class="react progress-bar progress-bar-info" role="progressbar" style="width: 0%">
+                                <span class="sr-only"></span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div id="resumeProficienciesTop">Node.js/Express</div>
+                    <div id="resumeProficienciesBottom">
+                        <div class="progress">
+                            <div class="node progress-bar progress-bar-info" role="progressbar" style="width: 0%"></div>
+                        </div>
+                    </div>
+                
+                    <div id="resumeProficienciesTop">Socket.io</div>
+                    <div id="resumeProficienciesBottom">
+                        <div class="progress">
+                            <div class="socket progress-bar progress-bar-info" role="progressbar" style="width: 0%"></div>
+                        </div>
+                    </div>
+                
+                    <div id="resumeProficienciesTop">RethinkDB</div>
+                    <div id="resumeProficienciesBottom">
+                        <div class="progress">
+                            <div class="rethink progress-bar progress-bar-info" role="progressbar" style="width: 0%">
+                                <span class="sr-only"></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="resumeProficienciesTop">Git</div>
+                    <div id="resumeProficienciesBottom">
+                        <div class="progress">
+                            <div class="git progress-bar progress-bar-info" role="progressbar" style="width: 0%">
+                                <span class="sr-only"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
         <div class="background" id="secondBG">
             <!--using a parallax scroll on background image-->
         </div>
         <div id="#projects">
             <!--projects list-->
-            <div>
+            <section>
                 <h4>List of Projects</h4>
                 <div id="list">
-                    <div class="project">Flappy Bird</div>
-                    <div class="project">API "Hack"</div>
-                    <div class="project">Hot or Cold</div>
-                    <div class="project">Task List</div>
+                    <div class="project">
+                        <h5>Flappy Bird</h5>
+                        <!--http://jstrother.github.io/flappy-bird/-->
+                        <!--https://github.com/jstrother/flappy-bird-->
+                    </div>
+                    <div class="project">
+                        <h5>API "Hack"</h5>
+                        <!--http://jstrother.github.io/read-watch-listen/-->
+                        <!--https://github.com/jstrother/read-watch-listen-->
+                    </div>
+                    <div class="project">
+                        <h5>Hot or Cold</h5>
+                        <!--https://jstrother.github.io/hot-cold-redux/public/index.html-->
+                        <!--small issue with needing server.js to function-->
+                        <!--https://github.com/jstrother/hot-cold-redux-->
+                    </div>
+                    <div class="project">
+                        <h5>Task List</h5>
+                        <!--http://52.43.128.234:9000/-->
+                        <!--https://github.com/jstrother/task-list-->
+                    </div>
                 </div>
-            </div>
+            </section>
         </div>
     </main>
     <footer>
-        <!--contains contact info- email, facebook, twitter, linkdin-->
+        <!--contains contact info- email, facebook, twitter, linkedin-->
         <a href="mailto:strotherwebdev@gmail.com">Email</a>
+        facebook
+        twitter
+        linkedin
     </footer>
+    <script type="text/javascript" src="scripts.js"></script>
 </body>
 <!--coder.png created by Umesh Vgl from Noun Project-->
 <!--creator.png created as Brain by Marek Polakovic from Noun Project-->
