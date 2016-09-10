@@ -40,6 +40,7 @@ $(document).ready(function() {
     });
     
     function parallax(){
+      // this if statement deals with the first parallax window
       if( $("#js-parallax-window1").length > 0 ) {
         var plxBackground = $("#js-parallax-background1");
         var plxWindow = $("#js-parallax-window1");
@@ -56,6 +57,7 @@ $(document).ready(function() {
     
         plxBackground.css('top', - (plxWindowTopToWindowTop * plxSpeed) + 'px');
       }
+      // this if statement deals with the second parallax window
       if( $("#js-parallax-window2").length > 0 ) {
         var plxBackground = $("#js-parallax-background2");
         var plxWindow = $("#js-parallax-window2");

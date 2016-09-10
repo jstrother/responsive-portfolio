@@ -11,6 +11,7 @@
     "image": "cp img/*.* public/img/",
     "font": "cp font/*.* public/font/",
     "html": "cp *.html public/",
+    "serve": "browser-sync start --server --files 'public/*.html, public/*.css, public/*.js, public/font/*.*, public/img/*.*'",
     "build:html": "npm run html && npm run image && npm run font",
     "build:css": "npm run scss && npm run autoprefixer",
     "build:js": "npm run browserify && npm run uglify",
@@ -18,7 +19,7 @@
     "watch:html": "onchange '*.html' -- npm run build:html",
     "watch:css": "onchange 'scss/*.scss' -- npm run build:css",
     "watch:js": "onchange 'js/*.js' -- npm run build:js",
-    "watch": "parallelshell 'npm run watch:html' 'npm run watch:css' 'npm run watch:js'",
+    "watch": "parallelshell 'npm run serve' 'npm run watch:html' 'npm run watch:css' 'npm run watch:js'",
     "ac": "git add --all && git commit -m",
     "push": "git push origin master && git status",
     "pull": "git pull origin master && git status"
@@ -39,6 +40,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^6.4.1",
+    "browser-sync": "^2.15.0",
     "browserify": "^13.1.0",
     "node-sass": "^3.9.0",
     "normalize-scss": "^5.0.3",

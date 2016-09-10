@@ -611,46 +611,84 @@ textarea {
   border: 1px solid red; }
 
 header {
-  background-color: #3498DB; }
+  background-color: #3498DB;
+  max-width: em(2000px);
+  margin-left: auto;
+  margin-right: auto; }
+  header::after {
+    clear: both;
+    content: "";
+    display: block; }
+  header a:link {
+    color: #ffffff; }
+  header a:hover {
+    background-color: #1d6fa5; }
+  header a:active {
+    background-color: #5faee3; }
+  header a:visited {
+    color: #c0cdd1; }
+  header #img-div {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 10.43705%;
+    margin-top: 1em; }
+    header #img-div:last-child {
+      margin-right: 0; }
+    header #img-div img {
+      width: 7em;
+      height: 5.5em; }
+  header nav {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 14.70196%;
+    margin-left: 29.85432%;
+    margin-top: 1.5%;
+    margin-bottom: 1%;
+    text-align: center; }
+    header nav:last-child {
+      margin-right: 0; }
+    header nav h1 {
+      margin-top: 0; }
+    header nav :nth-child(3) {
+      margin-left: 2.5em; }
 
 main {
   background-color: #ECF0F1; }
 
-.resumeProficiencies {
+#skillset {
+  width: 100%; }
+
+#resumeProficiencies {
+  clear: right;
+  width: 100%;
+  margin: 1.25em;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto; }
-  .resumeProficiencies::after {
+  #resumeProficiencies::after {
     clear: both;
     content: "";
     display: block; }
 
-.column1 {
+#column1 {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 48.82117%;
   background-color: blue; }
-  .column1:last-child {
+  #column1:last-child {
     margin-right: 0; }
 
-.column2 {
+#column2 {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 48.82117%;
   background-color: green; }
-  .column2:last-child {
+  #column2:last-child {
     margin-right: 0; }
-
-footer {
-  background-color: #34495E; }
-
-#resumeProficiencies {
-  float: left;
-  clear: right;
-  width: 500px;
-  margin: 20px 0px 30px 30px; }
 
 #resumeProficienciesTop {
   float: left;
@@ -694,7 +732,7 @@ footer {
 
 .parallax-background {
   background-position: bottom;
-  background-size: cover;
+  background-size: cover no-repeat;
   height: 60em;
   left: 0;
   position: absolute;
@@ -711,3 +749,6 @@ footer {
   clear: both;
   height: 30em;
   width: 100%; }
+
+footer {
+  background-color: #34495E; }

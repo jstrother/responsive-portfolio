@@ -11,36 +11,66 @@
 
 header {
     background-color: $baseBlue;
+    @include outer-container(em(2000px));
+    a:link {
+        color: $white;
+    }
+    a:hover {
+        background-color: darken($baseBlue, 15%);
+    }
+    a:active {
+        background-color: lighten($baseBlue, 10%);
+    }
+    a:visited {
+        color: darken($baseOffWhite, 15%);
+    }
+    #img-div {
+        @include span-columns(1.5);
+        margin-top: 1em;
+        img {
+            width: 7em;
+            height: 5.5em;
+        }
+    }
+    nav {
+        @include span-columns(2);
+        @include shift(3.5);
+        margin-top: 1.5%;
+        margin-bottom: 1%;
+        text-align: center;
+        h1 {
+            margin-top: 0;
+        }
+        :nth-child(3) {
+            margin-left: 2.5em;
+        }
+    }
 }
 
 main {
     background-color: $baseOffWhite;
 }
 
-.resumeProficiencies {
-    @include outer-container;
-}
-
-.column1 {
-    @include span-columns(6);
-    background-color: blue;
-}
-
-.column2 {
-    @include span-columns(6);
-    background-color: green;
-}
-
-footer {
-    background-color: $baseDarkBlue;
+#skillset {
+    width: 100%;
 }
 
 // skillset
 #resumeProficiencies {
-	float: left;
 	clear: right;
-	width: 500px;
-	margin: 20px 0px 30px 30px;
+	width: 100%;
+	margin: 1.25em;
+    @include outer-container;
+}
+
+#column1 {
+    @include span-columns(6);
+    background-color: blue;
+}
+
+#column2 {
+    @include span-columns(6);
+    background-color: green;
 }
 
 #resumeProficienciesTop {
@@ -103,7 +133,7 @@ $parallax-background-height: $parallax-window-height * 2;
 
 .parallax-background {
   background-position: bottom;
-  background-size: cover;
+  background-size: cover no-repeat;
   height: $parallax-background-height;
   left: 0;
   position: absolute;
@@ -130,3 +160,7 @@ $parallax-background-height: $parallax-window-height * 2;
 }
 
 // Based on http://codepen.io/skeurentjes/
+
+footer {
+    background-color: $baseDarkBlue;
+}
