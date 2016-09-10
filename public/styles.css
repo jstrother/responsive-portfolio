@@ -610,6 +610,42 @@ textarea {
 * {
   border: 1px solid red; }
 
+header {
+  background-color: #3498DB; }
+
+main {
+  background-color: #ECF0F1; }
+
+.resumeProficiencies {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto; }
+  .resumeProficiencies::after {
+    clear: both;
+    content: "";
+    display: block; }
+
+.column1 {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  background-color: blue; }
+  .column1:last-child {
+    margin-right: 0; }
+
+.column2 {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  background-color: green; }
+  .column2:last-child {
+    margin-right: 0; }
+
+footer {
+  background-color: #34495E; }
+
 #resumeProficiencies {
   float: left;
   clear: right;
@@ -639,7 +675,7 @@ textarea {
   border-radius: 0px;
   box-shadow: 0 1px 0px #bbbbbb inset, 0 1px 0 #fcfcfc; }
 
-.adobe, .html, .css, .jquery, .javascript, .bootstrap, .wordpress, .ui, .ux, .rwd, .mobile, .rapidproto {
+.html, .css, .scss, .bourbon, .jquery, .javascript, .velocity, .rwd, .react, .node, .socket, .rethink, .git {
   -webkit-transition: width 4.50s ease !important;
   transition: width 4.50s ease !important; }
 

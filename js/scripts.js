@@ -6,16 +6,16 @@ $(document).ready(function() {
     
     // skillset
     $(document).ready(function() {
-        $('.html').css('width', '100%');
-        $('.css').css('width', '100%');
+        $('.html').css('width', '95%');
+        $('.css').css('width', '95%');
         $('.scss').css('width', '95%');
         $('.bourbon').css('width', '85%');
         $('.javascript').css('width', '95%');
         $('.jquery').css('width', '90%');
-        $('.velocity').css('width', '65%');
-        $('.rwd').css('width', '80%');
+        $('.velocity').css('width', '75%');
+        $('.rwd').css('width', '85%');
         $('.react').css('width', '70%');
-        $('.node').css('width', '100%');
+        $('.node').css('width', '90%');
         $('.socket').css('width', '85%');
         $('.rethink').css('width', '70%');
         $('.git').css('width', '95%');
