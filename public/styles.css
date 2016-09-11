@@ -671,8 +671,20 @@ main {
   main #skillset {
     width: 100%;
     margin-bottom: 2em; }
+  main #projects {
+    padding: 0 2em 0 2em; }
+    main #projects h4 {
+      position: relative;
+      left: 40%;
+      width: 10em; }
+  main .project-image {
+    width: 15em;
+    height: 10em;
+    float: right;
+    margin-left: 1em; }
 
 #resumeProficiencies {
+  border: 1px solid #ECF0F1;
   clear: right;
   width: 100%;
   margin: 1.25em;
@@ -732,10 +744,12 @@ main {
   box-shadow: 0 1px 0px #bbbbbb inset, 0 1px 0 #fcfcfc; }
 
 .progress-bar {
-  background-color: yellow; }
+  background-color: yellow;
+  height: 20px; }
 
 .progress-bar-info {
-  background-color: green; }
+  background-color: green;
+  height: 20px; }
 
 .html, .css, .scss, .bourbon, .jquery, .javascript, .velocity, .rwd, .react, .node, .socket, .rethink, .git {
   -webkit-transition: width 4.50s ease !important;
@@ -775,4 +789,21 @@ main {
   width: 100%; }
 
 footer {
-  background-color: #34495E; }
+  background-color: #34495E;
+  padding: 1em;
+  width: 100%; }
+  footer #foot-container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto; }
+    footer #foot-container::after {
+      clear: both;
+      content: "";
+      display: block; }
+  footer #contact {
+    margin-left: 38.38412%; }
+  footer .small-logo {
+    height: 2em;
+    width: 2em;
+    color: #a9a9a9;
+    margin: 0 0.5em 0 0.5em; }

@@ -5,21 +5,19 @@ $(document).ready(function() {
     console.log('ready');
     
     // skillset
-    $(document).ready(function() {
-        $('.html').css('width', '95%');
-        $('.css').css('width', '95%');
-        $('.scss').css('width', '95%');
-        $('.bourbon').css('width', '85%');
-        $('.javascript').css('width', '90%');
-        $('.jquery').css('width', '90%');
-        $('.velocity').css('width', '75%');
-        $('.rwd').css('width', '75%');
-        $('.react').css('width', '70%');
-        $('.node').css('width', '90%');
-        $('.socket').css('width', '85%');
-        $('.rethink').css('width', '70%');
-        $('.git').css('width', '95%');
-    });
+    $('.html').css('width', '90%');
+    $('.css').css('width', '90%');
+    $('.scss').css('width', '90%');
+    $('.bourbon').css('width', '85%');
+    $('.javascript').css('width', '90%');
+    $('.jquery').css('width', '90%');
+    $('.velocity').css('width', '75%');
+    $('.rwd').css('width', '75%');
+    $('.react').css('width', '70%');
+    $('.node').css('width', '90%');
+    $('.socket').css('width', '85%');
+    $('.rethink').css('width', '70%');
+    $('.git').css('width', '90%');
     
     // parallax
     if ($("#js-parallax-window1").length) {
