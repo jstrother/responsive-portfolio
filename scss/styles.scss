@@ -45,16 +45,18 @@ header {
 
 main {
     background-color: $baseOffWhite;
-    #intro {
-        padding-top: 4em;
+    #about {
+        padding-top: 5em;
         width: 90%;
         text-align: center;
     }
-    #about {
+    #info-div {
         @include outer-container;
-        #info {
+        .info {
             @include span-columns(4);
             @include omega(3n);
+            margin-top: 2em;
+            margin-bottom: 2em;
         }
     }
     
@@ -63,12 +65,12 @@ main {
         height: 1.5em;
         float: left;
         margin-right: 0.25em;
-        margin-left: 25%;        
+        margin-left: 10%;   
     }
-}
-
-#skillset {
-    width: 100%;
+    #skillset {
+        width: 100%;
+        margin-bottom: 2em;
+    }
 }
 
 // skillset
@@ -81,12 +83,12 @@ main {
 
 #column1 {
     @include span-columns(6);
-    background-color: blue;
+    @include omega(6n);
 }
 
 #column2 {
     @include span-columns(6);
-    background-color: green;
+    @include omega(6n);
 }
 
 #resumeProficienciesTop {
@@ -118,6 +120,14 @@ main {
 	-moz-box-shadow: 0 1px 0px #bebbb9 inset, 0 1px 0 #fcfcfc;	 
 	-webkit-box-shadow: 0 1px 0px #bebbb9 inset, 0 1px 0 #fcfcfc;	 
 	box-shadow: 0 1px 0px #bbbbbb inset, 0 1px 0 #fcfcfc;	  
+}
+
+.progress-bar {
+    background-color: yellow;
+}
+
+.progress-bar-info {
+    background-color: green;
 }
 
 .html, .css, .scss, .bourbon, .jquery, .javascript, .velocity, .rwd, .react, .node, .socket, .rethink, .git {

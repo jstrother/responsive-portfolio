@@ -637,38 +637,40 @@ header {
 
 main {
   background-color: #ECF0F1; }
-  main #intro {
-    padding-top: 4em;
+  main #about {
+    padding-top: 5em;
     width: 90%;
     text-align: center; }
-  main #about {
+  main #info-div {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto; }
-    main #about::after {
+    main #info-div::after {
       clear: both;
       content: "";
       display: block; }
-    main #about #info {
+    main #info-div .info {
       float: left;
       display: block;
       margin-right: 2.35765%;
-      width: 31.76157%; }
-      main #about #info:last-child {
+      width: 31.76157%;
+      margin-top: 2em;
+      margin-bottom: 2em; }
+      main #info-div .info:last-child {
         margin-right: 0; }
-      main #about #info:nth-child(3n) {
+      main #info-div .info:nth-child(3n) {
         margin-right: 0; }
-      main #about #info:nth-child(3n+1) {
+      main #info-div .info:nth-child(3n+1) {
         clear: left; }
   main .med-logo {
     width: 1.5em;
     height: 1.5em;
     float: left;
     margin-right: 0.25em;
-    margin-left: 25%; }
-
-#skillset {
-  width: 100%; }
+    margin-left: 10%; }
+  main #skillset {
+    width: 100%;
+    margin-bottom: 2em; }
 
 #resumeProficiencies {
   clear: right;
@@ -686,19 +688,25 @@ main {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 48.82117%;
-  background-color: blue; }
+  width: 48.82117%; }
   #column1:last-child {
     margin-right: 0; }
+  #column1:nth-child(6n) {
+    margin-right: 0; }
+  #column1:nth-child(6n+1) {
+    clear: left; }
 
 #column2 {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 48.82117%;
-  background-color: green; }
+  width: 48.82117%; }
   #column2:last-child {
     margin-right: 0; }
+  #column2:nth-child(6n) {
+    margin-right: 0; }
+  #column2:nth-child(6n+1) {
+    clear: left; }
 
 #resumeProficienciesTop {
   float: left;
@@ -722,6 +730,12 @@ main {
   height: 20px;
   border-radius: 0px;
   box-shadow: 0 1px 0px #bbbbbb inset, 0 1px 0 #fcfcfc; }
+
+.progress-bar {
+  background-color: yellow; }
+
+.progress-bar-info {
+  background-color: green; }
 
 .html, .css, .scss, .bourbon, .jquery, .javascript, .velocity, .rwd, .react, .node, .socket, .rethink, .git {
   -webkit-transition: width 4.50s ease !important;
