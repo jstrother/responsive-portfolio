@@ -54,11 +54,8 @@ main {
         @include outer-container;
         #info {
             @include span-columns(4);
-            .mini-title {
-                position: fixed;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
+            img {
+
             }
         }
     }
@@ -68,6 +65,7 @@ main {
         height: 1.5em;
         float: left;
         margin-right: 0.25em;
+        margin-left: 25%;        
     }
 }
 

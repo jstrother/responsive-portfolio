@@ -656,17 +656,12 @@ main {
       width: 31.76157%; }
       main #about #info:last-child {
         margin-right: 0; }
-      main #about #info .mini-title {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        -webkit-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%); }
   main .med-logo {
     width: 1.5em;
     height: 1.5em;
     float: left;
-    margin-right: 0.25em; }
+    margin-right: 0.25em;
+    margin-left: 25%; }
 
 #skillset {
   width: 100%; }
