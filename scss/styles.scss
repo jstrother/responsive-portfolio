@@ -54,9 +54,7 @@ main {
         @include outer-container;
         #info {
             @include span-columns(4);
-            img {
-
-            }
+            @include omega(3n);
         }
     }
     

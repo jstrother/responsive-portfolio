@@ -656,6 +656,10 @@ main {
       width: 31.76157%; }
       main #about #info:last-child {
         margin-right: 0; }
+      main #about #info:nth-child(3n) {
+        margin-right: 0; }
+      main #about #info:nth-child(3n+1) {
+        clear: left; }
   main .med-logo {
     width: 1.5em;
     height: 1.5em;
