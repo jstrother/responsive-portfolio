@@ -142,12 +142,11 @@ main {
 }
 
 .progress-bar {
-    background-color: yellow;
     height: 20px;
 }
 
 .progress-bar-info {
-    background-color: green;
+    background-color: $green;
     height: 20px;
 }
 
