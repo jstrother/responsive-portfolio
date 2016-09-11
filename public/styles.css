@@ -607,18 +607,11 @@ textarea {
   font-family: openSans;
   src: url(../font/OpenSans-Regular.ttf); }
 
-* {
-  border: 1px solid red; }
-
 header {
-  background-color: #3498DB;
-  max-width: em(2000px);
-  margin-left: auto;
-  margin-right: auto; }
-  header::after {
-    clear: both;
-    content: "";
-    display: block; }
+  background-color: #258cd1;
+  text-align: center;
+  margin-top: -1.5em;
+  padding-bottom: 2em; }
   header a:link {
     color: #ffffff; }
   header a:hover {
@@ -629,33 +622,51 @@ header {
     color: #c0cdd1; }
   header #img-div {
     float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 10.43705%;
-    margin-top: 1em; }
-    header #img-div:last-child {
-      margin-right: 0; }
+    margin: 0;
+    padding: 0; }
     header #img-div img {
-      width: 7em;
-      height: 5.5em; }
+      width: 8.2em;
+      height: 6.9em;
+      padding: 1em; }
+  header h1 {
+    width: 80%; }
   header nav {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 14.70196%;
-    margin-left: 29.85432%;
-    margin-top: 1.5%;
-    margin-bottom: 1%;
-    text-align: center; }
-    header nav:last-child {
-      margin-right: 0; }
-    header nav h1 {
-      margin-top: 0; }
-    header nav :nth-child(3) {
+    width: 80%; }
+    header nav :nth-child(2) {
       margin-left: 2.5em; }
 
 main {
   background-color: #ECF0F1; }
+  main #intro {
+    padding-top: 4em;
+    width: 90%;
+    text-align: center; }
+  main #about {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto; }
+    main #about::after {
+      clear: both;
+      content: "";
+      display: block; }
+    main #about #info {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%; }
+      main #about #info:last-child {
+        margin-right: 0; }
+      main #about #info .mini-title {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%); }
+  main .med-logo {
+    width: 1.5em;
+    height: 1.5em;
+    float: left;
+    margin-right: 0.25em; }
 
 #skillset {
   width: 100%; }
@@ -718,13 +729,13 @@ main {
   transition: width 4.50s ease !important; }
 
 .parallax-window {
-  max-height: 30em;
+  max-height: 33em;
   overflow: hidden;
   position: relative;
   width: 100%; }
 
 .parallax-static-content {
-  height: 30em;
+  height: 33em;
   color: #9A9A8A;
   padding: 8em 0;
   position: relative;
@@ -732,11 +743,11 @@ main {
 
 .parallax-background {
   background-position: bottom;
-  background-size: cover no-repeat;
-  height: 60em;
+  background-size: cover;
+  height: 66em;
   left: 0;
   position: absolute;
-  top: -10em;
+  top: -11em;
   width: 100%; }
 
 #firstBG .parallax-background {

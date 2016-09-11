@@ -10,10 +10,10 @@ $(document).ready(function() {
         $('.css').css('width', '95%');
         $('.scss').css('width', '95%');
         $('.bourbon').css('width', '85%');
-        $('.javascript').css('width', '95%');
+        $('.javascript').css('width', '90%');
         $('.jquery').css('width', '90%');
         $('.velocity').css('width', '75%');
-        $('.rwd').css('width', '85%');
+        $('.rwd').css('width', '75%');
         $('.react').css('width', '70%');
         $('.node').css('width', '90%');
         $('.socket').css('width', '85%');

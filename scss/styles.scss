@@ -5,13 +5,11 @@
 @import "myVariables";
 @import "myFonts";
 
-* {
-    border: 1px solid red;
-}
-
 header {
-    background-color: $baseBlue;
-    @include outer-container(em(2000px));
+    background-color: darken($baseBlue, 5%);
+    text-align: center;
+    margin-top: -1.5em;
+    padding-bottom: 2em;
     a:link {
         color: $white;
     }
@@ -25,23 +23,21 @@ header {
         color: darken($baseOffWhite, 15%);
     }
     #img-div {
-        @include span-columns(1.5);
-        margin-top: 1em;
+        float: left;
+        margin: 0;
+        padding: 0;
         img {
-            width: 7em;
-            height: 5.5em;
+            width: 8.2em;
+            height: 6.9em;
+            padding: 1em;
         }
     }
+    h1 {
+        width: 80%;
+    }
     nav {
-        @include span-columns(2);
-        @include shift(3.5);
-        margin-top: 1.5%;
-        margin-bottom: 1%;
-        text-align: center;
-        h1 {
-            margin-top: 0;
-        }
-        :nth-child(3) {
+        width: 80%;
+        :nth-child(2) {
             margin-left: 2.5em;
         }
     }
@@ -49,6 +45,30 @@ header {
 
 main {
     background-color: $baseOffWhite;
+    #intro {
+        padding-top: 4em;
+        width: 90%;
+        text-align: center;
+    }
+    #about {
+        @include outer-container;
+        #info {
+            @include span-columns(4);
+            .mini-title {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+    
+    .med-logo {
+        width: 1.5em;
+        height: 1.5em;
+        float: left;
+        margin-right: 0.25em;
+    }
 }
 
 #skillset {
@@ -113,7 +133,7 @@ main {
  }
  
 //  parallax
-$parallax-window-height: 30em;
+$parallax-window-height: 33em;
 $parallax-background-height: $parallax-window-height * 2;
 
 .parallax-window {
@@ -124,7 +144,7 @@ $parallax-background-height: $parallax-window-height * 2;
 }
 
 .parallax-static-content {
-    height: 30em;
+    height: 33em;
     color: #9A9A8A;
     padding: 8em 0;
     position: relative;
@@ -133,7 +153,7 @@ $parallax-background-height: $parallax-window-height * 2;
 
 .parallax-background {
   background-position: bottom;
-  background-size: cover no-repeat;
+  background-size: cover;
   height: $parallax-background-height;
   left: 0;
   position: absolute;
