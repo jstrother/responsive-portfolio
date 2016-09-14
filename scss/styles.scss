@@ -1,9 +1,10 @@
 @import "bourbon/bourbon";
 @import "base/base";
-// @import "grid-settings";
 @import "neat/neat";
 @import "normalize";
 @import "myVariables";
+@import "mySkillSet";
+@import "myParallax";
 
 header {
     width: 100%;
@@ -48,10 +49,12 @@ main {
             text-align: center;
             font-size: 3.5em;
         }
-        img {
+        #head-img {
             width: 8.2em;
             height: 6.9em;
             margin: auto;
+        }h4 {
+            font-size: 2em;
         }
     }
     #info-div {
@@ -65,17 +68,29 @@ main {
                 @include omega(3n);
             }
         }
-    }
-    .med-logo {
-        width: 0.5em;
-        height: 5em;
-        float: left;
-        margin-right: 0.25em;
-        margin-left: 10%;   
+        .info-header {
+            margin-left: 30%;
+            @include media($gtDesktop) {
+                margin-left: 20%;
+            }
+        }
+        .med-logo {
+            width: 3em;
+            height: 3em;
+            float: left;
+            margin: 0.25em 0.5em -0.25em 10%;
+            @include media($gtDesktop) {
+                width: 2em;
+                height: 2em;
+            }
+        }
     }
     #skillset {
         width: 100%;
         margin-bottom: 2em;
+        h4 {
+            text-align: center;
+        }
     }
     #projects {
         padding: 0 2em 0 2em;
@@ -92,131 +107,7 @@ main {
         margin-left: 1em;
     }
 }
-
-// skillset
-
-#resumeProficiencies {
-    border: 1px solid $baseOffWhite;
-    // removing this border makes the progress bars not work properly. leave in for hack-fix.
-	clear: right;
-	width: 100%;
-	margin: 1.25em;
-    @include outer-container;
-}
-
-#column1 {
-    @include span-columns(6);
-    @include omega(6n);
-}
-
-#column2 {
-    @include span-columns(6);
-    @include omega(6n);
-}
-
-#resumeProficienciesTop {
-	float: left;
-	clear: right;
-	width: 100%;
-	margin: -5px 0px 0px 0px;
-	text-align: left;
-	font-weight: 600;
-}
-
-#resumeProficienciesBottom {
-	float: left;
-	clear: right;
-	width: 80%;
-	margin: 2px 0px 0px 0px;
-}
-
-.progress {
-	background:#e9e5e2;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#dddddd), to(#e9e5e2));
-	background-image: -webkit-linear-gradient(top, #dddddd, #e9e5e2);
-	background-image: -moz-linear-gradient(top, #dddddd, #e9e5e2);
-	background-image: -ms-linear-gradient(top, #dddddd, #e9e5e2);
-	background-image: -o-linear-gradient(top, #dddddd, #e9e5e2);
-	background-image: linear-gradient(top, #dddddd, #e9e5e2);  
-	height: 20px; 
-	border-radius: 0px;
-	-moz-box-shadow: 0 1px 0px #bebbb9 inset, 0 1px 0 #fcfcfc;	 
-	-webkit-box-shadow: 0 1px 0px #bebbb9 inset, 0 1px 0 #fcfcfc;	 
-	box-shadow: 0 1px 0px #bbbbbb inset, 0 1px 0 #fcfcfc;	  
-}
-
-.progress-bar {
-    height: 20px;
-}
-
-.progress-bar-info {
-    background-color: $baseBlue;
-    height: 20px;
-}
-
-.html, .css, .scss, .bourbon, .jquery, .javascript, .velocity, .rwd, .react, .node, .socket, .rethink, .git {
-
- -webkit-transition: width 4.50s ease !important;
- -moz-transition: width 4.50s ease !important;
-   -o-transition: width 4.50s ease !important;
-      transition: width 4.50s ease !important;
- }
  
-//  parallax
-$parallax-window-height: 33em;
-$parallax-background-height: $parallax-window-height * 2;
-
-.parallax-window {
-  max-height: $parallax-window-height;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-}
-
-.parallax-static-content {
-    height: 33em;
-    color: lighten($baseOffWhite, 20%);
-    padding: 1em 0;
-    position: relative;
-    z-index: 9;
-    text-align: center;
-    font-size: 2.5em;
-}
-
-.parallax-background {
-  background-position: center center;
-  background-size: cover;
-  height: $parallax-background-height;
-  left: 0;
-  position: absolute;
-  top: - $parallax-window-height / 3;
-  width: 100%;
-}
-
-#firstBG {
-    height: 30em;
-    .parallax-background {
-        background: url("../img/background4.jpg");
-    }
-}
-
-#secondBG {
-    height: 35em;
-    .parallax-background {
-        background: url("../img/background11.jpg");
-        @include media($mobile) {
-            
-        }
-    }
-}
-
-.background-div {
-    clear: both;
-    width: 100%;
-}
-
-// Based on http://codepen.io/skeurentjes/
-
 footer {
     background-color: $baseDarkBlue;
     padding: 1em;

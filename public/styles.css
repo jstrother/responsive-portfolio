@@ -606,98 +606,6 @@ textarea {
   font-family: openSans;
   src: url(../font/OpenSans-Regular.ttf); }
 
-header {
-  width: 100%;
-  background-color: #258cd1;
-  margin-top: -1.5em;
-  padding: 1em 0 1em 0;
-  text-align: center; }
-  header h1 {
-    font-size: 4em;
-    margin-bottom: 0; }
-  header a:link {
-    color: #ffffff; }
-  header a:hover {
-    background-color: #1d6fa5; }
-  header a:active {
-    background-color: #5faee3; }
-  header a:visited {
-    color: #c0cdd1; }
-  header nav {
-    font-size: 1.25em; }
-    header nav :nth-child(2) {
-      margin-left: 2.5em; }
-
-main {
-  background-color: #ECF0F1; }
-  main #about {
-    padding: 5em 0 2.5em 0; }
-    main #about #about-header {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      height: em(300px); }
-    main #about h2 {
-      text-align: center;
-      font-size: 3.5em; }
-    main #about img {
-      width: 8.2em;
-      height: 6.9em;
-      margin: auto; }
-  main #info-div {
-    padding: 3em;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto; }
-    main #info-div::after {
-      clear: both;
-      content: "";
-      display: block; }
-    main #info-div .info {
-      margin: 2em 0;
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 100%; }
-      main #info-div .info:last-child {
-        margin-right: 0; }
-      @media screen and (min-width: 991px) {
-        main #info-div .info {
-          float: left;
-          display: block;
-          margin-right: 2.35765%;
-          width: 31.76157%; }
-          main #info-div .info:last-child {
-            margin-right: 0; }
-          main #info-div .info:nth-child(3n) {
-            margin-right: 0; }
-          main #info-div .info:nth-child(3n+1) {
-            clear: left; } }
-  main .med-logo {
-    width: 0.5em;
-    height: 5em;
-    float: left;
-    margin-right: 0.25em;
-    margin-left: 10%; }
-  main #skillset {
-    width: 100%;
-    margin-bottom: 2em; }
-  main #projects {
-    padding: 0 2em 0 2em; }
-    main #projects h4 {
-      position: relative;
-      left: 40%;
-      width: 10em; }
-  main .project-image {
-    width: 15em;
-    height: 10em;
-    float: right;
-    margin-left: 1em; }
-
 #resumeProficiencies {
   border: 1px solid #ECF0F1;
   clear: right;
@@ -806,6 +714,110 @@ main {
 .background-div {
   clear: both;
   width: 100%; }
+
+header {
+  width: 100%;
+  background-color: #258cd1;
+  margin-top: -1.5em;
+  padding: 1em 0 1em 0;
+  text-align: center; }
+  header h1 {
+    font-size: 4em;
+    margin-bottom: 0; }
+  header a:link {
+    color: #ffffff; }
+  header a:hover {
+    background-color: #1d6fa5; }
+  header a:active {
+    background-color: #5faee3; }
+  header a:visited {
+    color: #c0cdd1; }
+  header nav {
+    font-size: 1.25em; }
+    header nav :nth-child(2) {
+      margin-left: 2.5em; }
+
+main {
+  background-color: #ECF0F1; }
+  main #about {
+    padding: 5em 0 2.5em 0; }
+    main #about #about-header {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      height: em(300px); }
+    main #about h2 {
+      text-align: center;
+      font-size: 3.5em; }
+    main #about #head-img {
+      width: 8.2em;
+      height: 6.9em;
+      margin: auto; }
+    main #about h4 {
+      font-size: 2em; }
+  main #info-div {
+    padding: 3em;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto; }
+    main #info-div::after {
+      clear: both;
+      content: "";
+      display: block; }
+    main #info-div .info {
+      margin: 2em 0;
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      main #info-div .info:last-child {
+        margin-right: 0; }
+      @media screen and (min-width: 991px) {
+        main #info-div .info {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 31.76157%; }
+          main #info-div .info:last-child {
+            margin-right: 0; }
+          main #info-div .info:nth-child(3n) {
+            margin-right: 0; }
+          main #info-div .info:nth-child(3n+1) {
+            clear: left; } }
+    main #info-div .info-header {
+      margin-left: 30%; }
+      @media screen and (min-width: 991px) {
+        main #info-div .info-header {
+          margin-left: 20%; } }
+    main #info-div .med-logo {
+      width: 3em;
+      height: 3em;
+      float: left;
+      margin: 0.25em 0.5em -0.25em 10%; }
+      @media screen and (min-width: 991px) {
+        main #info-div .med-logo {
+          width: 2em;
+          height: 2em; } }
+  main #skillset {
+    width: 100%;
+    margin-bottom: 2em; }
+    main #skillset h4 {
+      text-align: center; }
+  main #projects {
+    padding: 0 2em 0 2em; }
+    main #projects h4 {
+      position: relative;
+      left: 40%;
+      width: 10em; }
+  main .project-image {
+    width: 15em;
+    height: 10em;
+    float: right;
+    margin-left: 1em; }
 
 footer {
   background-color: #34495E;
