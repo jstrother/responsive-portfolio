@@ -658,21 +658,14 @@ main {
       content: "";
       display: block; }
     main #info-div .info {
-      margin: 2em 0; }
-      @media screen and (max-width: em(640)) {
-        main #info-div .info {
-          float: left;
-          display: block;
-          margin-right: 7.42297%;
-          width: 261.13446%;
-          margin-left: 26.85574%; }
-          main #info-div .info:last-child {
-            margin-right: 0; }
-          main #info-div .info:nth-child(1n) {
-            margin-right: 0; }
-          main #info-div .info:nth-child(1n+1) {
-            clear: left; } }
-      @media screen and (min-width: em(641)) {
+      margin: 2em 0;
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      main #info-div .info:last-child {
+        margin-right: 0; }
+      @media screen and (min-width: 991px) {
         main #info-div .info {
           float: left;
           display: block;

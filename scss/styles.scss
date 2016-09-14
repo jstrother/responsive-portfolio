@@ -59,12 +59,8 @@ main {
         @include outer-container;
         .info {
             margin: 2em 0;
-            @include media($mobile) {
-                @include span-columns(10);
-                @include omega(1n);
-                @include shift(1);
-            }
-            @include media($gtMobile) {
+            @include span-columns(12);
+            @include media($gtDesktop) {
                 @include span-columns(4);
                 @include omega(3n);
             }
