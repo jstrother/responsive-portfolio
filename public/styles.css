@@ -818,10 +818,41 @@ main {
     main #projects h2 {
       text-align: center;
       font-size: 3.5em; }
-    main #projects h5 {
+    main #projects .project-header {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      height: 15em; }
+      @media screen and (min-width: 991px) {
+        main #projects .project-header {
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: row;
+                  flex-direction: row; } }
+      main #projects .project-header h5 {
+        position: relative;
+        left: 40%;
+        width: 10em;
+        font-size: 2.25em; }
+        @media screen and (min-width: 991px) {
+          main #projects .project-header h5 {
+            top: 45%;
+            left: 25%;
+            font-size: 1.5em; } }
+      main #projects .project-header img {
+        margin: auto; }
+    main #projects button {
       position: relative;
-      left: 40%;
-      width: 10em; }
+      left: 30%;
+      top: 10%; }
+      @media screen and (max-width: 990px) {
+        main #projects button {
+          font-size: 2em;
+          left: 15%; } }
   main .project-image {
     width: 15em;
     height: 10em;
