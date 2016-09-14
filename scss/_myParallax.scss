@@ -37,12 +37,9 @@ $parallax-background-height: $parallax-window-height * 2;
 }
 
 #secondBG {
-    height: 35em;
+    height: 30em;
     .parallax-background {
         background: url("../img/background11.jpg");
-        @include media($mobile) {
-            
-        }
     }
 }
 
