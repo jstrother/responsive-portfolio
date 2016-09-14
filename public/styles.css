@@ -608,10 +608,16 @@ textarea {
   src: url(../font/OpenSans-Regular.ttf); }
 
 header {
+  max-width: em(2000px);
+  margin-left: auto;
+  margin-right: auto;
   background-color: #258cd1;
-  text-align: center;
   margin-top: -1.5em;
-  padding-bottom: 2em; }
+  padding: 1em 0 1em 0; }
+  header::after {
+    clear: both;
+    content: "";
+    display: block; }
   header a:link {
     color: #ffffff; }
   header a:hover {
@@ -622,18 +628,34 @@ header {
     color: #c0cdd1; }
   header #img-div {
     float: left;
-    margin: 0;
+    display: block;
+    margin-right: 2.35765%;
+    width: 14.70196%;
+    float: left;
+    margin-top: 1em;
     padding: 0; }
+    header #img-div:last-child {
+      margin-right: 0; }
+    header #img-div a:hover {
+      background-color: #3498DB; }
     header #img-div img {
       width: 8.2em;
       height: 6.9em;
       padding: 1em; }
-  header h1 {
-    width: 80%; }
-  header nav {
-    width: 80%; }
-    header nav :nth-child(2) {
-      margin-left: 2.5em; }
+  header #header-container {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    margin-left: 25.58941%; }
+    header #header-container:last-child {
+      margin-right: 0; }
+    header #header-container h1 {
+      width: 80%; }
+    header #header-container nav {
+      width: 80%; }
+      header #header-container nav :nth-child(2) {
+        margin-left: 2.5em; }
 
 main {
   background-color: #ECF0F1; }
@@ -650,18 +672,33 @@ main {
       content: "";
       display: block; }
     main #info-div .info {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 31.76157%;
       margin-top: 2em;
       margin-bottom: 2em; }
-      main #info-div .info:last-child {
-        margin-right: 0; }
-      main #info-div .info:nth-child(3n) {
-        margin-right: 0; }
-      main #info-div .info:nth-child(3n+1) {
-        clear: left; }
+      @media screen and (max-width: em(640)) {
+        main #info-div .info {
+          float: left;
+          display: block;
+          margin-right: 7.42297%;
+          width: 261.13446%;
+          margin-left: 26.85574%; }
+          main #info-div .info:last-child {
+            margin-right: 0; }
+          main #info-div .info:nth-child(1n) {
+            margin-right: 0; }
+          main #info-div .info:nth-child(1n+1) {
+            clear: left; } }
+      @media screen and (min-width: em(641)) {
+        main #info-div .info {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 31.76157%; }
+          main #info-div .info:last-child {
+            margin-right: 0; }
+          main #info-div .info:nth-child(3n) {
+            margin-right: 0; }
+          main #info-div .info:nth-child(3n+1) {
+            clear: left; } }
   main .med-logo {
     width: 1.5em;
     height: 1.5em;
@@ -744,11 +781,10 @@ main {
   box-shadow: 0 1px 0px #bbbbbb inset, 0 1px 0 #fcfcfc; }
 
 .progress-bar {
-  background-color: yellow;
   height: 20px; }
 
 .progress-bar-info {
-  background-color: green;
+  background-color: #006400;
   height: 20px; }
 
 .html, .css, .scss, .bourbon, .jquery, .javascript, .velocity, .rwd, .react, .node, .socket, .rethink, .git {
