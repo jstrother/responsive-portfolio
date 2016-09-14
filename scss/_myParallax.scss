@@ -20,8 +20,6 @@ $parallax-background-height: $parallax-window-height * 2;
 }
 
 .parallax-background {
-  background-position: center center;
-  background-size: cover;
   height: $parallax-background-height;
   left: 0;
   position: absolute;
@@ -33,6 +31,7 @@ $parallax-background-height: $parallax-window-height * 2;
     height: 30em;
     .parallax-background {
         background: url("../img/background4.jpg");
+        // background-size needs to be adjusted for larger screens than mine
     }
 }
 
@@ -40,6 +39,7 @@ $parallax-background-height: $parallax-window-height * 2;
     height: 30em;
     .parallax-background {
         background: url("../img/background11.jpg");
+        // background-size needs to be adjusted for larger screens than mine
     }
 }
 
