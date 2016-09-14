@@ -1,15 +1,20 @@
 @import "bourbon/bourbon";
 @import "base/base";
+// @import "grid-settings";
 @import "neat/neat";
 @import "normalize";
 @import "myVariables";
-@import "myFonts";
 
 header {
-    @include outer-container(em(2000px));
+    width: 100%;
     background-color: darken($baseBlue, 5%);
     margin-top: -1.5em;
     padding: 1em 0 1em 0;
+    text-align: center;
+    h1 {
+        font-size: 4em;
+        margin-bottom: 0;
+    }
     a:link {
         color: $white;
     }
@@ -22,31 +27,10 @@ header {
     a:visited {
         color: darken($baseOffWhite, 15%);
     }
-    #img-div {
-        @include span-columns(2);
-        float: left;
-        margin-top: 1em;
-        padding: 0;
-        a:hover {
-            background-color: $baseBlue;
-        }
-        img {
-            width: 8.2em;
-            height: 6.9em;
-            padding: 1em;
-        }
-    }
-    #header-container {
-        @include span-columns(4);
-        @include shift(3)
-        h1 {
-            width: 80%;
-        }
-        nav {
-            width: 80%;
-            :nth-child(2) {
-                margin-left: 2.5em;
-            }
+    nav {
+        font-size: 1.25em;
+        :nth-child(2) {
+            margin-left: 2.5em;
         }
     }
 }
@@ -54,30 +38,41 @@ header {
 main {
     background-color: $baseOffWhite;
     #about {
-        padding-top: 5em;
-        width: 90%;
-        text-align: center;
+        padding: 5em 0 2.5em 0;
+        #about-header {
+            display: flex;
+            flex-direction: column;
+            height: em(300px);
+        }
+        h2 {
+            text-align: center;
+            font-size: 3.5em;
+        }
+        img {
+            width: 8.2em;
+            height: 6.9em;
+            margin: auto;
+        }
     }
     #info-div {
+        padding: 2em;
         @include outer-container;
         .info {
+            margin: 2em 0;
             @include media($mobile) {
                 @include span-columns(10);
                 @include omega(1n);
                 @include shift(1);
             }
-            margin-top: 2em;
-            margin-bottom: 2em;
             @include media($gtMobile) {
                 @include span-columns(4);
                 @include omega(3n);
             }
         }
     }
-    
     .med-logo {
-        width: 1.5em;
-        height: 1.5em;
+        width: 0.5em;
+        height: 5em;
         float: left;
         margin-right: 0.25em;
         margin-left: 10%;   
@@ -86,7 +81,6 @@ main {
         width: 100%;
         margin-bottom: 2em;
     }
-    
     #projects {
         padding: 0 2em 0 2em;
         h4 {
@@ -95,7 +89,6 @@ main {
             width: 10em;
         }
     }
-    
     .project-image {
         width: 15em;
         height: 10em;
@@ -161,7 +154,7 @@ main {
 }
 
 .progress-bar-info {
-    background-color: $green;
+    background-color: $baseBlue;
     height: 20px;
 }
 
@@ -186,14 +179,16 @@ $parallax-background-height: $parallax-window-height * 2;
 
 .parallax-static-content {
     height: 33em;
-    color: #9A9A8A;
-    padding: 8em 0;
+    color: lighten($baseDarkBlue, 10%);
+    padding: 1em 0;
     position: relative;
     z-index: 9;
+    text-align: center;
+    font-size: 2.5em;
 }
 
 .parallax-background {
-  background-position: bottom;
+  background-position: center center;
   background-size: cover;
   height: $parallax-background-height;
   left: 0;
@@ -211,6 +206,9 @@ $parallax-background-height: $parallax-window-height * 2;
 #secondBG {
     .parallax-background {
         background: url("../img/background11.jpg");
+        @include media($mobile) {
+            margin-top: 9.8em;
+        }
     }
 }
 

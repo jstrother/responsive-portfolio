@@ -8,7 +8,7 @@ button, [type='button'], [type='reset'], [type='submit'] {
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: openSans;
   font-size: 1em;
   -webkit-font-smoothing: antialiased;
   font-weight: 600;
@@ -53,7 +53,7 @@ input,
 select,
 textarea {
   display: block;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: openSans;
   font-size: 1em; }
 
 [type='color'], [type='date'], [type='datetime'], [type='datetime-local'], [type='email'], [type='month'], [type='number'], [type='password'], [type='search'], [type='tel'], [type='text'], [type='time'], [type='url'], [type='week'], input:not([type]), textarea {
@@ -165,7 +165,7 @@ th {
 
 body {
   color: #333;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: openSans;
   font-size: 1em;
   line-height: 1.5; }
 
@@ -175,8 +175,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 1.25em;
+  font-family: alegreya;
   line-height: 1.2;
   margin: 0 0 0.75em; }
 
@@ -608,16 +607,14 @@ textarea {
   src: url(../font/OpenSans-Regular.ttf); }
 
 header {
-  max-width: em(2000px);
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
   background-color: #258cd1;
   margin-top: -1.5em;
-  padding: 1em 0 1em 0; }
-  header::after {
-    clear: both;
-    content: "";
-    display: block; }
+  padding: 1em 0 1em 0;
+  text-align: center; }
+  header h1 {
+    font-size: 4em;
+    margin-bottom: 0; }
   header a:link {
     color: #ffffff; }
   header a:hover {
@@ -626,44 +623,33 @@ header {
     background-color: #5faee3; }
   header a:visited {
     color: #c0cdd1; }
-  header #img-div {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 14.70196%;
-    float: left;
-    margin-top: 1em;
-    padding: 0; }
-    header #img-div:last-child {
-      margin-right: 0; }
-    header #img-div a:hover {
-      background-color: #3498DB; }
-    header #img-div img {
-      width: 8.2em;
-      height: 6.9em;
-      padding: 1em; }
-  header #header-container {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 31.76157%;
-    margin-left: 25.58941%; }
-    header #header-container:last-child {
-      margin-right: 0; }
-    header #header-container h1 {
-      width: 80%; }
-    header #header-container nav {
-      width: 80%; }
-      header #header-container nav :nth-child(2) {
-        margin-left: 2.5em; }
+  header nav {
+    font-size: 1.25em; }
+    header nav :nth-child(2) {
+      margin-left: 2.5em; }
 
 main {
   background-color: #ECF0F1; }
   main #about {
-    padding-top: 5em;
-    width: 90%;
-    text-align: center; }
+    padding: 5em 0 2.5em 0; }
+    main #about #about-header {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      height: em(300px); }
+    main #about h2 {
+      text-align: center;
+      font-size: 3.5em; }
+    main #about img {
+      width: 8.2em;
+      height: 6.9em;
+      margin: auto; }
   main #info-div {
+    padding: 2em;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto; }
@@ -672,8 +658,7 @@ main {
       content: "";
       display: block; }
     main #info-div .info {
-      margin-top: 2em;
-      margin-bottom: 2em; }
+      margin: 2em 0; }
       @media screen and (max-width: em(640)) {
         main #info-div .info {
           float: left;
@@ -700,8 +685,8 @@ main {
           main #info-div .info:nth-child(3n+1) {
             clear: left; } }
   main .med-logo {
-    width: 1.5em;
-    height: 1.5em;
+    width: 0.5em;
+    height: 5em;
     float: left;
     margin-right: 0.25em;
     margin-left: 10%; }
@@ -784,7 +769,7 @@ main {
   height: 20px; }
 
 .progress-bar-info {
-  background-color: #006400;
+  background-color: #3498DB;
   height: 20px; }
 
 .html, .css, .scss, .bourbon, .jquery, .javascript, .velocity, .rwd, .react, .node, .socket, .rethink, .git {
@@ -799,13 +784,15 @@ main {
 
 .parallax-static-content {
   height: 33em;
-  color: #9A9A8A;
-  padding: 8em 0;
+  color: #46637f;
+  padding: 1em 0;
   position: relative;
-  z-index: 9; }
+  z-index: 9;
+  text-align: center;
+  font-size: 2.5em; }
 
 .parallax-background {
-  background-position: bottom;
+  background-position: center center;
   background-size: cover;
   height: 66em;
   left: 0;
@@ -818,6 +805,9 @@ main {
 
 #secondBG .parallax-background {
   background: url("../img/background11.jpg"); }
+  @media screen and (max-width: em(640)) {
+    #secondBG .parallax-background {
+      margin-top: 9.8em; } }
 
 .background-div {
   clear: both;
