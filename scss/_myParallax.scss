@@ -31,7 +31,9 @@ $parallax-background-height: $parallax-window-height * 2;
     height: 30em;
     .parallax-background {
         background: url("../img/background4.jpg");
-        // background-size needs to be adjusted for larger screens than mine
+        @include media($gtCinema) {
+            background-size: 100% 85%;
+        }
     }
 }
 
@@ -39,7 +41,13 @@ $parallax-background-height: $parallax-window-height * 2;
     height: 30em;
     .parallax-background {
         background: url("../img/background11.jpg");
-        // background-size needs to be adjusted for larger screens than mine
+        background-size: 100% 110%;
+        @include media($gtDesktop) {
+            background-size: 100% 100%;
+        }
+        @include media($gtCinema) {
+            background-size: 100% 85%;
+        }
     }
 }
 

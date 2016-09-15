@@ -49,6 +49,10 @@ main {
             text-align: center;
             font-size: 3.5em;
         }
+        h3 {
+            text-align: center;
+            font-size: 3em;
+        }
         #head-img {
             width: 8.2em;
             height: 6.9em;
@@ -132,10 +136,11 @@ main {
         button {
             position: relative;
             font-size: 2em;
-            left: 15%;
+            left: 10%;
+            margin: 1em;
             @include media($gtDesktop) {
                 font-size: 1em;
-                left: 40%;
+                left: 35%;
                 top: 10%;
             }
         }
