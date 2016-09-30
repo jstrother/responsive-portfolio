@@ -101,6 +101,13 @@ main {
         padding: 0 2em 0 2em;
         @include media($gtDesktop) {
             margin-top: 0;
+            @include outer-container;
+            .project {
+                @include span-columns(7);
+                @include omega(1n);
+                @include shift(2);
+                margin-bottom: 2em;
+            }
         }
         h2 {
             text-align: center;
@@ -112,17 +119,16 @@ main {
             height: 17em;
             @include media($gtDesktop) {
                 flex-direction: row;
-                margin-left: 10%;
                 height: 12em;
             }
             h5 {
                 position: relative;
-                left: 37%;
-                width: 10em;
+                left: 30%;
+                width: 5em;
                 font-size: 3em;
                 @include media($gtDesktop) {
                     top: 45%;
-                    left: 25%;
+                    left: 15%;
                     font-size: 2em;
                 }
             }
@@ -135,12 +141,11 @@ main {
         }
         button {
             position: relative;
-            font-size: 2em;
+            font-size: 1em;
             left: 10%;
             margin: 1em;
             @include media($gtDesktop) {
-                font-size: 1em;
-                left: 35%;
+                left: 25%;
                 top: 10%;
             }
         }
@@ -165,10 +170,10 @@ footer {
         }
     }
     .small-logo {
-        height: 4.5em;
-        width: 4.5em;
+        height: 3em;
+        width: 3em;
         color: $dark-grey;
-        margin: 0 0.5em 0 0.5em;
+        margin: 0 0.5em 0.5em 0;
         @include media($gtDesktop) {
             height: 2em;
             width: 2em;
