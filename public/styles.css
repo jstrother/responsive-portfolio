@@ -651,7 +651,7 @@ textarea {
   font-size: 1.75em; }
   @media screen and (min-width: 991px) {
     #resumeProficienciesTop {
-      font-size: 1em; } }
+      font-size: 1.25em; } }
 
 #resumeProficienciesBottom {
   float: left;
