@@ -627,7 +627,7 @@ textarea {
   margin-left: 8.5298%; }
   #column1:last-child, #column2:last-child {
     margin-right: 0; }
-  @media screen and (min-width: 641px) {
+  @media screen and (min-width: 991px) {
     #column1, #column2 {
       float: left;
       display: block;
@@ -884,7 +884,11 @@ main {
       position: relative;
       font-size: 1em;
       left: 10%;
-      margin: 1em; }
+      margin: 1em;
+      font-size: 1em; }
+      @media screen and (min-width: 769px) {
+        main #projects button {
+          font-size: 1.25em; } }
       @media screen and (min-width: 991px) {
         main #projects button {
           left: 25%;

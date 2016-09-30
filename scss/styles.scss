@@ -144,6 +144,10 @@ main {
             font-size: 1em;
             left: 10%;
             margin: 1em;
+            font-size: 1em;
+            @include media($gtTabletP) {
+                font-size: 1.25em;
+            }
             @include media($gtDesktop) {
                 left: 25%;
                 top: 10%;
