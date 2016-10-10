@@ -6,32 +6,44 @@
 @import "mySkillSet";
 @import "myParallax";
 
+* {
+    border: 1px solid red;
+}
+
 header {
-    width: 100%;
     background-color: darken($baseBlue, 5%);
     margin-top: -1.5em;
     padding: 1em 0 1em 0;
     text-align: center;
-    h1 {
-        font-size: 4em;
-        margin-bottom: 0;
-    }
-    a:link {
-        color: $white;
-    }
-    a:hover {
-        background-color: darken($baseBlue, 15%);
-    }
-    a:active {
-        background-color: lighten($baseBlue, 10%);
-    }
-    a:visited {
-        color: darken($baseOffWhite, 15%);
-    }
-    nav {
-        font-size: 1.25em;
-        :nth-child(2) {
-            margin-left: 2.5em;
+    display: flex;
+    height: 5em;
+    width: 100%;
+    #header-container {
+        width: 95%;
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+        h1 {
+            font-size: 4em;
+            margin-bottom: 0;
+        }
+        a:link {
+            color: $white;
+        }
+        a:hover {
+            background-color: darken($baseBlue, 15%);
+        }
+        a:active {
+            background-color: lighten($baseBlue, 10%);
+        }
+        a:visited {
+            color: darken($baseOffWhite, 15%);
+        }
+        nav {
+            font-size: 1.25em;
+            :nth-child(2) {
+                margin-left: 2.5em;
+            }
         }
     }
 }
@@ -141,10 +153,11 @@ main {
         }
         button {
             position: relative;
-            font-size: 1em;
             left: 10%;
             margin: 1em;
             font-size: 1em;
+            width: 5em;
+            height: 3em;
             @include media($gtTabletP) {
                 font-size: 1.25em;
             }

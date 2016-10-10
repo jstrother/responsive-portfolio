@@ -725,27 +725,43 @@ textarea {
   clear: both;
   width: 100%; }
 
+* {
+  border: 1px solid red; }
+
 header {
-  width: 100%;
   background-color: #258cd1;
   margin-top: -1.5em;
   padding: 1em 0 1em 0;
-  text-align: center; }
-  header h1 {
-    font-size: 4em;
-    margin-bottom: 0; }
-  header a:link {
-    color: #ffffff; }
-  header a:hover {
-    background-color: #1d6fa5; }
-  header a:active {
-    background-color: #5faee3; }
-  header a:visited {
-    color: #c0cdd1; }
-  header nav {
-    font-size: 1.25em; }
-    header nav :nth-child(2) {
-      margin-left: 2.5em; }
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 5em;
+  width: 100%; }
+  header #header-container {
+    width: 95%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-line-pack: center;
+        align-content: center; }
+    header #header-container h1 {
+      font-size: 4em;
+      margin-bottom: 0; }
+    header #header-container a:link {
+      color: #ffffff; }
+    header #header-container a:hover {
+      background-color: #1d6fa5; }
+    header #header-container a:active {
+      background-color: #5faee3; }
+    header #header-container a:visited {
+      color: #c0cdd1; }
+    header #header-container nav {
+      font-size: 1.25em; }
+      header #header-container nav :nth-child(2) {
+        margin-left: 2.5em; }
 
 main {
   background-color: #ECF0F1; }
@@ -882,10 +898,11 @@ main {
         margin: auto; }
     main #projects button {
       position: relative;
-      font-size: 1em;
       left: 10%;
       margin: 1em;
-      font-size: 1em; }
+      font-size: 1em;
+      width: 5em;
+      height: 3em; }
       @media screen and (min-width: 769px) {
         main #projects button {
           font-size: 1.25em; } }
