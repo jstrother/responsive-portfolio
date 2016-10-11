@@ -1,9 +1,19 @@
 const $ = require('jquery');
-const velocity = require('velocity-animate');
 
 $(document).ready(function() {
     console.log('ready');
     
+    // links scroll to anchors
+    $('a[href^="#"]').on('click', function(event) {
+      var target = $(this.getAttribute('href'));
+      if(target.length) {
+          event.preventDefault();
+          $('html, body').stop().animate({
+              scrollTop: target.offset().top
+          }, 2000);
+      }
+    });
+
     // skillset
     $('.html').css('width', '90%');
     $('.css').css('width', '90%');

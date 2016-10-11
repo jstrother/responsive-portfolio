@@ -725,9 +725,6 @@ textarea {
   clear: both;
   width: 100%; }
 
-* {
-  border: 1px solid red; }
-
 header {
   background-color: #258cd1;
   margin-top: -1.5em;
@@ -736,10 +733,12 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 5em;
+  height: 6em;
   width: 100%; }
   header #header-container {
     width: 95%;
+    height: 5em;
+    margin: auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -748,8 +747,8 @@ header {
     -ms-flex-line-pack: center;
         align-content: center; }
     header #header-container h1 {
-      font-size: 4em;
-      margin-bottom: 0; }
+      font-size: 2em;
+      margin: auto 0 auto -12em; }
     header #header-container a:link {
       color: #ffffff; }
     header #header-container a:hover {
@@ -759,9 +758,21 @@ header {
     header #header-container a:visited {
       color: #c0cdd1; }
     header #header-container nav {
-      font-size: 1.25em; }
-      header #header-container nav :nth-child(2) {
-        margin-left: 2.5em; }
+      font-size: 1.25em;
+      -ms-flex-item-align: end;
+          align-self: flex-end;
+      margin: auto -19em auto 0;
+      padding-top: 0.25em; }
+      header #header-container nav .bar-on-right {
+        border-right: 2px solid white;
+        padding-right: 0.25em; }
+      header #header-container nav #about {
+        cursor: pointer;
+        display: inline; }
+      header #header-container nav #projects {
+        margin-left: 0.5em;
+        cursor: pointer;
+        display: inline; }
 
 main {
   background-color: #ECF0F1; }
@@ -786,8 +797,6 @@ main {
       width: 8.2em;
       height: 6.9em;
       margin: auto; }
-    main #about h4 {
-      font-size: 2em; }
   main #info-div {
     padding: 3em;
     max-width: 1200px;
@@ -833,11 +842,15 @@ main {
           height: 2em; } }
   main #skillset {
     width: 100%;
-    margin-bottom: 2em; }
-    main #skillset h4 {
+    margin: 3em 0 2em 0; }
+    main #skillset #skillset-header {
+      height: 4em;
+      margin-bottom: 2em;
       text-align: center; }
+      main #skillset #skillset-header h2 {
+        font-size: 3.5em; }
   main #projects {
-    margin-top: -8em;
+    margin: -8em 0 2em 0;
     padding: 0 2em 0 2em; }
     @media screen and (min-width: 991px) {
       main #projects {
@@ -901,7 +914,7 @@ main {
       left: 10%;
       margin: 1em;
       font-size: 1em;
-      width: 5em;
+      width: 12em;
       height: 3em; }
       @media screen and (min-width: 769px) {
         main #projects button {
@@ -911,8 +924,13 @@ main {
           left: 25%;
           top: 10%; } }
 
+.topReturn {
+  position: relative;
+  left: 95%; }
+
 footer {
   background-color: #34495E;
+  margin-top: 1em;
   padding: 2em 1em 1em 1em;
   width: 100%;
   height: 10em; }
