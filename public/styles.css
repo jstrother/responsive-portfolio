@@ -799,6 +799,7 @@ main {
       margin: auto; }
   main #info-div {
     padding: 3em;
+    width: 100%;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto; }
@@ -896,8 +897,9 @@ main {
           height: 12em; } }
       main #projects .project-header h5 {
         position: relative;
-        left: 30%;
+        left: 50%;
         width: 5em;
+        height: 2em;
         font-size: 3em; }
         @media screen and (min-width: 991px) {
           main #projects .project-header h5 {
@@ -907,7 +909,6 @@ main {
       main #projects .project-header .project-image {
         width: 15em;
         height: 10em;
-        float: right;
         margin: auto; }
     main #projects button {
       position: relative;
@@ -927,6 +928,10 @@ main {
 .topReturn {
   position: relative;
   left: 95%; }
+
+#firstTopReturn {
+  postition: relative;
+  left: 70.5%; }
 
 footer {
   background-color: #34495E;

@@ -6,6 +6,10 @@
 @import "mySkillSet";
 @import "myParallax";
 
+* {
+    // border: 1px solid red;
+}
+
 header {
     background-color: darken($baseBlue, 5%);
     margin-top: -1.5em;
@@ -84,6 +88,7 @@ main {
     }
     #info-div {
         padding: 3em;
+        width: 100%;
         @include outer-container;
         .info {
             margin: 2em 0;
@@ -149,8 +154,9 @@ main {
             }
             h5 {
                 position: relative;
-                left: 30%;
+                left: 50%;
                 width: 5em;
+                height: 2em;
                 font-size: 3em;
                 @include media($gtDesktop) {
                     top: 45%;
@@ -161,7 +167,6 @@ main {
             .project-image {
                 width: 15em;
                 height: 10em;
-                float: right;
                 margin: auto;
             }
         }
@@ -186,6 +191,11 @@ main {
 .topReturn {
     position: relative;
     left: 95%;
+}
+
+#firstTopReturn {
+    postition: relative;
+    left: 70.5%;
 }
  
 footer {
