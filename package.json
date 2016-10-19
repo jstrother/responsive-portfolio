@@ -6,14 +6,15 @@
   "scripts": {
     "scss": "node-sass --output-stlye compressed scss/styles.scss public/styles.css",
     "autoprefixer": "postcss -u autoprefixer -r public/styles.css",
+    "cleancss": "cleancss -o public/styles.css public/styles.css",
     "browserify": "browserify js/*.js -d -o public/scripts.js",
     "uglify": "uglifyjs public/scripts.js -m -c -o public/scripts.js",
-    "image": "cp img/*.* public/img/",
+    "image": "imagemin img/* -o public/img",
     "font": "cp font/*.* public/font/",
     "html": "cp *.html public/",
     "serve": "browser-sync start --server --files 'public/*.html, public/*.css, public/*.js, public/font/*.*, public/img/*.*'",
     "build:html": "npm run html && npm run image && npm run font",
-    "build:css": "npm run scss && npm run autoprefixer",
+    "build:css": "npm run scss && npm run autoprefixer && npm run cleancss",
     "build:js": "npm run browserify && npm run uglify",
     "build": "npm run build:html & npm run build:css && npm run build:js",
     "watch:html": "onchange '*.html' -- npm run build:html",
@@ -22,7 +23,7 @@
     "watch": "parallelshell 'npm run serve' 'npm run watch:html' 'npm run watch:css' 'npm run watch:js'",
     "start": "npm run build && npm run watch",
     "ac": "git add --all && git commit -m",
-    "push": "git push origin master && git push origin gh-pages && git status",
+    "push": "git push origin master && git status",
     "pull": "git pull origin master && git status"
   },
   "repository": {
