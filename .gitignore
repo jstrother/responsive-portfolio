@@ -4,3 +4,4 @@ base/
 bourbon/
 neat/
 *.map
+.bash_profile
