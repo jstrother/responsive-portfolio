@@ -13,6 +13,17 @@ $(document).ready(function() {
           }, 2000);
       }
     });
+    
+    // code for hamburger menu
+    $('.icon').on('click', function() {
+      var target = $('nav');
+      if (target.className === 'navHeader') {
+        target.className += 'responsive';
+      }
+      else {
+        target.className = 'navHeader';
+      }
+    });
 
     // skillset
     $('.html').css('width', '90%');

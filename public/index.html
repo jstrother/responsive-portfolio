@@ -9,10 +9,16 @@
     <header id="home">
         <div id="header-container">
             <h1>Jim Strother</h1>
-            <nav>
-                <a href="#about-header" class="bar-on-right">who i am</a>
-                <a href="#skillset-header" class="bar-on-right">skill set</a>
-                <a href="#projects-header">projects</a>
+            <nav class="navHeader">
+                <ul>
+                    <li><a href="#firstBG" class="bar-on-right">top</a></li>
+                    <li><a href="#about-header" class="bar-on-right">who i am</a></li>
+                    <li><a href="#skillset-header" class="bar-on-right">skill set</a></li>
+                    <li><a href="#projects-header">projects</a></li>
+                    <li class="icon">
+                        <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+                    </li>
+                </ul>
             </nav>
         </div>
     </header>
@@ -199,6 +205,7 @@
                             <img src="img/flappy-bird.png" alt="Flappy Bird" class="project-image">
                         </div>
                         <p>A project that taught me a lot of JavaScript, Flappy Bird was my first real introduction to that language. I learned how to link JavaScript files together and keeping the code simple to read and understand. This also introduced me to Node.js (not used in this project though) by showing me require statements to link the files together. This sparked an interest in Node.js that lead me to enlarging my skillset and becoming a Full-Stack JavaScript Developer.</p>
+                        <p>There is a small issue I am trying to fix.  If the bird falls off of the screen, the game doesn't end.  I am currently going through several javascript files to find and fix the error.</p>
                         <a href="http://jstrother.github.io/flappy-bird" target="_blank"><button>See it work!</button></a>
                         <a href="https://github.com/jstrother/flappy-bird" target="_blank"><button>Look at the code!</button></a>
                     </div>
