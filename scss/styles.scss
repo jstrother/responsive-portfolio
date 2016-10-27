@@ -100,7 +100,7 @@ header {
                         float: none;
                         display: inline;
                         a {
-                            display: block;
+                            display: bl;
                         }
                     }
                 }
@@ -123,9 +123,16 @@ header {
 }
 
 main {
-    padding-top: 4em;
+    .spaceDiv {
+        height: $headerContainerHght - 4em;
+        width: 100%;
+        visibility: hidden;
+    }
+    #spaceDivSkills {
+        height: $headerContainerHght - 3em;
+    }
     #about {
-        padding: 9em 0 2.5em 0;
+        padding: 5em 0 2.5em 0;
         #about-header {
             display: flex;
             flex-direction: column;

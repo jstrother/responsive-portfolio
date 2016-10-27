@@ -6,15 +6,15 @@
     <link rel="stylesheet" href="styles.css" type="text/css" />
 </head>
 <body>
-    <header id="home">
+    <header>
         <div id="header-container">
             <h1>Jim Strother</h1>
-            <nav class="navHeader">
-                <ul>
-                    <li><a href="#firstBG" class="bar-on-right">top</a></li>
-                    <li><a href="#about-header" class="bar-on-right">who i am</a></li>
-                    <li><a href="#skillset-header" class="bar-on-right">skill set</a></li>
-                    <li><a href="#projects-header">projects</a></li>
+            <nav>
+                <ul class="navHeader" id="navMenu">
+                    <li><a href="#spaceDivTop" class="bar-on-right">top</a></li>
+                    <li><a href="#spaceDivAbout" class="bar-on-right">who i am</a></li>
+                    <li><a href="#spaceDivSkills" class="bar-on-right">skill set</a></li>
+                    <li><a href="#spaceDivProjects">projects</a></li>
                     <li class="icon">
                         <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
                     </li>
@@ -23,6 +23,7 @@
         </div>
     </header>
     <main>
+        <div id="spaceDivTop" class="spaceDiv"></div>
         <div class="background-div" id="firstBG">
             <!--using a parallax scroll on background image-->
             <div id="js-parallax-window1" class="parallax-window">
@@ -34,6 +35,7 @@
                 <div id="js-parallax-background1" class="parallax-background"></div>
             </div>
         </div>
+        <div id="spaceDivAbout" class="spaceDiv"></div>
         <div id="about">
             <div id="about-header">
                 <h2>Who I Am</h2>
@@ -62,9 +64,9 @@
                     <p>Few things excite me more than "new". Whether it is a new place- such as my first-ever trip to southern California recently, or discovering a new database (RethinkDB) that fits closely with my belief that the web should be as real-time as possible, I never stop exploring places or ideas.</p>
                     <!--<img src="img/close-up3.jpg" alt="Me! In the woods!">-->
                 </section>
-                <a href="#home" class="topReturn" id="firstTopReturn">Top</a>
             </div>
         </div>
+        <div id="spaceDivSkills" class="spaceDiv"></div>
         <div id="skillset">
             <div id="skillset-header">
             	<h2>Skill Set</h2>
@@ -183,7 +185,6 @@
                     <br><br>
                 </div>
             </div>
-            <a href="#home" class="topReturn">Top</a>
         </div>
         <div class="background-div" id="secondBG">
             <!--using a parallax scroll on background image-->
@@ -192,6 +193,7 @@
                 <div id="js-parallax-background2" class="parallax-background"></div>
             </div>
         </div>
+        <div id="spaceDivProjects" class="spaceDiv"></div>
         <div id="projects">
             <!--projects list-->
             <section>
@@ -201,23 +203,12 @@
                     <br><br>
                     <div class="project">
                         <div class="project-header">
-                            <h5>Flappy Bird</h5>
-                            <img src="img/flappy-bird.png" alt="Flappy Bird" class="project-image">
+                            <h5>Task List</h5>
+                            <img src="img/task-list.png" alt="Task List" class="project-image">
                         </div>
-                        <p>A project that taught me a lot of JavaScript, Flappy Bird was my first real introduction to that language. I learned how to link JavaScript files together and keeping the code simple to read and understand. This also introduced me to Node.js (not used in this project though) by showing me require statements to link the files together. This sparked an interest in Node.js that lead me to enlarging my skillset and becoming a Full-Stack JavaScript Developer.</p>
-                        <p>There is a small issue I am trying to fix.  If the bird falls off of the screen, the game doesn't end.  I am currently going through several javascript files to find and fix the error.</p>
-                        <a href="http://jstrother.github.io/flappy-bird" target="_blank"><button>See it work!</button></a>
-                        <a href="https://github.com/jstrother/flappy-bird" target="_blank"><button>Look at the code!</button></a>
-                    </div>
-                    <br><br>
-                    <div class="project">
-                        <div class="project-header">
-                            <h5>API "Hack"</h5>
-                            <img src="img/api.png" alt="Api 'Hack'" class="project-image">
-                        </div>
-                        <p>In this project, I learned how to interact with the endpoints of an API. As it was the introduction of basic CRUD functions, it actually dovetailed nicely into my rising interest in Node.js. This one is just a simple recommendation program for any books, shows, movies, and more that you enjoy.</p>
-                        <a href="http://jstrother.github.io/read-watch-listen/public/index.html" target="_blank"><button>See it work!</button></a>
-                        <a href="https://github.com/jstrother/read-watch-listen" target="_blank"><button>Look at the code!</button></a>
+                        <p>This project was my final project at Thinkful. It is a full-stack app with a React/Redux front-end and, using Node.js and Socket.io, connects to a RethinkDB database to keep track of tasks via a persistent list. The tech stack that I used here is one that I am interested in using as my main stack for any future side-projects as it lends itself very nicely to the real-time web.</p>
+                        <a href="http://52.43.128.234:9000" target="_blank"><button>See it work!</button></a>
+                        <a href="https://github.com/jstrother/task-list" target="_blank"><button>Look at the code!</button></a>
                     </div>
                     <br><br>
                     <div class="project">
@@ -233,18 +224,28 @@
                     <br><br>
                     <div class="project">
                         <div class="project-header">
-                            <h5>Task List</h5>
-                            <img src="img/task-list.png" alt="Task List" class="project-image">
+                            <h5>API "Hack"</h5>
+                            <img src="img/api.png" alt="Api 'Hack'" class="project-image">
                         </div>
-                        <p>This project was my final project at Thinkful. It is a full-stack app with a React/Redux front-end and, using Node.js and Socket.io, connects to a RethinkDB database to keep track of tasks via a persistent list. The tech stack that I used here is one that I am interested in using as my main stack for any future side-projects as it lends itself very nicely to the real-time web.</p>
-                        <a href="http://52.43.128.234:9000" target="_blank"><button>See it work!</button></a>
-                        <a href="https://github.com/jstrother/task-list" target="_blank"><button>Look at the code!</button></a>
+                        <p>In this project, I learned how to interact with the endpoints of an API. As it was the introduction of basic CRUD functions, it actually dovetailed nicely into my rising interest in Node.js. This one is just a simple recommendation program for any books, shows, movies, and more that you enjoy.</p>
+                        <a href="http://jstrother.github.io/read-watch-listen/public/index.html" target="_blank"><button>See it work!</button></a>
+                        <a href="https://github.com/jstrother/read-watch-listen" target="_blank"><button>Look at the code!</button></a>
+                    </div>
+                    <br><br>
+                    <div class="project">
+                        <div class="project-header">
+                            <h5>Flappy Bird</h5>
+                            <img src="img/flappy-bird.png" alt="Flappy Bird" class="project-image">
+                        </div>
+                        <p>A project that taught me a lot of JavaScript, Flappy Bird was my first real introduction to that language. I learned how to link JavaScript files together and keeping the code simple to read and understand. This also introduced me to Node.js (not used in this project though) by showing me require statements to link the files together. This sparked an interest in Node.js that lead me to enlarging my skillset and becoming a Full-Stack JavaScript Developer.</p>
+                        <p>There is a small issue I am trying to fix.  If the bird falls off of the screen, the game doesn't end.  I am currently going through several javascript files to find and fix the error.</p>
+                        <a href="http://jstrother.github.io/flappy-bird" target="_blank"><button>See it work!</button></a>
+                        <a href="https://github.com/jstrother/flappy-bird" target="_blank"><button>Look at the code!</button></a>
                     </div>
                     <br><br>
                 </div>
             </section>
         </div>
-        <a href="#home" class="topReturn">Top</a>
     </main>
     <footer>
         <section id="foot-container">

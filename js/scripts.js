@@ -16,12 +16,12 @@ $(document).ready(function() {
     
     // code for hamburger menu
     $('.icon').on('click', function() {
-      var target = $('nav');
-      if (target.className === 'navHeader') {
-        target.className += 'responsive';
+      var menu = $('#navMenu');
+      if (menu.className === 'navHeader') {
+        menu.className += 'responsive';
       }
       else {
-        target.className = 'navHeader';
+        menu.className = 'navHeader';
       }
     });
 
