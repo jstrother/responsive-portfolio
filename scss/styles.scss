@@ -58,6 +58,9 @@ header {
             @include media($gtDesktop) {
                 margin: auto -19em auto 0;
             }
+            .navHeader {
+                overflow: hidden;
+            }
             ul {
                 display: flex;
                 :first-child{
@@ -79,6 +82,11 @@ header {
             li {
                 float: right;
                 margin-left: 0.25em;
+                a {
+                    display: inline-block;
+                    text-align: center;
+                    transition: 0.3s;
+                }
             }
             li:not(.icon) {
                 @include media($mobile) {
@@ -100,7 +108,7 @@ header {
                         float: none;
                         display: inline;
                         a {
-                            display: bl;
+                            display: block;
                         }
                     }
                 }

@@ -15,13 +15,15 @@ $(document).ready(function() {
     });
     
     // code for hamburger menu
+    var menu = $('#navMenu');
     $('.icon').on('click', function() {
-      var menu = $('#navMenu');
       if (menu.className === 'navHeader') {
-        menu.className += 'responsive';
+        menu.className += ' responsive';
+        console.log('className:', menu.className);
       }
       else {
         menu.className = 'navHeader';
+        console.log('className:', menu.className);
       }
     });
 
