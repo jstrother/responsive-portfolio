@@ -90,17 +90,18 @@ header {
                 }
             }
             li:not(.icon) {
-                @include media($mobile) {
+                @include media($hiDefMobile) {
                     display: none;
                 }
             }
             .icon {
-                @include media($gtMobile) {
+                color: white;
+                @include media($gtHiDefMobile) {
                     display: none;
                 }
             }
             .responsive {
-                @include media($mobile) {
+                @include media($hiDefMobile) {
                     flex-direction: column;
                     justify-content: flex-start;
                     background-color: $headerColor;
@@ -108,7 +109,7 @@ header {
                     padding-bottom: 0.25em;
                     margin-top: 0.5em;
                     .icon {
-                        position: absolute;
+                        position: relative;
                         display: inline-block;
                     }
                     li {
