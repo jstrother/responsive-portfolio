@@ -15,16 +15,11 @@ $(document).ready(function() {
     });
     
     // code for hamburger menu
-    var menu = $('#navMenu');
-    $('.icon').on('click', function() {
-      if (menu.className === 'navHeader') {
-        menu.className += ' responsive';
-        console.log('className:', menu.className);
-      }
-      else {
-        menu.className = 'navHeader';
-        console.log('className:', menu.className);
-      }
+    $('#navMenu').on('click', function() {
+      $(this).toggleClass('responsive');
+      $('#first-li').removeClass('bar-on-right');
+      $('#second-li').removeClass('bar-on-right');
+      $('#third-li').removeClass('bar-on-right');
     });
 
     // skillset

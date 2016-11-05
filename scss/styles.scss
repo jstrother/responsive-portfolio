@@ -15,7 +15,7 @@ body {
 }
 
 header {
-    background-color: darken($baseBlue, 5%);
+    background-color: $headerColor;
     margin-top: -1.5em;
     padding: 1em 0 1em 0;
     text-align: center;
@@ -55,6 +55,7 @@ header {
             align-self: flex-end;
             padding-top: 0.25em;
             margin: auto -5.5em auto 0;
+            display: flex;
             @include media($gtDesktop) {
                 margin: auto -19em auto 0;
             }
@@ -63,19 +64,19 @@ header {
             }
             ul {
                 display: flex;
-                :first-child{
+                &:first-child{
                     order: 1;
                 }
-                :nth-child(2) {
+                &:nth-child(2) {
                     order: 2;
                 }
-                :nth-child(3) {
+                &:nth-child(3) {
                     order: 3;
                 }
-                :nth-child(4) {
+                &:nth-child(4) {
                     order: 4;
                 }
-                :nth-child(5) {
+                &:nth-child(5) {
                     order: 5;
                 }
             }
@@ -94,19 +95,28 @@ header {
                 }
             }
             .icon {
-                display: inline-block;
                 @include media($gtMobile) {
                     display: none;
                 }
             }
             .responsive {
                 @include media($mobile) {
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    background-color: $headerColor;
+                    padding-right: 0.25em;
+                    padding-bottom: 0.25em;
+                    margin-top: 0.5em;
                     .icon {
                         position: absolute;
+                        display: inline-block;
                     }
                     li {
                         float: none;
                         display: inline;
+                        &:not(.icon) {
+                            margin-top: 2em;
+                        }
                         a {
                             display: block;
                         }
