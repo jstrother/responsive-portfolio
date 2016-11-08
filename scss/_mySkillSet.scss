@@ -19,20 +19,20 @@
     }
 }
 
-#resumeProficienciesTop {
+.resumeProficienciesTop {
 	float: left;
 	clear: right;
 	width: 100%;
 	margin: 5px 0px 0px 0px;
 	text-align: left;
 	font-weight: 600;
-	font-size: 1.75em;
-	@include media($gtDesktop) {
+	font-size: 1em;
+	@include media($gtMobile) {
 		font-size: 1.25em;
 	}
 }
 
-#resumeProficienciesBottom {
+.resumeProficienciesBottom {
 	float: left;
 	clear: right;
 	width: 80%;

@@ -35,7 +35,7 @@ header {
             font-size: 2em;
             margin: auto 0 auto -1.5em;
             @include media($gtDesktop) {
-                margin: auto 0 auto -12em;
+                margin: auto 0 auto -7em;
             }
             .responsiveAdjust {
                 margin-left: 0.75em;
@@ -60,7 +60,7 @@ header {
             margin: auto -2.5em auto 0;
             display: flex;
             @include media($gtDesktop) {
-                margin: auto -19em auto 0;
+                margin: auto -11em auto 0;
             }
             .navHeader {
                 overflow: hidden;
@@ -161,6 +161,9 @@ main {
         text-align: center;
         font-size: 3.5em;
         @include media($hiDefMobile) {
+            font-size: 2.75em;
+        }
+        @include media($mobile) {
             font-size: 1.9em;
         }
     }
@@ -188,21 +191,35 @@ main {
                 @include span-columns(4);
                 @include omega(3n);
             }
-        }
-        .info-header {
-            margin-left: 30%;
-            @include media($gtDesktop) {
-                margin-left: 20%;
+            // this is a fix to make it look good on my Galaxy S5
+            @include media($hiDefMobile) {
+                @include media($gtHiDefMobileHeight) {
+                    p {
+                        font-size: 1.5em;
+                    }
+                }
             }
         }
+        .info-header {
+            margin-left: auto;
+            clear: both;
+        }
         .med-logo {
-            width: 3em;
-            height: 3em;
+            width: 1.2em;
+            height: 1.2em;
             float: left;
             margin: 0.25em 0.5em -0.25em 10%;
-            @include media($gtDesktop) {
+            @include media($gtMobile) {
                 width: 2em;
                 height: 2em;
+            }
+        }
+        .infoH4 {
+            font-size: 1.3em;
+            padding-top: 0.1em;
+            @include media($gtMobile) {
+                font-size: 2em;
+                padding-bottom: 0.2em;
             }
         }
     }
@@ -210,9 +227,9 @@ main {
         width: 100%;
         margin: 3em 0 2em 0;
         #skillset-header {
-            height: 4em;
             margin-bottom: 2em;
             text-align: center;
+            
         }
     }
     #projects {
@@ -231,8 +248,7 @@ main {
             flex-direction: column;
             height: 17em;
             @include media($gtDesktop) {
-                position: relative;
-                left: 10%;
+                margin-left: auto;
                 flex-direction: row;
                 height: 12em;
             }
@@ -242,7 +258,7 @@ main {
                 left: 2%;
                 width: 5em;
                 height: 2em;
-                font-size: 3em;
+                font-size: 1.75em;
                 @include media($gtDesktop) {
                     top: -35%;
                     left: 27%;
@@ -289,17 +305,29 @@ main {
             }
         }
     }
-}
-
-#firstTopReturn {
-    position: relative;
-    left: 102.75%;
-    @include media($gtDesktop) {
+    #firstTopReturn {
         position: relative;
-        left: 70.5%;
+        left: 102.75%;
+        @include media($gtDesktop) {
+            position: relative;
+            left: 70.5%;
+        }
+    }
+    .h3Class {
+        text-align: center;
+        font-size: 2em;
+        @include media($gtMobile) {
+            font-size: 2.5em;
+        }
     }
 }
- 
+
+.disappear {
+    @include media($mobile) {
+        display: none;
+    }
+}
+
 footer {
     background-color: lighten($baseDarkBlue, 15%);
     margin-top: 1em;
@@ -329,15 +357,4 @@ footer {
             width: 2em;
         }
     }
-}
-
-.disappear {
-    @include media($hiDefMobile) {
-        display: none;
-    }
-}
-
-.h3Class {
-    text-align: center;
-    font-size: 1.7em;
 }
