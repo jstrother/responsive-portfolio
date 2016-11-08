@@ -20,6 +20,8 @@ $(document).ready(function() {
       $('#first-li').removeClass('bar-on-right');
       $('#second-li').removeClass('bar-on-right');
       $('#third-li').removeClass('bar-on-right');
+      $('.icon').toggle();
+      $('#firstName').toggleClass('responsiveAdjust');
     });
 
     // skillset

@@ -17,6 +17,9 @@ $parallax-background-height: $parallax-window-height * 2;
     z-index: 9;
     text-align: center;
     font-size: 2.5em;
+    @include media($hiDefMobile) {
+        padding: 1.5em 0;
+    }
 }
 
 .parallax-background {
@@ -41,7 +44,8 @@ $parallax-background-height: $parallax-window-height * 2;
     height: 30em;
     .parallax-background {
         background: url("../img/background11.jpg");
-        background-size: 100% 105%;
+        background-size: auto;
+        background-position: center top;
         @include media($gtDesktop) {
             background-size: 100% 100%;
         }

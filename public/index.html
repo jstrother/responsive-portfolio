@@ -8,7 +8,7 @@
 <body>
     <header>
         <div id="header-container">
-            <h1>Jim Strother</h1>
+            <h1><span id="firstName">Jim</span> <span class="disappear">Strother</span></h1>
             <nav>
                 <ul class="navHeader" id="navMenu">
                     <li><a href="#spaceDivTop" class="bar-on-right" id="first-li">top</a></li>
@@ -27,10 +27,10 @@
         <div class="background-div" id="firstBG">
             <!--using a parallax scroll on background image-->
             <div id="js-parallax-window1" class="parallax-window">
-                <div class="parallax-static-content">
-                    <h3>Full-Stack JavaScript</h3>
-                    <h3>&</h3>
-                    <h3>Front-End Web Developer</h3>
+                <div class="parallax-static-content" id="staticH2">
+                    <h2>Full-Stack JavaScript</h2>
+                    <h2>&</h2>
+                    <h2>Front-End Web Developer</h2>
                 </div>
                 <div id="js-parallax-background1" class="parallax-background"></div>
             </div>
@@ -38,7 +38,7 @@
         <div id="spaceDivAbout" class="spaceDiv"></div>
         <div id="about">
             <div id="about-header">
-                <h2>Who I Am</h2>
+                <h3 class="h3Class">Who I Am</h3>
                 <img src="img/head-shot1.jpg" alt="Jim Strother" id="head-img">
             </div>
             <div id="info-div">
@@ -69,7 +69,7 @@
         <div id="spaceDivSkills" class="spaceDiv"></div>
         <div id="skillset">
             <div id="skillset-header">
-            	<h2>Skill Set</h2>
+            	<h3 class="h3Class">Skill Set</h3>
             </div>
             <div id="resumeProficiencies">
                 <div id="column1">
@@ -198,7 +198,7 @@
             <!--projects list-->
             <section>
                 <br><br><br>
-                <h2 id="projects-header">Projects</h2>
+                <h3 id="projects-header" class="h3Class">Projects</h3>
                 <div id="list">
                     <br><br>
                     <div class="project">

@@ -25,7 +25,7 @@ header {
     position: fixed;
     z-index: 9999;
     #header-container {
-        width: 95%;
+        width: 100%;
         height: $headerContainerHght;
         margin: auto;
         display: flex;
@@ -33,9 +33,12 @@ header {
         align-content: center;
         h1 {
             font-size: 2em;
-            margin: auto 0 auto -3.5em;
+            margin: auto 0 auto -1.5em;
             @include media($gtDesktop) {
                 margin: auto 0 auto -12em;
+            }
+            .responsiveAdjust {
+                margin-left: 0.75em;
             }
         }
         a:link {
@@ -54,7 +57,7 @@ header {
             font-size: 1.25em;
             align-self: flex-end;
             padding-top: 0.25em;
-            margin: auto -5.5em auto 0;
+            margin: auto -2.5em auto 0;
             display: flex;
             @include media($gtDesktop) {
                 margin: auto -19em auto 0;
@@ -117,7 +120,7 @@ header {
                         float: none;
                         display: inline;
                         &:not(.icon) {
-                            margin-top: 2em;
+                            margin-top: 3.25em;
                         }
                         a {
                             display: block;
@@ -154,20 +157,19 @@ main {
     #spaceDivSkills {
         height: $headerContainerHght - 3em;
     }
+    #staticH2 {
+        text-align: center;
+        font-size: 3.5em;
+        @include media($hiDefMobile) {
+            font-size: 1.9em;
+        }
+    }
     #about {
         padding: 5em 0 2.5em 0;
         #about-header {
             display: flex;
             flex-direction: column;
             height: em(300px);
-        }
-        h2 {
-            text-align: center;
-            font-size: 3.5em;
-        }
-        h3 {
-            text-align: center;
-            font-size: 3em;
         }
         #head-img {
             width: 8.2em;
@@ -211,9 +213,6 @@ main {
             height: 4em;
             margin-bottom: 2em;
             text-align: center;
-            h2 {
-                font-size: 3.5em;
-            }
         }
     }
     #projects {
@@ -226,10 +225,6 @@ main {
                 @include omega(1n);
                 @include shift(2);
             }
-        }
-        h2 {
-            text-align: center;
-            font-size: 3.5em;
         }
         .project-header {
             display: flex;
@@ -334,4 +329,15 @@ footer {
             width: 2em;
         }
     }
+}
+
+.disappear {
+    @include media($hiDefMobile) {
+        display: none;
+    }
+}
+
+.h3Class {
+    text-align: center;
+    font-size: 1.7em;
 }
