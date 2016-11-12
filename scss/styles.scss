@@ -7,7 +7,7 @@
 @import "myParallax";
 
 * {
-    // border: 1px solid red;
+    border: 1px solid red;
 }
 
 body {
@@ -234,16 +234,15 @@ main {
     }
     #projects {
         padding: 0 2em;
-        @include media($gtDesktop) {
-            @include outer-container;
-            .project {
-                display: flex;
-                width: 100%;
-                margin-bottom: 4em;
-                @include span-columns(7);
-                @include omega(1n);
-                @include shift(2);
-            }
+        @include outer-container;
+        .project {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-bottom: 4em;
+            @include span-columns(7);
+            @include omega(1n);
+            @include shift(2);
         }
         .project-header {
             display: flex;
@@ -283,25 +282,19 @@ main {
         }
         p {
             margin-top: 3em;
-            position: relative;
-            left: 5%;
             margin-right: 1.5em;
             text-align: center;
-            @include media($gtDesktop) {
-                left: 12%;
-            }
         }
         button {
             position: relative;
+            left: 25%;
             margin: 1em auto;
             font-size: 1em;
-            width: 12em;
+            width: 11em;
             height: 3em;
-            @include media($hiDefMobile) {
-                left: -10%;
-            }
-            @include media($desktop) {
-                left: 25%;
+            @include media($gtHiDefMobile) {
+                width: 12em;
+                left: 0;
             }
             @include media($gtTabletP) {
                 font-size: 1.25em;
@@ -310,14 +303,6 @@ main {
                 left: 17%;
                 top: 10%;
             }
-        }
-    }
-    #firstTopReturn {
-        position: relative;
-        left: 102.75%;
-        @include media($gtDesktop) {
-            position: relative;
-            left: 70.5%;
         }
     }
     .h3Class {
