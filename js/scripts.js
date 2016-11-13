@@ -22,6 +22,7 @@ $(document).ready(function() {
       $('.icon').toggle();
       $('#firstName').toggleClass('responsiveAdjust');
       if (query.matches) {
+        $('.icon').css('display', 'none');
         $('#first-li').toggleClass('bar-on-right');
         $('#second-li').toggleClass('bar-on-right');
         $('#third-li').toggleClass('bar-on-right');
