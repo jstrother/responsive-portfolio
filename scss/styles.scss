@@ -7,7 +7,7 @@
 @import "myParallax";
 
 * {
-    border: 1px solid red;
+    // border: 1px solid red;
 }
 
 body {
@@ -233,6 +233,7 @@ main {
         }
     }
     #projects {
+        width: 100%;
         padding: 0 2em;
         @include outer-container;
         .project {
@@ -281,27 +282,31 @@ main {
             }
         }
         p {
-            margin-top: 3em;
-            margin-right: 1.5em;
+            margin: 3em auto;
             text-align: center;
         }
-        button {
-            position: relative;
-            left: 25%;
-            margin: 1em auto;
-            font-size: 1em;
-            width: 11em;
-            height: 3em;
-            @include media($gtHiDefMobile) {
-                width: 12em;
-                left: 0;
+        .button-container {
+            border: 1px solid red;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            @include media($mobile) {
+                flex-wrap: wrap;
             }
-            @include media($gtTabletP) {
-                font-size: 1.25em;
+            button {
+                width: 10em;
+                margin: 0.5em auto;
+                padding: 0.5em 0;
+                @include media($smallMobile) {
+                    
+                }
             }
-            @include media($gtDesktop) {
-                left: 17%;
-                top: 10%;
+            .first-button {
+                float: left;
+            }
+            .second-button {
+                float: right;
+                margin-left: 0.25em;
             }
         }
     }
