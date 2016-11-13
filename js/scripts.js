@@ -3,6 +3,8 @@ const $ = require('jquery');
 $(document).ready(function() {
     console.log('ready');
     
+    var query = window.matchMedia('(min-width: 981px)');
+    
     // links scroll to anchors
     $('a[href^="#"]').on('click', function(event) {
       var target = $(this.getAttribute('href'));
@@ -17,11 +19,18 @@ $(document).ready(function() {
     // code for hamburger menu
     $('#navMenu').on('click', function() {
       $(this).toggleClass('responsive');
-      $('#first-li').removeClass('bar-on-right');
-      $('#second-li').removeClass('bar-on-right');
-      $('#third-li').removeClass('bar-on-right');
       $('.icon').toggle();
       $('#firstName').toggleClass('responsiveAdjust');
+      if (query.matches) {
+        $('#first-li').toggleClass('bar-on-right');
+        $('#second-li').toggleClass('bar-on-right');
+        $('#third-li').toggleClass('bar-on-right');
+      }
+      else {
+        $('#first-li').toggleClass('bar-on-right');
+        $('#second-li').toggleClass('bar-on-right');
+        $('#third-li').toggleClass('bar-on-right');
+      }
     });
 
     // skillset
