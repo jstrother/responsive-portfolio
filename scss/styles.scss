@@ -30,16 +30,11 @@ header {
         margin: auto;
         display: flex;
         justify-content: space-around;
-        align-content: center;
+        align-content: space-around;
         h1 {
             font-size: 2em;
-            margin: auto 0 auto -1.5em;
-            @include media($gtDesktop) {
-                margin: auto 0 auto -7em;
-            }
-            .responsiveAdjust {
-                margin-left: 0.75em;
-            }
+            align-self: flex-start;
+            margin: auto 0 auto 0;
         }
         a:link {
             color: $white;
@@ -54,14 +49,10 @@ header {
             color: darken($baseOffWhite, 15%);
         }
         nav {
+            display: flex;
             font-size: 1.25em;
             align-self: flex-end;
-            padding-top: 0.25em;
-            margin: auto -2.5em auto 0;
-            display: flex;
-            @include media($gtDesktop) {
-                margin: auto -11em auto 0;
-            }
+            margin: auto 0 auto 0;
             .navHeader {
                 overflow: hidden;
             }
