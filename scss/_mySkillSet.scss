@@ -3,7 +3,8 @@
 #resumeProficiencies {
     border: 1px solid $baseOffWhite;
     // removing this border makes the progress bars not work properly. leave in for hack-fix.
-	clear: right;
+	// clear: right;
+	align-self: center;
 	width: 100%;
 	margin: 1.25em;
     @include outer-container;

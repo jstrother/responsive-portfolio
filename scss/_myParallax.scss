@@ -4,6 +4,7 @@ $parallax-background-height: $parallax-window-height * 2;
 
 .parallax-window {
   max-height: $parallax-window-height;
+  display: flex;
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -13,6 +14,7 @@ $parallax-background-height: $parallax-window-height * 2;
     height: 33em;
     color: lighten($baseOffWhite, 20%);
     padding: 1em 0;
+    margin: 0 auto;
     position: relative;
     z-index: 9;
     text-align: center;

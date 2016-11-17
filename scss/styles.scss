@@ -7,7 +7,7 @@
 @import "myParallax";
 
 * {
-    // border: 1px solid red;
+    border: 1px solid red;
 }
 
 body {
@@ -174,8 +174,9 @@ main {
         @include outer-container;
         .info {
             margin: 2em 0;
+            display: flex;
             @include span-columns(12);
-            @include media($gtDesktop) {
+            @include media($gtTabletP) {
                 @include span-columns(4);
                 @include omega(3n);
             }
@@ -189,14 +190,15 @@ main {
             }
         }
         .info-header {
-            margin-left: auto;
+            margin: 0 auto;
             clear: both;
+            display: flex;
+            justify-content: center;
         }
         .med-logo {
             width: 1.2em;
             height: 1.2em;
-            float: left;
-            margin: 0.25em 0.5em -0.25em 10%;
+            margin: 0.25em 0.5em -0.25em 0;
             @include media($gtMobile) {
                 width: 2em;
                 height: 2em;
@@ -205,15 +207,22 @@ main {
         .infoH4 {
             font-size: 1.3em;
             padding-top: 0.1em;
+            align-self: center;
             @include media($gtMobile) {
                 font-size: 2em;
                 padding-bottom: 0.2em;
             }
         }
+        .description {
+            align-self: center;
+        }
     }
     #skillset {
         width: 100%;
         margin: 3em 0 2em 0;
+        display: flex;
+        align-contents: center;
+        flex-direction: column;
         #skillset-header {
             margin-bottom: 2em;
             text-align: center;
@@ -221,37 +230,35 @@ main {
         }
     }
     #projects {
+        display: flex;
+        align-content: center;
         width: 100%;
         padding: 0 2em;
-        @include outer-container;
+        #list {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
         .project {
             display: flex;
             flex-direction: column;
             width: 100%;
-            margin-bottom: 4em;
-            @include span-columns(7);
-            @include omega(1n);
-            @include shift(2);
+            margin: 0 auto 4em;
         }
         .project-header {
             display: flex;
             flex-direction: column;
+            align-content: center;
+            width: 100%;
             height: 17em;
-            @include media($gtDesktop) {
-                margin-left: auto;
-                flex-direction: row;
-                height: 12em;
-            }
+            margin: 0 auto;
+            text-align: center;
             h5 {
                 margin: auto;
-                position: relative;
-                left: 2%;
                 width: 5em;
                 height: 2em;
                 font-size: 1.75em;
                 @include media($gtDesktop) {
-                    top: -35%;
-                    left: 27%;
                     font-size: 2em;
                 }
             }
@@ -260,13 +267,6 @@ main {
                 height: 10em;
                 margin: auto;
                 border: 1px solid black;
-                position: relative;
-                left: 2%;
-                @include media ($gtDesktop) {
-                    position: relative;
-                    top: 25%;
-                    left: -22%;
-                }
             }
         }
         p {
