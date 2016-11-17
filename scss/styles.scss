@@ -7,7 +7,7 @@
 @import "myParallax";
 
 * {
-    border: 1px solid red;
+    // border: 1px solid red;
 }
 
 body {
@@ -63,18 +63,18 @@ header {
                         transition: 0.3s;
                     }
                 }
-                li:not(.icon) {
-                    margin-left: 1em;
-                    @include media($hiDefMobile) {
-                        margin: 0.25em;
-                        display: none;
-                    }
+            }
+            .nav-item {
+                margin-left: 1em;
+                @include media($hiDefMobile) {
+                    margin: 0.25em;
+                    display: none;
                 }
-                .icon {
-                    color: white;
-                    @include media($gtHiDefMobile) {
-                        display: none;
-                    }
+            }
+            .icon {
+                color: white;
+                @include media($gtHiDefMobile) {
+                    display: none;
                 }
             }
             .responsive {

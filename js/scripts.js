@@ -17,7 +17,7 @@ $(document).ready(function() {
     });
     
     // code for hamburger menu
-    $('#navMenu').on('click', function() {
+    $('.navMenu').on('click', function() {
       $(this).toggleClass('responsive');
       $('.icon').toggle();
       if (query.matches) {
