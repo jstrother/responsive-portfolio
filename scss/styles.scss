@@ -7,7 +7,7 @@
 @import "myParallax";
 
 * {
-    // border: 1px solid red;
+    border: 1px solid red;
 }
 
 body {
@@ -52,64 +52,42 @@ header {
             display: flex;
             font-size: 1.25em;
             align-self: flex-end;
-            margin: auto 0 auto 0;
-            .navHeader {
+            margin: auto 0;
+            #navHeader {
                 overflow: hidden;
-            }
-            ul {
                 display: flex;
-                &:first-child{
-                    order: 1;
+                li {
+                    a {
+                        display: inline-block;
+                        text-align: center;
+                        transition: 0.3s;
+                    }
                 }
-                &:nth-child(2) {
-                    order: 2;
+                li:not(.icon) {
+                    margin-left: 1em;
+                    @include media($hiDefMobile) {
+                        margin: 0.25em;
+                        display: none;
+                    }
                 }
-                &:nth-child(3) {
-                    order: 3;
-                }
-                &:nth-child(4) {
-                    order: 4;
-                }
-                &:nth-child(5) {
-                    order: 5;
-                }
-            }
-            li {
-                float: right;
-                a {
-                    display: inline-block;
-                    text-align: center;
-                    transition: 0.3s;
-                }
-            }
-            li:not(.icon) {
-                margin-left: 1em;
-                @include media($hiDefMobile) {
-                    margin: 0.25em;
-                    display: none;
-                }
-            }
-            .icon {
-                color: white;
-                @include media($gtHiDefMobile) {
-                    display: none;
+                .icon {
+                    color: white;
+                    @include media($gtHiDefMobile) {
+                        display: none;
+                    }
                 }
             }
             .responsive {
                 @include media($hiDefMobile) {
                     flex-direction: column;
-                    justify-content: flex-start;
+                    justify-content: center;
                     background-color: $headerColor;
-                    padding-right: 0.25em;
-                    padding-bottom: 0.25em;
                     margin-top: 0.5em;
                     .icon {
                         position: relative;
                         display: inline-block;
-                        align-self: flex-start;
                     }
                     li {
-                        float: none;
                         display: inline;
                         &:not(.icon) {
                             margin-top: 3.25em;
@@ -119,15 +97,6 @@ header {
                         }
                     }
                 }
-            }
-            #about {
-                cursor: pointer;
-                display: inline;
-            }
-            #projects {
-                margin-left: 0.5em;
-                cursor: pointer;
-                display: inline;
             }
         }
     }
@@ -168,11 +137,11 @@ main {
             margin: auto;
         }
     }
-    #info-div {
+    #info {
         padding: 3em;
         width: 100%;
         @include outer-container;
-        .info {
+        .info-div {
             margin: 2em 0;
             display: flex;
             @include span-columns(12);
@@ -194,27 +163,22 @@ main {
             clear: both;
             display: flex;
             justify-content: center;
-        }
-        .med-logo {
-            width: 1.2em;
-            height: 1.2em;
-            margin: 0.25em 0.5em -0.25em 0;
-            @include media($gtMobile) {
+            width: 100%;
+            height: 4em;
+            h4 {
+                font-size: 2em;
+                align-self: center;
+                margin: auto 0.25em;
+            }
+            .med-logo {
                 width: 2em;
                 height: 2em;
+                margin: auto 0.25em;
             }
-        }
-        .infoH4 {
-            font-size: 1.3em;
-            padding-top: 0.1em;
-            align-self: center;
-            @include media($gtMobile) {
-                font-size: 2em;
-                padding-bottom: 0.2em;
+            .description {
+                align-self: center;
+                margin: auto 0.25em;
             }
-        }
-        .description {
-            align-self: center;
         }
     }
     #skillset {
@@ -275,25 +239,13 @@ main {
         }
         .button-container {
             display: flex;
-            justify-content: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
             width: 100%;
-            @include media($mobile) {
-                flex-wrap: wrap;
-            }
             button {
                 width: 10em;
                 margin: 0.5em auto;
                 padding: 0.5em 0;
-                @include media($smallMobile) {
-                    
-                }
-            }
-            .first-button {
-                float: left;
-            }
-            .second-button {
-                float: right;
-                margin-left: 0.25em;
             }
         }
     }
@@ -318,6 +270,8 @@ footer {
     padding: 2em 1em 1em 1em;
     width: 100%;
     height: 6em;
+    display: flex;
+    justify-content: center;
     @include media($gtDesktop) {
         height: 5em;
     }
@@ -326,16 +280,16 @@ footer {
         flex-flow: row wrap;
         justify-content: center;
         align-content: center;
-    }
-    .small-logo {
-        height: 3em;
-        width: 3em;
-        margin: 0 0.5em 1em 0;
-        border-radius: 50%;
-        border: none;
-        @include media($gtDesktop) {
-            height: 2em;
-            width: 2em;
+        .small-logo {
+            height: 3em;
+            width: 3em;
+            margin: 0 0.25em;
+            border-radius: 50%;
+            border: none;
+            @include media($gtDesktop) {
+                height: 2em;
+                width: 2em;
+            }
         }
     }
 }
