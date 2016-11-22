@@ -19,7 +19,7 @@ $parallax-background-height: $parallax-window-height * 2;
     z-index: 9;
     text-align: center;
     font-size: 2.5em;
-    @include media($hiDefMobile) {
+    @include media($tabletP) {
         padding: 1.5em 0;
     }
 }

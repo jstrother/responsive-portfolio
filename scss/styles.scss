@@ -7,7 +7,7 @@
 @import "myParallax";
 
 * {
-    // border: 1px solid red;
+    border: 1px solid red;
 }
 
 body {
@@ -48,11 +48,25 @@ header {
         a:visited {
             color: darken($baseOffWhite, 15%);
         }
+        .icon {
+            color: white;
+            display: inline-block;
+            z-index: 12;
+            margin: auto 0;
+            @include media($gtTabletP) {
+                display: none;
+                z-index: -12;
+            }
+        }
         nav {
             display: flex;
             font-size: 1.25em;
             align-self: flex-end;
             margin: auto 0;
+            z-index: -12;
+            @include media($tabletP) {
+                display: none;
+            }
             #navHeader {
                 overflow: hidden;
                 display: flex;
@@ -66,32 +80,28 @@ header {
             }
             .nav-item {
                 margin-left: 1em;
-                @include media($hiDefMobile) {
+                @include media($tabletP) {
                     margin: 0.25em;
                     display: none;
                 }
             }
-            .icon {
-                color: white;
-                @include media($gtHiDefMobile) {
-                    display: none;
-                }
-            }
             .responsive {
-                @include media($hiDefMobile) {
+                @include media($tabletP) {
                     flex-direction: column;
                     justify-content: center;
                     background-color: $headerColor;
                     margin-top: 0.5em;
-                    .icon {
-                        position: relative;
-                        display: inline-block;
-                    }
+                    z-index: 12;
+                    // .icon {
+                    //     position: relative;
+                    //     display: inline-block;
+                    // }
                     li {
                         display: inline;
-                        &:not(.icon) {
-                            margin-top: 3.25em;
-                        }
+                        margin-top: 3.25em;
+                        // &:not(.icon) {
+                            
+                        // }
                         a {
                             display: block;
                         }
@@ -117,7 +127,7 @@ main {
     #staticH2 {
         text-align: center;
         font-size: 3.5em;
-        @include media($hiDefMobile) {
+        @include media($tabletP) {
             font-size: 2.75em;
         }
         @include media($mobile) {
@@ -150,7 +160,7 @@ main {
                 @include omega(3n);
             }
             // this is a fix to make it look good on my Galaxy S5
-            @include media($hiDefMobile) {
+            @include media($gtHiDefMobile) {
                 @include media($gtHiDefMobileHeight) {
                     p {
                         font-size: 1.5em;

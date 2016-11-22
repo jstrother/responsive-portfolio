@@ -3,11 +3,13 @@ const $ = require('jquery');
 $(document).ready(function() {
     console.log('ready');
     
-    var query = window.matchMedia('(min-width: 981px)');
+    var navItem = $('.nav-item');
     
     // links scroll to anchors
-    $('a[href^="#"]').on('click', function(event) {
-      var target = $(this.getAttribute('href'));
+    navItem.on('click', function(event) {
+      var id = $(this.getAttribute('id')),
+        target = `#${id}`;
+        
       if(target.length) {
           event.preventDefault();
           $('html, body').stop().animate({
@@ -17,11 +19,25 @@ $(document).ready(function() {
     });
     
     // code for hamburger menu
+    var min769query = window.matchMedia('(min-width: 769px)'),
+      clicked = false,
+      icon = $('.icon');
+      
+    console.log('1clicked:', clicked);
+    navItem.on('click', function() {
+        clicked = true;
+        console.log('2clicked:', clicked);
+    });
     $('.navMenu').on('click', function() {
-      $(this).toggleClass('responsive');
-      $('.icon').toggle();
-      if (query.matches) {
-        $('.icon').toggle();
+      $('nav').toggleClass('responsive');
+      icon.toggle();
+      if (min769query.matches) {
+        icon.toggle();
+      }
+      if ($(window).resize() && !(min769query.matches) && clicked) {
+        navItem.toggle();
+        clicked = false;
+        console.log('3clicked:', clicked);
       }
     });
 
@@ -62,23 +78,23 @@ $(document).ready(function() {
       var plxSpeed = 0.35;
       // this if statement deals with the first parallax window
       if( $("#js-parallax-window1").length > 0 ) {
-        var plxBackground1 = $("#js-parallax-background1");
-        var plxWindow1 = $("#js-parallax-window1");
+        var plxBackground1 = $("#js-parallax-background1"),
+        plxWindow1 = $("#js-parallax-window1"),
     
-        var plxWindowTopToPageTop1 = $(plxWindow1).offset().top;
-        var windowTopToPageTop1 = $(window).scrollTop();
-        var plxWindowTopToWindowTop1 = plxWindowTopToPageTop1 - windowTopToPageTop1;
+        plxWindowTopToPageTop1 = $(plxWindow1).offset().top,
+        windowTopToPageTop1 = $(window).scrollTop(),
+        plxWindowTopToWindowTop1 = plxWindowTopToPageTop1 - windowTopToPageTop1;
     
         plxBackground1.css('top', - (plxWindowTopToWindowTop1 * plxSpeed) + 'px');
       }
       // this if statement deals with the second parallax window
       if( $("#js-parallax-window2").length > 0 ) {
-        var plxBackground2 = $("#js-parallax-background2");
-        var plxWindow2 = $("#js-parallax-window2");
+        var plxBackground2 = $("#js-parallax-background2"),
+        plxWindow2 = $("#js-parallax-window2"),
     
-        var plxWindowTopToPageTop2 = $(plxWindow2).offset().top;
-        var windowTopToPageTop2 = $(window).scrollTop();
-        var plxWindowTopToWindowTop2 = plxWindowTopToPageTop2 - windowTopToPageTop2;
+        plxWindowTopToPageTop2 = $(plxWindow2).offset().top,
+        windowTopToPageTop2 = $(window).scrollTop(),
+        plxWindowTopToWindowTop2 = plxWindowTopToPageTop2 - windowTopToPageTop2;
     
         plxBackground2.css('top', - (plxWindowTopToWindowTop2 * plxSpeed) + 'px');
       }
