@@ -53,6 +53,7 @@ header {
             display: inline-block;
             z-index: 12;
             margin: auto 0;
+            font-size: 1.5em;
             @include media($gtTabletP) {
                 display: none;
                 z-index: -12;
@@ -71,6 +72,7 @@ header {
                 overflow: hidden;
                 display: flex;
                 li {
+                    display: inline-block;
                     a {
                         display: inline-block;
                         text-align: center;
