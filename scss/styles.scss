@@ -46,49 +46,38 @@ header {
         padding-top: 0.25em;
         ul {
             display: flex;
-        }
-        li {
-            float: right;
-            margin-left: 0.25em;
-        }
-        li:not(.icon) {
-            @include media($mobile) {
-                display: none;
+            li {
+                margin-left: 0.25em;
             }
-        }
-        .icon {
-            display: inline-block;
-            @include media($gtMobile) {
-                display: none;
-            }
-        }
-        .responsive {
-            position: relative;
-            @include media($mobile) {
-                .icon {
-                    position: absolute;
+            li:not(.icon) {
+                @include media($mobile) {
+                    display: none;
                 }
-                li {
-                    float: none;
-                    display: inline;
-                    a {
-                        display: bl;
+            }
+            .icon {
+                display: inline-block;
+                @include media($gtMobile) {
+                    display: none;
+                }
+            }
+            .responsive {
+                @include media($mobile) {
+                    .icon {
+                        position: absolute;
+                    }
+                    li {
+                        display: inline;
+                        a {
+                            display: block;
+                            text-align: center;
+                        }
                     }
                 }
             }
-        }
-        .bar-on-right {
-            border-right: 2px solid white;
-            padding-right: 0.25em;
-        }
-        #about {
-            cursor: pointer;
-            display: inline;
-        }
-        #projects {
-            margin-left: 0.5em;
-            cursor: pointer;
-            display: inline;
+            .bar-on-right {
+                border-right: 2px solid white;
+                padding-right: 0.25em;
+            }
         }
     }
 }
