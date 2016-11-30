@@ -7,7 +7,7 @@
 @import "myParallax";
 
 * {
-    // border: 1px solid red;
+    border: 1px solid red;
 }
 
 body {
@@ -46,21 +46,6 @@ header {
         padding-top: 0.25em;
         ul {
             display: flex;
-            :first-child{
-                order: 1;
-            }
-            :nth-child(2) {
-                order: 2;
-            }
-            :nth-child(3) {
-                order: 3;
-            }
-            :nth-child(4) {
-                order: 4;
-            }
-            :nth-child(5) {
-                order: 5;
-            }
         }
         li {
             float: right;
