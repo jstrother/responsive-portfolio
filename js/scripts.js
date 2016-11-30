@@ -21,7 +21,7 @@ $(document).ready(function () {
   });
 
   // code for hamburger menu
-  let min769query = window.matchMedia('(min-width: 769px)'),
+  let minWidth769query = window.matchMedia('(min-width: 769px)'),
       clicked = false,
       icon = $('.icon');
 
@@ -33,10 +33,10 @@ $(document).ready(function () {
   $('.navMenu').on('click', function () {
     $('nav').toggleClass('responsive');
     icon.toggle();
-    if (min769query.matches) {
+    if (minWidth769query.matches) {
       icon.toggle();
     }
-    if ($(window).resize() && !min769query.matches && clicked) {
+    if ($(window).resize() && !minWidth769query.matches && clicked) {
       navItem.toggle();
       clicked = false;
       console.log('3clicked:', clicked);

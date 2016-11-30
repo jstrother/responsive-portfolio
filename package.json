@@ -7,7 +7,7 @@
     "scss": "node-sass --output-stlye compressed scss/styles.scss public/styles.css",
     "autoprefixer": "postcss -u autoprefixer -r public/styles.css",
     "cleancss": "cleancss -o public/styles.css public/styles.css",
-    "browserify": "browserify js/scripts.js -o js/scripts-browserify.js -t [ babelify --presets [ latest ] ]",
+    "browserify": "browserify js/scripts.js -t [ babelify --presets [ latest ] ] -o js/scripts-browserify.js",
     "uglify": "uglifyjs js/scripts-browserify.js -m -c -o public/scripts.min.js",
     "image": "imagemin img/* -o public/img",
     "font": "cp font/*.* public/font/",
