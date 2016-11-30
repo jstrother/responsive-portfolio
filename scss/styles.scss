@@ -15,126 +15,107 @@ body {
 }
 
 header {
-    background-color: $headerColor;
+    background-color: darken($baseBlue, 5%);
     margin-top: -1.5em;
     padding: 1em 0 1em 0;
     text-align: center;
-    display: flex;
     height: $headerHeight;
     width: 100%;
     position: fixed;
     z-index: 9999;
-    #header-container {
-        width: 100%;
-        height: $headerContainerHght;
-        margin: auto;
-        display: flex;
-        justify-content: space-around;
-        align-content: space-around;
-        h1 {
-            font-size: 2em;
-            align-self: flex-start;
-            margin: auto 0 auto 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    h1 {
+        font-size: 2em;
+    }
+    a:link {
+        color: $white;
+    }
+    a:hover {
+        background-color: darken($baseBlue, 15%);
+    }
+    a:active {
+        background-color: lighten($baseBlue, 10%);
+    }
+    a:visited {
+        color: darken($baseOffWhite, 15%);
+    }
+    nav {
+        font-size: 1.25em;
+        padding-top: 0.25em;
+        ul {
+            display: flex;
+            :first-child{
+                order: 1;
+            }
+            :nth-child(2) {
+                order: 2;
+            }
+            :nth-child(3) {
+                order: 3;
+            }
+            :nth-child(4) {
+                order: 4;
+            }
+            :nth-child(5) {
+                order: 5;
+            }
         }
-        a:link {
-            color: $white;
+        li {
+            float: right;
+            margin-left: 0.25em;
         }
-        a:hover {
-            background-color: darken($baseBlue, 15%);
-        }
-        a:active {
-            background-color: lighten($baseBlue, 10%);
-        }
-        a:visited {
-            color: darken($baseOffWhite, 15%);
+        li:not(.icon) {
+            @include media($mobile) {
+                display: none;
+            }
         }
         .icon {
-            color: white;
             display: inline-block;
-            z-index: 12;
-            margin: auto 0;
-            font-size: 1.5em;
-            @include media($gtTabletP) {
+            @include media($gtMobile) {
                 display: none;
-                z-index: -12;
             }
         }
-        nav {
-            display: flex;
-            font-size: 1.25em;
-            align-self: flex-end;
-            margin: auto 0;
-            z-index: -12;
-            @include media($tabletP) {
-                display: none;
-            }
-            #navHeader {
-                overflow: hidden;
-                display: flex;
+        .responsive {
+            position: relative;
+            @include media($mobile) {
+                .icon {
+                    position: absolute;
+                }
                 li {
-                    display: inline-block;
+                    float: none;
+                    display: inline;
                     a {
-                        display: inline-block;
-                        text-align: center;
-                        transition: 0.3s;
+                        display: bl;
                     }
                 }
             }
-            .nav-item {
-                margin-left: 1em;
-                @include media($tabletP) {
-                    margin: 0.25em;
-                    display: none;
-                }
-            }
-            .responsive {
-                @include media($tabletP) {
-                    flex-direction: column;
-                    justify-content: center;
-                    background-color: $headerColor;
-                    margin-top: 0.5em;
-                    z-index: 12;
-                    // .icon {
-                    //     position: relative;
-                    //     display: inline-block;
-                    // }
-                    li {
-                        display: inline;
-                        margin-top: 3.25em;
-                        // &:not(.icon) {
-                            
-                        // }
-                        a {
-                            display: block;
-                        }
-                    }
-                }
-            }
+        }
+        .bar-on-right {
+            border-right: 2px solid white;
+            padding-right: 0.25em;
+        }
+        #about {
+            cursor: pointer;
+            display: inline;
+        }
+        #projects {
+            margin-left: 0.5em;
+            cursor: pointer;
+            display: inline;
         }
     }
 }
 
 main {
     .spaceDiv {
-        height: $headerContainerHght - 4em;
+        height: $spaceDivHght - 4em;
         width: 100%;
         visibility: hidden;
     }
-    #spaceDivTop {
-        height: $headerContainerHght - 3em;
-    }
     #spaceDivSkills {
-        height: $headerContainerHght - 3em;
-    }
-    #staticH2 {
-        text-align: center;
-        font-size: 3.5em;
-        @include media($tabletP) {
-            font-size: 2.75em;
-        }
-        @include media($mobile) {
-            font-size: 1.9em;
-        }
+        height: $spaceDivHght - 3em;
     }
     #about {
         padding: 5em 0 2.5em 0;
@@ -143,53 +124,53 @@ main {
             flex-direction: column;
             height: em(300px);
         }
+        h2 {
+            text-align: center;
+            font-size: 3.5em;
+        }
+        h3 {
+            text-align: center;
+            font-size: 3em;
+        }
         #head-img {
             width: 8.2em;
             height: 6.9em;
             margin: auto;
         }
     }
-    #info {
+    #info-div {
         padding: 3em;
         width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
         @include outer-container;
-        .info-div {
-            margin: 2em 0;
+        .info {
             display: flex;
+            justify-content: center;
+            align-content: center;
             @include span-columns(12);
-            @include media($gtTabletP) {
+            @include media($gtDesktop) {
                 @include span-columns(4);
                 @include omega(3n);
             }
-            // this is a fix to make it look good on my Galaxy S5
-            @include media($gtHiDefMobile) {
-                @include media($gtHiDefMobileHeight) {
-                    p {
-                        font-size: 1.5em;
-                    }
-                }
-            }
         }
         .info-header {
-            margin: 0 auto;
-            clear: both;
-            display: flex;
-            justify-content: center;
             width: 100%;
             height: 4em;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
             h4 {
-                font-size: 2em;
-                align-self: center;
-                margin: auto 0.25em;
+                margin: auto 0;
+                font-size: 2.75em;
+                align-self: flex-start;
             }
             .med-logo {
-                width: 2em;
-                height: 2em;
-                margin: auto 0.25em;
-            }
-            .description {
-                align-self: center;
-                margin: auto 0.25em;
+                margin: auto 0;
+                width: 3em;
+                height: 3em;
             }
         }
     }
@@ -197,111 +178,90 @@ main {
         width: 100%;
         margin: 3em 0 2em 0;
         display: flex;
-        align-contents: center;
-        flex-direction: column;
+        flex-flow: column nowrap;
         #skillset-header {
+            height: 4em;
             margin-bottom: 2em;
             text-align: center;
-            
+            align-self: center;
+            h2 {
+                font-size: 3.5em;
+            }
         }
     }
     #projects {
+        padding: 2em;
         display: flex;
-        align-content: center;
-        width: 100%;
-        padding: 0 2em;
-        #list {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+        justify-content: space-around;
+        flex-direction: column;
+        h2 {
+            text-align: center;
+            font-size: 3.5em;
         }
         .project {
             display: flex;
             flex-direction: column;
-            width: 100%;
-            margin: 0 auto 4em;
-        }
-        .project-header {
-            display: flex;
-            flex-direction: column;
-            align-content: center;
-            width: 100%;
-            height: 17em;
-            margin: 0 auto;
-            text-align: center;
-            h5 {
-                margin: auto;
-                width: 5em;
-                height: 2em;
-                font-size: 1.75em;
-                @include media($gtDesktop) {
-                    font-size: 2em;
+            align-content: space-between;
+            .project-header {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-content: center;
+                height: 17em;
+                h5 {
+                    margin: auto;
+                    text-align: center;
+                    font-size: 2.5em;
+                }
+                .project-image {
+                    width: 15em;
+                    height: 10em;
+                    margin: auto;
+                    border: 1px solid black;
                 }
             }
-            .project-image {
-                width: 15em;
-                height: 10em;
-                margin: auto;
-                border: 1px solid black;
+            .project-body {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-content: space-between;
+                p {
+                    margin: auto;
+                    text-align: center;
+                }
+                .button-container {
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: space-around;
+                    align-content: space-around;
+                    align-items: center;
+                    margin-top: 0.75em;
+                    button {
+                        margin: 0.25em auto;
+                        font-size: 1em;
+                        width: 12em;
+                        height: 3em;
+                    }
+                }
             }
         }
-        p {
-            margin: 3em auto;
-            text-align: center;
-        }
-        .button-container {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            width: 100%;
-            button {
-                width: 10em;
-                margin: 0.5em auto;
-                padding: 0.5em 0;
-            }
-        }
-    }
-    .h3Class {
-        text-align: center;
-        font-size: 2em;
-        @include media($gtMobile) {
-            font-size: 2.5em;
-        }
-    }
-}
-
-.disappear {
-    @include media($mobile) {
-        display: none;
     }
 }
 
 footer {
     background-color: lighten($baseDarkBlue, 15%);
-    margin-top: 1em;
-    padding: 2em 1em 1em 1em;
     width: 100%;
     height: 6em;
     display: flex;
     justify-content: center;
-    @include media($gtDesktop) {
-        height: 5em;
-    }
-    #foot-container {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        align-content: center;
-        .small-logo {
-            height: 3em;
-            width: 3em;
-            margin: 0 0.25em;
-            border-radius: 50%;
-            border: none;
-            @include media($gtDesktop) {
-                height: 2em;
-                width: 2em;
-            }
-        }
+    align-content: center;
+    align-items: center;
+    .small-logo {
+        height: 3em;
+        width: 3em;
+        margin: 0.25em;
+        border-radius: 50%;
+        border: none;
     }
 }

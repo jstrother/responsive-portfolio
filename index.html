@@ -7,30 +7,28 @@
 </head>
 <body>
     <header>
-        <div id="header-container">
-            <h1><span id="firstName">Jim</span> <span class="disappear">Strother</span></h1>
+        <h1>Jim Strother</h1>
             <nav>
-                <ul id="navHeader" class="navMenu">
-                    <li class="nav-item" id="spaceDivTopLink"><a href="#spaceDivTop">top</a></li>
-                    <li class="nav-item" id="spaceDivAboutLink"><a href="#spaceDivAbout">who i am</a></li>
-                    <li class="nav-item" id="spaceDivSkillsLink"><a href="#spaceDivSkills">skill set</a></li>
-                    <li class="nav-item" id="spaceDivProjectsLink"><a href="#spaceDivProjects">projects</a></li>
-                    <li class="icon">
-                        <a href="javascript:void(0);">&#9776;</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+            <ul class="navHeader" id="navMenu">
+                <li><a href="#spaceDivTop" class="bar-on-right">top</a></li>
+                <li><a href="#spaceDivAbout" class="bar-on-right">who i am</a></li>
+                <li><a href="#spaceDivSkills" class="bar-on-right">skill set</a></li>
+                <li><a href="#spaceDivProjects">projects</a></li>
+                <li class="icon">
+                    <a href="javascript:void(0);">&#9776;</a>
+                </li>
+            </ul>
+        </nav>
     </header>
     <main>
         <div id="spaceDivTop" class="spaceDiv"></div>
         <div class="background-div" id="firstBG">
             <!--using a parallax scroll on background image-->
             <div id="js-parallax-window1" class="parallax-window">
-                <div class="parallax-static-content" id="staticH2">
-                    <h2>Full-Stack JavaScript</h2>
-                    <h2>&</h2>
-                    <h2>Front-End Web Developer</h2>
+                <div class="parallax-static-content">
+                    <h3>Full-Stack JavaScript</h3>
+                    <h3>&</h3>
+                    <h3>Front-End Web Developer</h3>
                 </div>
                 <div id="js-parallax-background1" class="parallax-background"></div>
             </div>
@@ -38,42 +36,42 @@
         <div id="spaceDivAbout" class="spaceDiv"></div>
         <div id="about">
             <div id="about-header">
-                <h3 class="h3Class">Who I Am</h3>
+                <h2>Who I Am</h2>
                 <img src="img/head-shot1.jpg" alt="Jim Strother" id="head-img">
             </div>
-            <section id="info">
-                <div class="info-div" id="coder">
+            <div id="info-div">
+                <section class="info" id="coder">
                     <div class="info-header">
                         <img src="img/coder.png" alt="Coder" class="med-logo">
                         <h4>Coder</h4>
                     </div>
-                    <p class="description">I love code. I love the challenge it gives me as I work on projects, and solve each one's unique problems. From styling a web site's look with the lightweight Bourbon library, to the JavaScript that powers the user experience up front and fetches data from the server, I aim to build web sites and web apps with a consistent feel and thoughtful thoroughness.</p>
-                </div>
-                <div class="info-div" id="creator">
+                    <p>I love code. I love the challenge it gives me as I work on projects, and solve each one's unique problems. From styling a web site's look with the lightweight Bourbon library, to the JavaScript that powers the user experience up front and fetches data from the server, I aim to build web sites and web apps with a consistent feel and thoughtful thoroughness.</p>
+                </section>
+                <section class="info" id="creator">
                     <div class="info-header">
                         <img src="img/creator.png" alt="Creator" class="med-logo">
                         <h4>Creator</h4>
                     </div>
-                    <p class="description">Creating things is as natural as breathing. Ideas arrive constantly and give me so much to work out and put to good use. Ideas as simple as a task list, to something as grand as open-source inventory tracking software, I continually give myself something worthwhile to work toward.</p>
-                </div>
-                <div class="info-div" id="explorer">
+                    <p>Creating things is as natural as breathing. Ideas arrive constantly and give me so much to work out and put to good use. Ideas as simple as a task list, to something as grand as open-source inventory tracking software, I continually give myself something worthwhile to work toward.</p>
+                </section>
+                <section class="info" id="explorer">
                     <div class="info-header">
                         <img src="img/explorer.png" alt="Explorer" class="med-logo">
                         <h4>Explorer</h4>
                     </div>
-                    <p class="description">Few things excite me more than "new". Whether it is a new place- such as my first-ever trip to southern California recently, or discovering a new database (RethinkDB) that fits closely with my belief that the web should be as real-time as possible, I never stop exploring places or ideas.</p>
+                    <p>Few things excite me more than "new". Whether it is a new place- such as my first-ever trip to southern California recently, or discovering a new database (RethinkDB) that fits closely with my belief that the web should be as real-time as possible, I never stop exploring places or ideas.</p>
                     <!--<img src="img/close-up3.jpg" alt="Me! In the woods!">-->
-                </div>
-            </section>
+                </section>
+            </div>
         </div>
         <div id="spaceDivSkills" class="spaceDiv"></div>
         <div id="skillset">
             <div id="skillset-header">
-            	<h3 class="h3Class">Skill Set</h3>
+            	<h2>Skill Set</h2>
             </div>
             <div id="resumeProficiencies">
                 <div id="column1">
-                    <div class="resumeProficienciesTop1 resumeProficienciesTop">HTML5</div>
+                    <div class="resumeProficienciesTop resumeProficienciesTop1">HTML5</div>
                     <div class="resumeProficienciesBottom">
                         <div class="progress">
                             <div class="html progress-bar progress-bar-info" role="progressbar" style="width: 0%">
@@ -194,54 +192,60 @@
             </div>
         </div>
         <div id="spaceDivProjects" class="spaceDiv"></div>
-        <section id="projects">
+        <div id="projects">
             <!--projects list-->
-            <div>
+            <section>
                 <br><br><br>
-                <h3 id="projects-header" class="h3Class">Projects</h3>
-                <div id="list">
-                    <br><br>
-                    <div class="project">
-                        <div class="project-header">
-                            <h5>Task List</h5>
-                            <img src="img/task-list.png" alt="Task List" class="project-image">
-                        </div>
+                <h2 id="projects-header">Projects</h2>
+                <br><br>
+                <div class="project">
+                    <div class="project-header">
+                        <h5>Task List</h5>
+                        <img src="img/task-list.png" alt="Task List" class="project-image">
+                    </div>
+                    <div class="project-body">
                         <p>This project was my final project at Thinkful. It is a full-stack app with a React/Redux front-end and, using Node.js and Socket.io, connects to a RethinkDB database to keep track of tasks via a persistent list. The tech stack that I used here is one that I am interested in using as my main stack for any future side-projects as it lends itself very nicely to the real-time web.</p>
                         <div class="button-container">
                             <a href="http://52.43.128.234:9000" target="_blank"><button>See it work!</button></a>
                             <a href="https://github.com/jstrother/task-list" target="_blank"><button>Look at the code!</button></a>
                         </div>
                     </div>
-                    <br><br>
-                    <div class="project">
-                        <div class="project-header">
-                            <h5>Hot or Cold</h5>
-                            <img src="img/hot-cold.png" alt="Hot or Cold" class="project-image">
-                        </div>
+                </div>
+                <br><br>
+                <div class="project">
+                    <div class="project-header">
+                        <h5>Hot or Cold</h5>
+                        <img src="img/hot-cold.png" alt="Hot or Cold" class="project-image">
+                    </div>
+                    <div class="project-body">
                         <p>Although initially built as pure HTML, CSS, and JavaScript, I ended up refactoring this when I started learning React and Redux. I created the components necessary and set up the flow of info through the app. It was hard initially to wrap my head around the abstraction of React, but I was able to gain a good understanding of it. Also, the addition of Redux really helped to make things easier for me.</p>
                         <div class="button-container">
-                            <a href="https://pacific-ravine-70507.herokuapp.com/" target="_blank"><button>See it work!</button></a>
+                            <a href="https://jstrother.github.io/hot-cold-redux/public/index.html" target="_blank"><button>See it work!</button></a>
                             <a href="https://github.com/jstrother/hot-cold-redux" target="_blank"><button>Look at the code!</button></a>
                         </div>
                     </div>
-                    <br><br>
-                    <div class="project">
-                        <div class="project-header">
-                            <h5>API "Hack"</h5>
-                            <img src="img/api.png" alt="Api 'Hack'" class="project-image">
-                        </div>
+                </div>
+                <br><br>
+                <div class="project">
+                    <div class="project-header">
+                        <h5>API "Hack"</h5>
+                        <img src="img/api.png" alt="Api 'Hack'" class="project-image">
+                    </div>
+                    <div class="project-body">
                         <p>In this project, I learned how to interact with the endpoints of an API. As it was the introduction of basic CRUD functions, it actually dovetailed nicely into my rising interest in Node.js. This one is just a simple recommendation program for any books, shows, movies, and more that you enjoy.</p>
                         <div class="button-container">
                             <a href="http://jstrother.github.io/read-watch-listen/public/index.html" target="_blank"><button>See it work!</button></a>
                             <a href="https://github.com/jstrother/read-watch-listen" target="_blank"><button>Look at the code!</button></a>
                         </div>
                     </div>
-                    <br><br>
-                    <div class="project">
-                        <div class="project-header">
-                            <h5>Flappy Bird</h5>
-                            <img src="img/flappy-bird.png" alt="Flappy Bird" class="project-image">
-                        </div>
+                </div>
+                <br><br>
+                <div class="project">
+                    <div class="project-header">
+                        <h5>Flappy Bird</h5>
+                        <img src="img/flappy-bird.png" alt="Flappy Bird" class="project-image">
+                    </div>
+                    <div class="project-body">
                         <p>A project that taught me a lot of JavaScript, Flappy Bird was my first real introduction to that language. I learned how to link JavaScript files together and keeping the code simple to read and understand. This also introduced me to Node.js (not used in this project though) by showing me require statements to link the files together. This sparked an interest in Node.js that lead me to enlarging my skillset and becoming a Full-Stack JavaScript Developer.</p>
                         <p>There is a small issue I am trying to fix.  If the bird falls off of the screen, the game doesn't end.  I am currently going through several javascript files to find and fix the error.</p>
                         <div class="button-container">
@@ -249,18 +253,16 @@
                             <a href="https://github.com/jstrother/flappy-bird" target="_blank"><button>Look at the code!</button></a>
                         </div>
                     </div>
-                    <br><br>
                 </div>
-            </div>
-        </section>
+                <br><br>
+            </section>
+        </div>
     </main>
     <footer>
-        <section id="foot-container">
-            <a href="mailto:strotherwebdev@gmail.com"><img class="small-logo" src="img/email.png" alt="Email"></a>
-            <a href="https://www.facebook.com/profile.php?id=100013311965879"><img class="small-logo" src="img/facebook-logo.png" alt="Facebook"></a>
-            <a href="https://twitter.com/strotherwebdev"><img class="small-logo" src="img/twitter-logo.png" alt="Twitter"></a>
-            <a href="https://www.linkedin.com/in/jim-strother-57bb8083"><img class="small-logo" src="img/linkedin-logo.png" alt="LinkedIn"></a>
-        </section>
+        <a href="mailto:strotherwebdev@gmail.com"><img class="small-logo" src="img/email.png" alt="Email"></a>
+        <a href="https://www.facebook.com/profile.php?id=100013311965879"><img class="small-logo" src="img/facebook-logo.png" alt="Facebook"></a>
+        <a href="https://twitter.com/strotherwebdev"><img class="small-logo" src="img/twitter-logo.png" alt="Twitter"></a>
+        <a href="https://www.linkedin.com/in/jim-strother-57bb8083"><img class="small-logo" src="img/linkedin-logo.png" alt="LinkedIn"></a>
     </footer>
     <script type="text/javascript" src="scripts.min.js"></script>
 </body>
