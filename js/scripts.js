@@ -15,14 +15,32 @@ $(document).ready(function() {
     });
     
     // code for hamburger menu
-    var menu = $('.navMenu');
+    var menu = $('#navMenu'),
+        icon = $('#icon'),
+        item = $('.nav-item');
         
     menu.on('click', function() {
-      if (menu.className === 'navHeader') {
-        menu.className += 'responsive';
+      // we only want this to work on mobile screens
+      if (window.matchMedia("(max-width: 680px)").matches) {
+        icon.toggle();
+        item.toggle();
+      }
+    });
+    
+    $(window).resize(function() {
+      // first check to make sure screen size is bigger than mobile
+      if (window.matchMedia("(min-width: 681px)").matches) {
+        if (item.hasClass('hidden')) {
+          item.toggleClass('hidden');
+          item.show();
+        }
+        icon.hide();
       }
       else {
-        menu.className = 'navHeader';
+        if (!(item.hasClass('hidden'))) {
+          item.toggleClass('hidden');
+        }
+        icon.show();
       }
     });
 
