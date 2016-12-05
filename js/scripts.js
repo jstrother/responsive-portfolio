@@ -19,8 +19,12 @@ $(document).ready(function() {
         icon = $('#icon'),
         item = $('.nav-item');
         
+    menu.data('clicked', false);
+        
     menu.on('click', function() {
-      // we only want this to work on mobile screens
+      var $this = $(this);
+      $this.toggle($this.data('clicked', true));
+      // we only want this to toggle on mobile screens
       if (window.matchMedia("(max-width: 680px)").matches) {
         icon.toggle();
         item.toggle();
@@ -30,17 +34,31 @@ $(document).ready(function() {
     $(window).resize(function() {
       // first check to make sure screen size is bigger than mobile
       if (window.matchMedia("(min-width: 681px)").matches) {
+        // we want to make sure that item and icon show or hide properly
         if (item.hasClass('hidden')) {
+          // removing the class messes with the mobile display
           item.toggleClass('hidden');
+          // apparently, we have to force it to show to make sure it works
           item.show();
         }
         icon.hide();
       }
       else {
+        // on a mobile display, we want the opposite of above, but the same thing on the whole
         if (!(item.hasClass('hidden'))) {
           item.toggleClass('hidden');
+          icon.show();
+          if (icon.show()) {
+            item.hide();
+          }
         }
-        icon.show();
+        if (icon.hasClass('hidden')) {
+          icon.toggleClass('hidden');
+          item.show();
+          if (item.show()) {
+            icon.hide();
+          }
+        }
       }
     });
 
@@ -60,19 +78,22 @@ $(document).ready(function() {
     $('.git').css('width', '90%');
     
     // parallax
-    if ($("#js-parallax-window1").length) {
+    var paraWindow1 = $("#js-parallax-window1"),
+        paraWindow2 = $("#js-parallax-window2");
+    
+    if (paraWindow1.length) {
         parallax();
     }
     
-    if ($("#js-parallax-window2").length) {
+    if (paraWindow2.length) {
         parallax();
     }
     
     $(window).scroll(function(e) {
-      if ($("#js-parallax-window1").length) {
+      if (paraWindow1.length) {
         parallax();
       }
-      if ($("#js-parallax-window2").length) {
+      if (paraWindow2.length) {
         parallax();
       }
     });
@@ -80,7 +101,7 @@ $(document).ready(function() {
     function parallax(){
       var plxSpeed = 0.35;
       // this if statement deals with the first parallax window
-      if( $("#js-parallax-window1").length > 0 ) {
+      if(paraWindow1.length > 0) {
         var plxBackground1 = $("#js-parallax-background1"),
             plxWindow1 = $("#js-parallax-window1"),
             plxWindowTopToPageTop1 = $(plxWindow1).offset().top,
@@ -90,7 +111,7 @@ $(document).ready(function() {
         plxBackground1.css('top', - (plxWindowTopToWindowTop1 * plxSpeed) + 'px');
       }
       // this if statement deals with the second parallax window
-      if( $("#js-parallax-window2").length > 0 ) {
+      if(paraWindow2.length > 0) {
         var plxBackground2 = $("#js-parallax-background2"),
             plxWindow2 = $("#js-parallax-window2"),
             plxWindowTopToPageTop2 = $(plxWindow2).offset().top,
