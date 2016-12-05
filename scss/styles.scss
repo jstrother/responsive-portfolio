@@ -44,12 +44,21 @@ header {
     nav {
         font-size: 1.25em;
         padding-top: 0.25em;
-        ul {
+        display: flex;
+        align-self: flex-end;
+        margin: auto 0;
+        #navHeader {
             display: flex;
+            overflow: hidden;
             li {
                 margin-left: 0.25em;
+                a {
+                    display: inline-block;
+                    text-align: center;
+                    transition: 0.3s;
+                }
             }
-            li:not(.icon) {
+            .nav-item {
                 @include media($mobile) {
                     display: none;
                 }
@@ -62,6 +71,9 @@ header {
             }
             .responsive {
                 @include media($mobile) {
+                    flex-direction: column;
+                    justify-content: center;
+                    background-color: $headerColor;
                     .icon {
                         position: absolute;
                     }

@@ -15,10 +15,9 @@ $(document).ready(function() {
     });
     
     // code for hamburger menu
-    var icon = $('.icon'),
-        menu = $('#navMenu');
+    var menu = $('.navMenu');
         
-    icon.on('click', function() {
+    menu.on('click', function() {
       if (menu.className === 'navHeader') {
         menu.className += 'responsive';
       }
