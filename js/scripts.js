@@ -1,11 +1,11 @@
-const $ = require('jquery');
+import $ from 'jquery';
 
 $(document).ready(function() {
     console.log('ready');
     
     // links scroll to anchors
     $('a[href^="#"]').on('click', function(event) {
-      var target = $(this.getAttribute('href'));
+      let target = $(this.getAttribute('href'));
       if(target.length) {
           event.preventDefault();
           $('html, body').stop().animate({
@@ -15,14 +15,14 @@ $(document).ready(function() {
     });
     
     // code for hamburger menu
-    var menu = $('#navMenu'),
+    let menu = $('#navMenu'),
         icon = $('#icon'),
         item = $('.nav-item');
         
     menu.data('clicked', false);
         
     menu.on('click', function() {
-      var $this = $(this);
+      let $this = $(this);
       $this.toggle($this.data('clicked', true));
       // we only want this to toggle on mobile screens
       if (window.matchMedia("(max-width: 680px)").matches) {
@@ -78,7 +78,7 @@ $(document).ready(function() {
     $('.git').css('width', '90%');
     
     // parallax
-    var paraWindow1 = $("#js-parallax-window1"),
+    let paraWindow1 = $("#js-parallax-window1"),
         paraWindow2 = $("#js-parallax-window2");
     
     if (paraWindow1.length) {
@@ -99,10 +99,10 @@ $(document).ready(function() {
     });
     
     function parallax(){
-      var plxSpeed = 0.35;
+      let plxSpeed = 0.35;
       // this if statement deals with the first parallax window
       if(paraWindow1.length > 0) {
-        var plxBackground1 = $("#js-parallax-background1"),
+        let plxBackground1 = $("#js-parallax-background1"),
             plxWindow1 = $("#js-parallax-window1"),
             plxWindowTopToPageTop1 = $(plxWindow1).offset().top,
             windowTopToPageTop1 = $(window).scrollTop(),
@@ -112,7 +112,7 @@ $(document).ready(function() {
       }
       // this if statement deals with the second parallax window
       if(paraWindow2.length > 0) {
-        var plxBackground2 = $("#js-parallax-background2"),
+        let plxBackground2 = $("#js-parallax-background2"),
             plxWindow2 = $("#js-parallax-window2"),
             plxWindowTopToPageTop2 = $(plxWindow2).offset().top,
             windowTopToPageTop2 = $(window).scrollTop(),

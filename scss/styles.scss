@@ -28,6 +28,11 @@ header {
     align-items: center;
     h1 {
         font-size: 2em;
+        .disappear {
+            @include media($mobile) {
+                display: none;
+            }
+        }
     }
     a:link {
         color: $white;
@@ -243,3 +248,5 @@ footer {
         border: none;
     }
 }
+
+// and all the colors of the sun
