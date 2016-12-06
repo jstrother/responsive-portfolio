@@ -1,28 +1,51 @@
-import $ from 'jquery';
+'use strict';
 
-$.ready(function() {
+import $ from 'jquery';
+import 'jquery-ui';
+import Velocity from 'velocity-animate';
+import 'velocity-ui-pack';
+
+$(() => {
     console.log('ready');
     
     // links scroll to anchors
-    $('a[href^="#"]').on('click', function(event) {
-      let target = $(this.getAttribute('href'));
-      if(target.length) {
-          event.preventDefault();
-          $('html, body').stop().animate({
-              scrollTop: target.offset().top
-          }, 2000);
-      }
-    });
+    
+    const topLink = $('#top-link'),
+          aboutLink = $('#about-link'),
+          skillsetLink = $('#skillset-link'),
+          projectsLink = $('#projects-link');
+    
+    topLink.on('click', scrollFunction('spaceDivTop'));
+    aboutLink.on('click', scrollFunction('spaceDivAbout'));
+    skillsetLink.on('click', scrollFunction('spaceDivSkills'));
+    projectsLink.on('click', scrollFunction('spaceDivProjects'));
+    
+    function scrollFunction(target) {
+      target.Velocity('scroll', {
+        duration: 2000,
+        easing: 'easeInCirc'
+      });
+    }
+    
+    // $('a[href^="#"]').on('click', event => {
+    //   let target = $(this.getAttribute('href'));
+    //   if(target.length) {
+    //       event.preventDefault();
+    //       $('html, body').stop().animate({
+    //           scrollTop: target.offset().top
+    //       }, 2000);
+    //   }
+    // });
     
     // code for hamburger menu
-    let menu = $('#navMenu'),
+    const menu = $('#navMenu'),
         icon = $('#icon'),
         item = $('.nav-item');
         
     menu.data('clicked', false);
         
-    menu.on('click', function() {
-      let $this = $(this);
+    menu.on('click', () => {
+      const $this = $(this);
       $this.toggle($this.data('clicked', true));
       // we only want this to toggle on mobile screens
       if (window.matchMedia("(max-width: 680px)").matches) {
@@ -31,7 +54,7 @@ $.ready(function() {
       }
     });
     
-    $(window).resize(function() {
+    $(window).resize(() => {
       // first check to make sure screen size is bigger than mobile
       if (window.matchMedia("(min-width: 681px)").matches) {
         // we want to make sure that item and icon show or hide properly
@@ -80,7 +103,7 @@ $.ready(function() {
     $('.git').css('width', '90%');
     
     // parallax
-    let paraWindow1 = $("#js-parallax-window1"),
+    const paraWindow1 = $("#js-parallax-window1"),
         paraWindow2 = $("#js-parallax-window2");
     
     if (paraWindow1.length) {
@@ -101,24 +124,26 @@ $.ready(function() {
     });
     
     function parallax(){
-      let plxSpeed = 0.35;
+      const plxSpeed = 0.35;
       // this if statement deals with the first parallax window
       if(paraWindow1.length > 0) {
-        let plxBackground1 = $("#js-parallax-background1"),
+        const plxBackground1 = $("#js-parallax-background1"),
             plxWindow1 = $("#js-parallax-window1"),
             plxWindowTopToPageTop1 = $(plxWindow1).offset().top,
-            windowTopToPageTop1 = $(window).scrollTop(),
-            plxWindowTopToWindowTop1 = plxWindowTopToPageTop1 - windowTopToPageTop1;
+            windowTopToPageTop1 = $(window).scrollTop();
+            
+        let plxWindowTopToWindowTop1 = plxWindowTopToPageTop1 - windowTopToPageTop1;
     
         plxBackground1.css('top', - (plxWindowTopToWindowTop1 * plxSpeed) + 'px');
       }
       // this if statement deals with the second parallax window
       if(paraWindow2.length > 0) {
-        let plxBackground2 = $("#js-parallax-background2"),
+        const  plxBackground2 = $("#js-parallax-background2"),
             plxWindow2 = $("#js-parallax-window2"),
             plxWindowTopToPageTop2 = $(plxWindow2).offset().top,
-            windowTopToPageTop2 = $(window).scrollTop(),
-            plxWindowTopToWindowTop2 = plxWindowTopToPageTop2 - windowTopToPageTop2;
+            windowTopToPageTop2 = $(window).scrollTop();
+            
+        let plxWindowTopToWindowTop2 = plxWindowTopToPageTop2 - windowTopToPageTop2;
     
         plxBackground2.css('top', - (plxWindowTopToWindowTop2 * plxSpeed) + 'px');
       }

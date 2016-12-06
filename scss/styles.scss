@@ -36,6 +36,9 @@ header {
             }
         }
     }
+    a {
+        position: relative;
+    }
     a:link {
         color: $white;
     }

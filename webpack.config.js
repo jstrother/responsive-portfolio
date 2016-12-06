@@ -4,14 +4,14 @@ const webpack = require('webpack');
 module.exports = {
 	entry: './js/scripts.js',
 	output: {
-		path: `./js`,
+		path: `${__dirname}/js`,
 		filename: 'scripts-webpack.js'
 	},
 	watch: true,
 	devtool: 'source-map',
 	module: {
 		loaders: [{
-			test: /.js?$/,
+			test: /.js$/,
 			loader: 'babel-loader',
 			exclude: /node_modules/,
 			query: {
