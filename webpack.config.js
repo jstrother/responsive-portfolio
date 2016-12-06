@@ -4,8 +4,8 @@ const webpack = require('webpack');
 module.exports = {
 	entry: './js/scripts.js',
 	output: {
-		path: `${__dirname}/public`,
-		filename: 'scripts.min.js'
+		path: `./js`,
+		filename: 'scripts-webpack.js'
 	},
 	watch: true,
 	devtool: 'source-map',

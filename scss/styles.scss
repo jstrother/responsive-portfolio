@@ -26,8 +26,10 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    // the order on h1 and nav is to fix a small glitch occasionally happening on reload
     h1 {
         font-size: 2em;
+        order: 1;
         .disappear {
             @include media($mobile) {
                 display: none;
@@ -53,6 +55,7 @@ header {
         align-self: flex-end;
         margin: auto 0;
         background-color: $headerColor;
+        order: 2;
         #navMenu {
             display: flex;
             flex-direction: column;

@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-$(document).ready(function() {
+$.ready(function() {
     console.log('ready');
     
     // links scroll to anchors
@@ -48,6 +48,7 @@ $(document).ready(function() {
         if (!(item.hasClass('hidden'))) {
           item.toggleClass('hidden');
           icon.show();
+          // to make sure this works on continually resizing the window we have to force the two to be opposite
           if (icon.show()) {
             item.hide();
           }
@@ -55,6 +56,7 @@ $(document).ready(function() {
         if (icon.hasClass('hidden')) {
           icon.toggleClass('hidden');
           item.show();
+          // to make sure this works on continually resizing the window we have to force the two to be opposite
           if (item.show()) {
             icon.hide();
           }
