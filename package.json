@@ -7,7 +7,6 @@
     "scss": "node-sass --output-stlye compressed scss/styles.scss public/styles.css",
     "autoprefixer": "postcss -u autoprefixer -r public/styles.css",
     "cleancss": "cleancss -o public/styles.css public/styles.css",
-    "webpack": "webpack",
     "image": "imagemin img/* -o public/img",
     "font": "cp font/*.* public/font/",
     "html": "cp *.html public/",
