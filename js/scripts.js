@@ -1,32 +1,37 @@
 'use strict';
 
 import $ from 'jquery';
+import jQuery from 'jquery';
+
+window.$ = $;
+window.jQuery = jQuery;
+
 import 'jquery-ui';
-import Velocity from 'velocity-animate';
+import {Velocity as velocity} from 'velocity-animate';
 import 'velocity-ui-pack';
 
 $(() => {
     console.log('ready');
     
     // links scroll to anchors
-    
     const topLink = $('#top-link'),
           aboutLink = $('#about-link'),
           skillsetLink = $('#skillset-link'),
           projectsLink = $('#projects-link');
     
-    topLink.on('click', scrollFunction('spaceDivTop'));
-    aboutLink.on('click', scrollFunction('spaceDivAbout'));
-    skillsetLink.on('click', scrollFunction('spaceDivSkills'));
-    projectsLink.on('click', scrollFunction('spaceDivProjects'));
+    topLink.on('click', scrollToAnchor('#spaceDivTop'));
+    aboutLink.on('click', scrollToAnchor('#spaceDivAbout'));
+    skillsetLink.on('click', scrollToAnchor('#spaceDivSkills'));
+    projectsLink.on('click', scrollToAnchor('#spaceDivProjects'));
     
-    function scrollFunction(target) {
-      target.Velocity('scroll', {
+    function scrollToAnchor(target) {
+      target.velocity('scroll', {
         duration: 2000,
         easing: 'easeInCirc'
       });
     }
     
+    // this code block stopped working after webpack was added
     // $('a[href^="#"]').on('click', event => {
     //   let target = $(this.getAttribute('href'));
     //   if(target.length) {
@@ -88,23 +93,25 @@ $(() => {
     });
 
     // skillset
+    // this code block stopped working after webpack was added
     $('.html').css('width', '90%');
     $('.css').css('width', '90%');
     $('.scss').css('width', '90%');
     $('.bourbon').css('width', '85%');
     $('.javascript').css('width', '90%');
-    $('.jquery').css('width', '90%');
+    $('.jquery').css('width', '85%');
     $('.velocity').css('width', '75%');
-    $('.rwd').css('width', '75%');
+    $('.rwd').css('width', '85%');
     $('.react').css('width', '70%');
-    $('.node').css('width', '90%');
-    $('.socket').css('width', '85%');
-    $('.rethink').css('width', '70%');
+    $('.node').css('width', '85%');
+    $('.socket').css('width', '65%');
+    $('.rethink').css('width', '50%');
     $('.git').css('width', '90%');
     
     // parallax
+    // this code block stopped working after webpack was added
     const paraWindow1 = $("#js-parallax-window1"),
-        paraWindow2 = $("#js-parallax-window2");
+          paraWindow2 = $("#js-parallax-window2");
     
     if (paraWindow1.length) {
         parallax();
