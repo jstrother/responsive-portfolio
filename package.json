@@ -33,15 +33,7 @@
   },
   "homepage": "https://github.com/jstrother/responsive-portfolio#readme",
   "dependencies": {
-    "css-loader": "^0.26.1",
-    "jquery": "^3.1.0",
-    "jquery-ui": "^1.12.1",
-    "node-sass": "^3.13.0",
-    "postcss-loader": "^1.2.0",
-    "sass-loader": "^4.0.2",
-    "style-loader": "^0.13.1",
-    "velocity-animate": "^1.3.1",
-    "velocity-ui-pack": "^1.2.2"
+    "jquery": "^3.1.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.1",
@@ -55,7 +47,7 @@
     "eslint-config-standard": "^5.3.5",
     "eslint-plugin-promise": "^2.0.1",
     "eslint-plugin-standard": "^2.0.0",
-    "node-sass": "^3.9.0",
+    "node-sass": "^4.0.0",
     "nodemon": "^1.10.0",
     "normalize-scss": "^5.0.3",
     "onchange": "^3.0.0",
