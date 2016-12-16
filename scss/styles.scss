@@ -16,8 +16,7 @@ body {
 
 header {
     background-color: darken($baseBlue, 5%);
-    margin-top: -1.5em;
-    padding: 1em 0 1em 0;
+    margin-top: -0.5em;
     text-align: center;
     height: $headerHeight;
     width: 100%;
@@ -26,6 +25,7 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    align-content: center;
     // the order on h1 and nav is to fix a small glitch occasionally happening on reload
     h1 {
         font-size: 2em;
@@ -104,7 +104,7 @@ main {
         visibility: hidden;
     }
     #spaceDivSkills {
-        height: $spaceDivHght - 3em;
+        height: $spaceDivHght - 2.25em;
     }
     #about {
         padding: 5em 0 2.5em 0;
