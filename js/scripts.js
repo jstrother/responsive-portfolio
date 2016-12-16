@@ -1,46 +1,20 @@
 'use strict';
 
+// recently refactored to use ES6
+
 import $ from 'jquery';
-import jQuery from 'jquery';
-
-window.$ = $;
-window.jQuery = jQuery;
-
-import 'jquery-ui';
-import {Velocity as velocity} from 'velocity-animate';
-import 'velocity-ui-pack';
 
 $(() => {
     console.log('ready');
     
     // links scroll to anchors
-    const topLink = $('#top-link'),
-          aboutLink = $('#about-link'),
-          skillsetLink = $('#skillset-link'),
-          projectsLink = $('#projects-link');
-    
-    topLink.on('click', scrollToAnchor('#spaceDivTop'));
-    aboutLink.on('click', scrollToAnchor('#spaceDivAbout'));
-    skillsetLink.on('click', scrollToAnchor('#spaceDivSkills'));
-    projectsLink.on('click', scrollToAnchor('#spaceDivProjects'));
-    
-    function scrollToAnchor(target) {
-      target.velocity('scroll', {
-        duration: 2000,
-        easing: 'easeInCirc'
-      });
-    }
-    
-    // this code block stopped working after webpack was added
-    // $('a[href^="#"]').on('click', event => {
-    //   let target = $(this.getAttribute('href'));
-    //   if(target.length) {
-    //       event.preventDefault();
-    //       $('html, body').stop().animate({
-    //           scrollTop: target.offset().top
-    //       }, 2000);
-    //   }
-    // });
+    $('a[href^="#"]').on('click', event => {
+      event.preventDefault();
+      let location = event.target.getAttribute('href');
+      $('html, body').stop().animate({
+          scrollTop: $(location).offset().top
+      }, 2000);
+    });
     
     // code for hamburger menu
     const menu = $('#navMenu'),

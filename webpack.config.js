@@ -7,7 +7,6 @@ module.exports = {
 		path: `${__dirname}/js`,
 		filename: 'scripts-webpack.js'
 	},
-	watch: true,
 	devtool: 'source-map',
 	module: {
 		loaders: [{
