@@ -4,7 +4,7 @@
   "description": "a rebuild of my site",
   "main": "scripts.js",
   "scripts": {
-    "scss": "node-sass --output-stlye compressed scss/styles.scss public/styles.css",
+    "scss": "node-sass --output-style compressed scss/styles.scss public/styles.css",
     "autoprefixer": "postcss -u autoprefixer -r public/styles.css",
     "cleancss": "cleancss -o public/styles.css public/styles.css",
     "uglify": "uglifyjs js/scripts-webpack.js -m -c -o public/scripts.min.js",
