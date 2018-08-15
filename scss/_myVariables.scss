@@ -1,3 +1,4 @@
+@import "myFonts";
 @import "myBreakpoints";
 
 // colors
@@ -5,3 +6,10 @@ $baseBlue: #3498DB;
 $baseOffWhite: #ECF0F1;
 $baseDarkBlue: #34495E;
 $white: #ffffff;
+$dark-grey: #a9a9a9;
+$green: #006400;
+$headerColor: darken($baseBlue, 5%);
+
+// measurements
+$headerHeight: 6em;
+$spaceDivHght: $headerHeight - 1;

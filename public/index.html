@@ -6,228 +6,271 @@
     <link rel="stylesheet" href="styles.css" type="text/css" />
 </head>
 <body>
-    <header id="home">
-        <!--contains nav info, uses pic of me in "logo" slot (also for returning to #home)-->
-        <div id="img-div">
-            <a href="#home"><img src="img/head-shot1.jpg" alt="Jim Strother"></a>
-        </div>
-        <h1>Jim Strother</h1>
+    <header>
+        <h1>Jim <span class="disappear">Strother</span></h1>
         <nav>
-            <a href="#about">Who I Am</a>
-            <a href="#projects">Projects</a>
+            <ul id="navMenu">
+                <li class="nav-item hidden"><a href="#spaceDivTop" id="top-link">top</a></li>
+                <li class="nav-item hidden"><a href="#spaceDivAbout" id="about-link">who i am</a></li>
+                <li class="nav-item hidden"><a href="#spaceDivSkills" id="skillset-link">skill set</a></li>
+                <li class="nav-item hidden"><a href="#spaceDivProjects" id="projects-link">projects</a></li>
+                <li id="icon">
+                    <a href="javascript:void(0);">&#9776;</a>
+                </li>
+            </ul>
         </nav>
     </header>
     <main>
-        <div class="background-div" id="firstBG">
+        <div id="spaceDivTop" class="spaceDiv"></div>
+        <div class="background-div">
             <!--using a parallax scroll on background image-->
             <div id="js-parallax-window1" class="parallax-window">
-                <div class="parallax-static-content"></div>
+                <div class="parallax-static-content">
+                    <h3>Full-Stack JavaScript</h3>
+                    <h3>&</h3>
+                    <h3>Front-End Web Developer</h3>
+                </div>
                 <div id="js-parallax-background1" class="parallax-background"></div>
             </div>
         </div>
-        <div id="intro">
-            <h4>Full-Stack JavaScript</h4>
-            <h4>&</h4>
-            <h4>Front-End Web Developer</h4>
-            <p>(Not much of a web designer though)</p>
-        </div>
+        <div id="spaceDivAbout" class="spaceDiv"></div>
         <div id="about">
-            <section class="info" id="coder">
-                <div class="mini-title">
-                    <img src="img/coder.png" alt="Coder" class="med-logo">
-                    <h4>Coder</h4>
-                </div>
-                <p>I love code. I love the challenge it gives me as I work on projects, and solve each one's unique problems. From styling a web site's look with the lightweight Bourbon library, to the JavaScript that powers the user experience up front and fetches data from the server, I aim to build web sites and web apps with a consistent feel and thoughtful thoroughness.</p>
-            </section>
-            <section class="info" id="creator">
-                <div class="mini-title">
-                    <img src="img/creator.png" alt="Creator" class="med-logo">
-                    <h4>Creator</h4>
-                </div>
-                <p>Creating things is as natural as breathing. Ideas arrive constantly and give me so much to work out and put to good use. Ideas as simple as a task list, to something as grand as open-source inventory tracking software, I continually give myself something worthwhile to work toward.</p>
-            </section>
-            <section class="info" id="explorer">
-                <div class="mini-title">
-                    <img src="img/explorer.png" alt="Explorer" class="med-logo">
-                    <h4>Explorer</h4>
-                </div>
-                <p>Few things excite me more than "new". Whether it is a new place- such as my first-ever trip to southern California recently, or discovering a new database (RethinkDB) that fits closely with my belief that the web should be as real-time as possible, I never stop exploring places or ideas.</p>
-                <img src="img/close-up3.jpg" alt="Me! In the woods!">
-            </section>
-            <section id=skillset>
-                <div id="resumeProficiencies">
-                    <div id="column1">
-                        <div id="resumeProficienciesTop" class="resumeProficienciesTop1">HTML5</div>
-                        <div id="resumeProficienciesBottom">
-                            <div class="progress">
-                                <div class="html progress-bar progress-bar-info" role="progressbar" style="width: 0%">
-                                    <span class="sr-only"></span></div>
-                            </div>
-                        </div>
-                        
-                        <div id="resumeProficienciesTop">CSS3</div>
-                        <div id="resumeProficienciesBottom">
-                            <div class="progress">
-                                <div class="css progress-bar progress-bar-info" role="progressbar" style="width: 0%">
-                                    <span class="sr-only"></span></div>
-                            </div>
-                        </div>
-            
-                        <div id="resumeProficienciesTop">SASS/SCSS</div>
-                        <div id="resumeProficienciesBottom">
-                            <div class="progress">
-                                <div class="scss progress-bar progress-bar-info" role="progressbar" style="width: 0%">
-                                    <span class="sr-only"></span></div>
-                            </div>
-                        </div>
-                
-                        <div id="resumeProficienciesTop">JavaScript</div>
-                        <div id="resumeProficienciesBottom">
-                            <div class="progress">
-                                <div class="javascript progress-bar progress-bar-info" role="progressbar" style="width: 0%">
-                                    <span class="sr-only"></span></div>
-                            </div>
-                        </div>
-                        
-                        <div id="resumeProficienciesTop">jQuery</div>
-                        <div id="resumeProficienciesBottom">
-                            <div class="progress">
-                                <div class="jquery progress-bar progress-bar-info" role="progressbar" style="width: 0%">
-                                    <span class="sr-only"></span></div>
-                            </div>
-                        </div>
-                    
-                        <div id="resumeProficienciesTop">Velocity</div>
-                        <div id="resumeProficienciesBottom">
-                            <div class="progress">
-                                <div class="velocity progress-bar progress-bar-info" role="progressbar" style="width: 0%">
-                                    <span class="sr-only"></span></div>
-                            </div>
-                        </div>
-                    
-                        <div id="resumeProficienciesTop">Bourbon/Neat</div>
-                        <div id="resumeProficienciesBottom">
-                            <div class="progress">
-                                <div class="bourbon progress-bar progress-bar-info" role="progressbar" style="width: 0%">
-                                    <span class="sr-only"></span></div>
-                            </div>
-                        </div>
+            <div id="about-header">
+                <h2>Who I Am</h2>
+                <img src="img/head-shot1.jpg" alt="Jim Strother" id="head-img">
+            </div>
+            <div id="info-div">
+                <section class="info" id="coder">
+                    <div class="info-header">
+                        <img src="img/coder.png" alt="Coder" class="med-logo">
+                        <h4>Coder</h4>
                     </div>
-                
-                    <div id="column2">
-                        <div id="resumeProficienciesTop">Responsive Web Design</div>
-                        <div id="resumeProficienciesBottom">
-                            <div class="progress">
-                                <div class="rwd progress-bar progress-bar-info" role="progressbar" style="width: 0%">
-                                    <span class="sr-only"></span>
-                                </div>
-                            </div>
-                        </div>
-                    
-                        <div id="resumeProficienciesTop">React/Redux</div>
-                        <div id="resumeProficienciesBottom">
-                            <div class="progress">
-                                <div class="react progress-bar progress-bar-info" role="progressbar" style="width: 0%">
-                                    <span class="sr-only"></span>
-                                </div>
-                            </div>
-                        </div>
-                    
-                        <div id="resumeProficienciesTop">Node.js/Express</div>
-                        <div id="resumeProficienciesBottom">
-                            <div class="progress">
-                                <div class="node progress-bar progress-bar-info" role="progressbar" style="width: 0%">
-                                    <span class="sr-only"></span></div>
-                            </div>
-                        </div>
-                    
-                        <div id="resumeProficienciesTop">Socket.io</div>
-                        <div id="resumeProficienciesBottom">
-                            <div class="progress">
-                                <div class="socket progress-bar progress-bar-info" role="progressbar" style="width: 0%">
-                                    <span class="sr-only"></span></div>
-                            </div>
-                        </div>
-                    
-                        <div id="resumeProficienciesTop">RethinkDB</div>
-                        <div id="resumeProficienciesBottom">
-                            <div class="progress">
-                                <div class="rethink progress-bar progress-bar-info" role="progressbar" style="width: 0%">
-                                    <span class="sr-only"></span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div id="resumeProficienciesTop">Git</div>
-                        <div id="resumeProficienciesBottom">
-                            <div class="progress">
-                                <div class="git progress-bar progress-bar-info" role="progressbar" style="width: 0%">
-                                    <span class="sr-only"></span>
-                                </div>
-                            </div>
-                        </div>
+                    <p>I love code. I love the challenge it gives me as I work on projects, and solve each one's unique problems. From styling a web site's look with the lightweight Bourbon library, to the JavaScript that powers the user experience up front and fetches data from the server, I aim to build web sites and web apps with a consistent feel and thoughtful thoroughness.</p>
+                </section>
+                <section class="info" id="creator">
+                    <div class="info-header">
+                        <img src="img/creator.png" alt="Creator" class="med-logo">
+                        <h4>Creator</h4>
                     </div>
-                </div>
-            </section>
+                    <p>Creating things is as natural as breathing. Ideas arrive constantly and give me so much to work out and put to good use. Ideas as simple as a task list, to something as grand as open-source inventory tracking software, I continually give myself something worthwhile to work toward.</p>
+                </section>
+                <section class="info" id="explorer">
+                    <div class="info-header">
+                        <img src="img/explorer.png" alt="Explorer" class="med-logo">
+                        <h4>Explorer</h4>
+                    </div>
+                    <p>Few things excite me more than "new". Whether it is a new place- such as my first-ever trip to southern California recently, or discovering a new database (RethinkDB) that fits closely with my belief that the web should be as real-time as possible, I never stop exploring places or ideas.</p>
+                    <!--<img src="img/close-up3.jpg" alt="Me! In the woods!">-->
+                </section>
+            </div>
         </div>
-        <div class="background-div" id="secondBG">
+        <div id="spaceDivSkills" class="spaceDiv"></div>
+        <div id="skillset">
+            <div id="skillset-header">
+            	<h2>Skill Set</h2>
+            </div>
+            <div id="resumeProficiencies">
+                <div id="column1">
+                    <div class="resumeProficienciesTop resumeProficienciesTop1">HTML5</div>
+                    <div class="resumeProficienciesBottom">
+                        <div class="progress">
+                            <div class="html progress-bar progress-bar-info" role="progressbar" style="width: 0%">
+                                <span class="sr-only"></span></div>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="resumeProficienciesTop">CSS3</div>
+                    <div class="resumeProficienciesBottom">
+                        <div class="progress">
+                            <div class="css progress-bar progress-bar-info" role="progressbar" style="width: 0%">
+                                <span class="sr-only"></span></div>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="resumeProficienciesTop">SASS/SCSS</div>
+                    <div class="resumeProficienciesBottom">
+                        <div class="progress">
+                            <div class="scss progress-bar progress-bar-info" role="progressbar" style="width: 0%">
+                                <span class="sr-only"></span></div>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="resumeProficienciesTop">JavaScript</div>
+                    <div class="resumeProficienciesBottom">
+                        <div class="progress">
+                            <div class="javascript progress-bar progress-bar-info" role="progressbar" style="width: 0%">
+                                <span class="sr-only"></span></div>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="resumeProficienciesTop">jQuery</div>
+                    <div class="resumeProficienciesBottom">
+                        <div class="progress">
+                            <div class="jquery progress-bar progress-bar-info" role="progressbar" style="width: 0%">
+                                <span class="sr-only"></span></div>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="resumeProficienciesTop">Velocity</div>
+                    <div class="resumeProficienciesBottom">
+                        <div class="progress">
+                            <div class="velocity progress-bar progress-bar-info" role="progressbar" style="width: 0%">
+                                <span class="sr-only"></span></div>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="resumeProficienciesTop">Bourbon/Neat</div>
+                    <div class="resumeProficienciesBottom">
+                        <div class="progress">
+                            <div class="bourbon progress-bar progress-bar-info" role="progressbar" style="width: 0%">
+                                <span class="sr-only"></span></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="column2">
+                    <div class="resumeProficienciesTop">Responsive Web Design</div>
+                    <div class="resumeProficienciesBottom">
+                        <div class="progress">
+                            <div class="rwd progress-bar progress-bar-info" role="progressbar" style="width: 0%">
+                                <span class="sr-only"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="resumeProficienciesTop">React/Redux</div>
+                    <div class="resumeProficienciesBottom">
+                        <div class="progress">
+                            <div class="react progress-bar progress-bar-info" role="progressbar" style="width: 0%">
+                                <span class="sr-only"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="resumeProficienciesTop">Node.js/Express</div>
+                    <div class="resumeProficienciesBottom">
+                        <div class="progress">
+                            <div class="node progress-bar progress-bar-info" role="progressbar" style="width: 0%">
+                                <span class="sr-only"></span></div>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="resumeProficienciesTop">Socket.io</div>
+                    <div class="resumeProficienciesBottom">
+                        <div class="progress">
+                            <div class="socket progress-bar progress-bar-info" role="progressbar" style="width: 0%">
+                                <span class="sr-only"></span></div>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="resumeProficienciesTop">RethinkDB</div>
+                    <div class="resumeProficienciesBottom">
+                        <div class="progress">
+                            <div class="rethink progress-bar progress-bar-info" role="progressbar" style="width: 0%">
+                                <span class="sr-only"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="resumeProficienciesTop">Git</div>
+                    <div class="resumeProficienciesBottom">
+                        <div class="progress">
+                            <div class="git progress-bar progress-bar-info" role="progressbar" style="width: 0%">
+                                <span class="sr-only"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+                </div>
+            </div>
+        </div>
+        <div class="background-div">
             <!--using a parallax scroll on background image-->
             <div id="js-parallax-window2" class="parallax-window">
                 <div class="parallax-static-content"></div>
                 <div id="js-parallax-background2" class="parallax-background"></div>
             </div>
         </div>
+        <div id="spaceDivProjects" class="spaceDiv"></div>
         <div id="projects">
             <!--projects list-->
             <section>
-                <h4>List of Projects</h4>
-                <div id="list">
-                    <div class="project">
-                        <h5>Flappy Bird</h5>
-                        <img src="img/flappy-bird.png" alt="Flappy Bird" class="project-image">
-                        <p>A project that taught me a lot of JavaScript, Flappy Bird was my first real introduction to that language. I learned how to link JavaScript files together and keeping the code simple to read and understand. This also introduced me to Node.js (not used in this project though) by showing me require statements to link the files together. This sparked an interest in Node.js that lead me to enlarging my skillset and becoming a Full-Stack JavaScript Developer.</p>
-                        <a href="http://jstrother.github.io/flappy-bird"><button>See it work!</button></a>
-                        <a href="https://github.com/jstrother/flappy-bird"><button>Look at the code!</button></a>
+                <br><br><br>
+                <h2 id="projects-header">Projects</h2>
+                <br><br>
+                <div class="project">
+                    <div class="project-header">
+                        <h5>Basic Inventory Tracker</h5>
+                        <img src="img/inventory.PNG" alt="Task List" class="project-image">
                     </div>
-                    <div class="project">
-                        <h5>API "Hack"</h5>
-                        <img src="img/api.png" alt="Api 'Hack'" class="project-image">
-                        <p>In this project, I learned how to interact with the endpoints of an API. As it was the introduction of basic CRUD functions, it actually dovetailed nicely into my rising interest in Node.js. This one is just a simple recommendation program for any books, shows, movies, and more that you enjoy.</p>
-                        <a href="http://jstrother.github.io/read-watch-listen"><button>See it work!</button></a>
-                        <a href="https://github.com/jstrother/read-watch-listen"><button>Look at the code!</button></a>
-                    </div>
-                    <div class="project">
-                        <h5>Hot or Cold</h5>
-                        <img src="img/hot-cold.png" alt="Hot or Cold" class="project-image">
-                        <p>Although initially built as pure JavaScript, I ended up refactoring this when I started learning React and Redux. I created the components necessary and set up the flow of info through the app. It was hard initially to wrap my head around the abstraction of React, but I was able to gain a good understanding of it. Also, the addition of Redux really helped to make things easier for me.</p>
-                        <p>Sorry, the server demonstrating this is currently down. It will soon be fixed.</p>
-                        <a href="https://jstrother.github.io/hot-cold-redux/public/index.html"><button>See it work!</button></a>
-                        <a href="https://github.com/jstrother/hot-cold-redux"><button>Look at the code!</button></a>
-                    </div>
-                    <div class="project">
-                        <h5>Task List</h5>
-                        <img src="img/task-list.png" alt="Task List" class="project-image">
-                        <p>This project was my final project at Thinkful. It is a full-stack app with a React/Redux front-end and, using Node.js and Socket.io, connects to a RethinkDB database to keep track of tasks via a persistent list. The tech stack that I used here I am interested in using as my main stack for any future side-projects as it lends itself very nicely to the real-time web.</p>
-                        <a href="http://52.43.128.234:9000"><button>See it work!</button></a>
-                        <a href="https://github.com/jstrother/task-list"><button>Look at the code!</button></a>
+                    <div class="project-body">
+                        <p>This project was my final project at Thinkful. It is a full-stack app with a React/Redux front-end and, using Node.js and Socket.io, connects to a RethinkDB database to keep track of an inventory in real-time.  A user would be able to know the exact levels of stock as they change. Easy to customize, the tech stack that I used here is one that I am interested in using as my main stack for any future side-projects as it lends itself very nicely to the real-time web. And let's face it: that's where everything is headed, isn't it?</p>
+                        <div class="button-container">
+                            <a href="http://35.162.140.23:9000" target="_blank"><button>See it work!</button></a>
+                            <a href="https://github.com/jstrother/real-time-inventory" target="_blank"><button>Look at the code!</button></a>
+                        </div>
                     </div>
                 </div>
+                <br><br>
+                <div class="project">
+                    <div class="project-header">
+                        <h5>Hot or Cold</h5>
+                        <img src="img/hot-cold.png" alt="Hot or Cold" class="project-image">
+                    </div>
+                    <div class="project-body">
+                        <p>Although initially built as pure HTML, CSS, and JavaScript, I ended up refactoring this when I started learning React and Redux. I created the components necessary and set up the flow of info through the app. It was hard initially to wrap my head around the abstraction of React, but I was able to gain a good understanding of it. Also, the addition of Redux really helped to make things easier for me.</p>
+                        <div class="button-container">
+                            <a href="https://jstrother.github.io/hot-cold-redux/public/index.html" target="_blank"><button>See it work!</button></a>
+                            <a href="https://github.com/jstrother/hot-cold-redux" target="_blank"><button>Look at the code!</button></a>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                <div class="project">
+                    <div class="project-header">
+                        <h5>Book Recommender</h5>
+                        <img src="img/api.png" alt="Api 'Hack'" class="project-image">
+                    </div>
+                    <div class="project-body">
+                        <p>In this project, I learned how to interact with the endpoints of an API. As it was the introduction of basic CRUD functions, it actually dovetailed nicely into my rising interest in Node.js. This one is just a simple recommendation program for any new books that you might enjoy, along with reviews.</p>
+                        <div class="button-container">
+                            <a href="http://jstrother.github.io/read-watch-listen/public/index.html" target="_blank"><button>See it work!</button></a>
+                            <a href="https://github.com/jstrother/read-watch-listen" target="_blank"><button>Look at the code!</button></a>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                <div class="project">
+                    <div class="project-header">
+                        <h5>Flappy Bird</h5>
+                        <img src="img/flappy-bird.png" alt="Flappy Bird" class="project-image">
+                    </div>
+                    <div class="project-body">
+                        <p>A project that taught me a lot of JavaScript, Flappy Bird was my first real introduction to that language. I learned how to link JavaScript files together and keeping the code simple to read and understand. This also introduced me to Node.js (not used in this project though) by showing me require statements to link the files together. This sparked an interest in Node.js that lead me to enlarging my skillset and becoming a Full-Stack JavaScript Developer.</p>
+                        <p>There is a small issue I am trying to fix.  If the bird falls off of the screen, the game doesn't end.  I am currently going through several javascript files to find and fix the error.</p>
+                        <div class="button-container">
+                            <a href="http://jstrother.github.io/flappy-bird" target="_blank"><button>See it work!</button></a>
+                            <a href="https://github.com/jstrother/flappy-bird" target="_blank"><button>Look at the code!</button></a>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
             </section>
         </div>
     </main>
     <footer>
-        <!--contains contact info- email, facebook, twitter, linkedin-->
-        <a href="mailto:strotherwebdev@gmail.com">Email</a>
-        <a href="https://www.facebook.com/profile.php?id=100013311965879"><img class="small-logo" src="img/facebook-logo-circle.png" alt="Facebook"></a>
-        <!--don't forget facebook logo-->
-        <a href="https://twitter.com/strotherwebdev"><img class="small-logo" src="img/twitter-logo-circle.png" alt="Twitter"></a>
-        <!--don't forget twitter logo-->
-        <a href="https://www.linkedin.com/in/jim-strother-57bb8083">LinkedIn</a>
-        <!--need logo for LinkedIn-->
+        <a href="mailto:strotherwebdev@gmail.com"><img class="small-logo" src="img/email.png" alt="Email"></a>
+        <a href="https://www.facebook.com/profile.php?id=100013311965879"><img class="small-logo" src="img/facebook-logo.png" alt="Facebook"></a>
+        <a href="https://twitter.com/strotherwebdev"><img class="small-logo" src="img/twitter-logo.png" alt="Twitter"></a>
+        <a href="https://www.linkedin.com/in/jim-strother-57bb8083"><img class="small-logo" src="img/linkedin-logo.png" alt="LinkedIn"></a>
     </footer>
-    <script type="text/javascript" src="scripts.js"></script>
+    <script type="text/javascript" src="scripts.min.js"></script>
 </body>
 <!--This website was built, and is maintained, by Jim Strother-->
+<!--Go, Sounders, Go!-->
+<!--Fight, Sounders, Fight!-->
+<!--And the entire world will tremble at your might!-->
+<!--We sing for you! We love you so! And we will follow you wherever you may go!-->
 
 <!--coder.png created by Umesh Vgl from Noun Project-->
 <!--creator.png created as Brain by Marek Polakovic from Noun Project-->

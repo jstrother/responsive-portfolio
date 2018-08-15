@@ -1,0 +1,73 @@
+// skillset
+
+#resumeProficiencies {
+    border: 1px solid $baseOffWhite;
+    // removing this border makes the progress bars not work properly. leave in for hack-fix.
+	// clear: right;
+	align-self: center;
+	width: 100%;
+	margin: 1.25em;
+    @include outer-container;
+}
+
+#column1, #column2 {
+	@include span-columns(11);
+	@include shift(1);
+    @include media($gtDesktop) {
+    	@include span-columns(5);
+    	@include omega(6n);
+    	@include shift(1);
+    }
+}
+
+.resumeProficienciesTop {
+	float: left;
+	clear: right;
+	width: 100%;
+	margin: 5px 0px 0px 0px;
+	text-align: left;
+	font-weight: 600;
+	font-size: 1em;
+	@include media($gtMobile) {
+		font-size: 1.25em;
+	}
+}
+
+.resumeProficienciesBottom {
+	float: left;
+	clear: right;
+	width: 80%;
+	margin: 2px 0px 4px 0px;
+}
+
+.progress {
+	background:#e9e5e2;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#dddddd), to(#e9e5e2));
+	background-image: -webkit-linear-gradient(top, #dddddd, #e9e5e2);
+	background-image: -moz-linear-gradient(top, #dddddd, #e9e5e2);
+	background-image: -ms-linear-gradient(top, #dddddd, #e9e5e2);
+	background-image: -o-linear-gradient(top, #dddddd, #e9e5e2);
+	background-image: linear-gradient(top, #dddddd, #e9e5e2);  
+	height: 20px; 
+	border-radius: 0px;
+	-moz-box-shadow: 0 1px 0px #bebbb9 inset, 0 1px 0 #fcfcfc;	 
+	-webkit-box-shadow: 0 1px 0px #bebbb9 inset, 0 1px 0 #fcfcfc;	 
+	box-shadow: 0 1px 0px #bbbbbb inset, 0 1px 0 #fcfcfc;	  
+}
+
+.progress-bar {
+    height: 20px;
+}
+
+.progress-bar-info {
+    background-color: $baseBlue;
+    height: 20px;
+}
+
+.html, .css, .scss, .bourbon, .jquery, .javascript, .velocity, .rwd, .react, .node, .socket, .rethink, .git {
+
+ -webkit-transition: width 4.50s ease !important;
+ -moz-transition: width 4.50s ease !important;
+   -o-transition: width 4.50s ease !important;
+      transition: width 4.50s ease !important;
+ }

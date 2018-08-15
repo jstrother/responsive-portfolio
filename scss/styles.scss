@@ -3,13 +3,42 @@
 @import "neat/neat";
 @import "normalize";
 @import "myVariables";
-@import "myFonts";
+@import "mySkillSet";
+@import "myParallax";
+
+* {
+    // border: 1px solid red;
+}
+
+body {
+    background-color: $baseOffWhite;
+}
 
 header {
     background-color: darken($baseBlue, 5%);
+    margin-top: -0.5em;
     text-align: center;
-    margin-top: -1.5em;
-    padding-bottom: 2em;
+    height: $headerHeight;
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    // the order on h1 and nav is to fix a small glitch occasionally happening on reload
+    h1 {
+        font-size: 2em;
+        order: 1;
+        .disappear {
+            @include media($mobile) {
+                display: none;
+            }
+        }
+    }
+    a {
+        position: relative;
+    }
     a:link {
         color: $white;
     }
@@ -22,165 +51,208 @@ header {
     a:visited {
         color: darken($baseOffWhite, 15%);
     }
-    #img-div {
-        float: left;
-        margin: 0;
-        padding: 0;
-        img {
-            width: 8.2em;
-            height: 6.9em;
-            padding: 1em;
-        }
-    }
-    h1 {
-        width: 80%;
-    }
     nav {
-        width: 80%;
-        :nth-child(2) {
-            margin-left: 2.5em;
+        font-size: 1.25em;
+        padding-top: 0.25em;
+        display: flex;
+        align-self: flex-end;
+        margin: auto 0;
+        background-color: $headerColor;
+        order: 2;
+        #navMenu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            @include media($gtMobile) {
+                flex-direction: row;
+            }
+            .hidden {
+                display: none;
+            }
+            li {
+                margin-left: 0.25em;
+                a {
+                    display: inline-block;
+                    text-align: center;
+                    transition: 0.3s;
+                }
+            }
+            .nav-item {
+                margin: 0.5em auto;
+                padding: 0 0.5em;
+                @include media($gtMobile) {
+                    display: inline;
+                    margin: auto;
+                }
+            }
+            #icon {
+                display: inline-block;
+                @include media($gtMobile) {
+                    display: none;
+                }
+            }
         }
     }
 }
 
 main {
-    background-color: $baseOffWhite;
-    #intro {
-        padding-top: 4em;
-        width: 90%;
-        text-align: center;
+    .spaceDiv {
+        height: $spaceDivHght - 4em;
+        width: 100%;
+        visibility: hidden;
+    }
+    #spaceDivSkills {
+        height: $spaceDivHght - 2.25em;
     }
     #about {
+        padding: 5em 0 2.5em 0;
+        #about-header {
+            display: flex;
+            flex-direction: column;
+            height: em(300px);
+        }
+        h2 {
+            text-align: center;
+            font-size: 3.5em;
+        }
+        h3 {
+            text-align: center;
+            font-size: 3em;
+        }
+        #head-img {
+            width: 8.2em;
+            height: 6.9em;
+            margin: auto;
+        }
+    }
+    #info-div {
+        padding: 3em;
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
         @include outer-container;
-        #info {
-            @include span-columns(4);
-            .mini-title {
-                position: fixed;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
+        .info {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            @include span-columns(12);
+            @include media($gtDesktop) {
+                @include span-columns(4);
+                @include omega(3n);
+            }
+        }
+        .info-header {
+            width: 100%;
+            height: 4em;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            h4 {
+                margin: auto 0;
+                font-size: 2.75em;
+                align-self: flex-start;
+            }
+            .med-logo {
+                margin: auto 0;
+                width: 3em;
+                height: 3em;
             }
         }
     }
-    
-    .med-logo {
-        width: 1.5em;
-        height: 1.5em;
-        float: left;
-        margin-right: 0.25em;
+    #skillset {
+        width: 100%;
+        margin: 3em 0 2em 0;
+        display: flex;
+        flex-flow: column nowrap;
+        #skillset-header {
+            height: 4em;
+            margin-bottom: 2em;
+            text-align: center;
+            align-self: center;
+            h2 {
+                font-size: 3.5em;
+            }
+        }
+    }
+    #projects {
+        padding: 2em;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        h2 {
+            text-align: center;
+            font-size: 3.5em;
+        }
+        .project {
+            display: flex;
+            flex-direction: column;
+            align-content: space-between;
+            .project-header {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-content: center;
+                height: 17em;
+                h5 {
+                    margin: auto;
+                    text-align: center;
+                    font-size: 2.5em;
+                }
+                .project-image {
+                    width: 15em;
+                    height: 10em;
+                    margin: auto;
+                    border: 1px solid black;
+                }
+            }
+            .project-body {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-content: space-between;
+                p {
+                    margin: auto;
+                    text-align: center;
+                }
+                .button-container {
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: space-around;
+                    align-content: space-around;
+                    align-items: center;
+                    margin-top: 0.75em;
+                    button {
+                        margin: 0.25em auto;
+                        font-size: 1em;
+                        width: 12em;
+                        height: 3em;
+                    }
+                }
+            }
+        }
     }
 }
-
-#skillset {
-    width: 100%;
-}
-
-// skillset
-#resumeProficiencies {
-	clear: right;
-	width: 100%;
-	margin: 1.25em;
-    @include outer-container;
-}
-
-#column1 {
-    @include span-columns(6);
-    background-color: blue;
-}
-
-#column2 {
-    @include span-columns(6);
-    background-color: green;
-}
-
-#resumeProficienciesTop {
-	float: left;
-	clear: right;
-	width: 100%;
-	margin: -5px 0px 0px 0px;
-	text-align: left;
-	font-weight: 600;
-}
-
-#resumeProficienciesBottom {
-	float: left;
-	clear: right;
-	width: 80%;
-	margin: 2px 0px 0px 0px;
-}
-
-.progress {
-	background:#e9e5e2;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#dddddd), to(#e9e5e2));
-	background-image: -webkit-linear-gradient(top, #dddddd, #e9e5e2);
-	background-image: -moz-linear-gradient(top, #dddddd, #e9e5e2);
-	background-image: -ms-linear-gradient(top, #dddddd, #e9e5e2);
-	background-image: -o-linear-gradient(top, #dddddd, #e9e5e2);
-	background-image: linear-gradient(top, #dddddd, #e9e5e2);  
-	height:20px; 
-	border-radius: 0px;
-	-moz-box-shadow: 0 1px 0px #bebbb9 inset, 0 1px 0 #fcfcfc;	 
-	-webkit-box-shadow: 0 1px 0px #bebbb9 inset, 0 1px 0 #fcfcfc;	 
-	box-shadow: 0 1px 0px #bbbbbb inset, 0 1px 0 #fcfcfc;	  
-}
-
-.html, .css, .scss, .bourbon, .jquery, .javascript, .velocity, .rwd, .react, .node, .socket, .rethink, .git {
-
- -webkit-transition: width 4.50s ease !important;
- -moz-transition: width 4.50s ease !important;
-   -o-transition: width 4.50s ease !important;
-      transition: width 4.50s ease !important;
- }
- 
-//  parallax
-$parallax-window-height: 33em;
-$parallax-background-height: $parallax-window-height * 2;
-
-.parallax-window {
-  max-height: $parallax-window-height;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-}
-
-.parallax-static-content {
-    height: 33em;
-    color: #9A9A8A;
-    padding: 8em 0;
-    position: relative;
-    z-index: 9;
-}
-
-.parallax-background {
-  background-position: bottom;
-  background-size: cover;
-  height: $parallax-background-height;
-  left: 0;
-  position: absolute;
-  top: - $parallax-window-height / 3;
-  width: 100%;
-}
-
-#firstBG {
-    .parallax-background {
-        background: url("../img/background4.jpg");
-    }
-}
-
-#secondBG {
-    .parallax-background {
-        background: url("../img/background11.jpg");
-    }
-}
-
-.background-div {
-    clear: both;
-    height: 30em;
-    width: 100%;
-}
-
-// Based on http://codepen.io/skeurentjes/
 
 footer {
-    background-color: $baseDarkBlue;
+    background-color: lighten($baseDarkBlue, 15%);
+    width: 100%;
+    height: 6em;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    .small-logo {
+        height: 3em;
+        width: 3em;
+        margin: 0.25em;
+        border-radius: 50%;
+        border: none;
+    }
 }
+
+// and all the colors of the sun
