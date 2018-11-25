@@ -5,3 +5,5 @@ bourbon/
 neat/
 *.map
 .bash_profile
+*.min.js
+package-lock.json

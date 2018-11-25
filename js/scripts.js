@@ -71,15 +71,12 @@ $(() => {
     $('.html').css('width', '90%');
     $('.css').css('width', '90%');
     $('.scss').css('width', '90%');
-    $('.bourbon').css('width', '85%');
     $('.javascript').css('width', '90%');
-    $('.jquery').css('width', '85%');
-    $('.velocity').css('width', '75%');
     $('.rwd').css('width', '85%');
     $('.react').css('width', '70%');
     $('.node').css('width', '85%');
     $('.socket').css('width', '65%');
-    $('.rethink').css('width', '50%');
+    $('.mongodb').css('width', '90%');
     $('.git').css('width', '90%');
     
     // parallax
